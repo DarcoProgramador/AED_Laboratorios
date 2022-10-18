@@ -4,7 +4,7 @@
  */
 package Formularios;
 
-import Formularios.Lab2.Laboratorio2;
+import Lab2.Formularios.Laboratorio2;
 import Lab3.Dashboard;
 import Lab3.Lab3;
 import java.awt.Color;

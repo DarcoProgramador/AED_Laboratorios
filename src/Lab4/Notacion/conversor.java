@@ -1,4 +1,4 @@
-package Notacion;
+package Lab4.Notacion;
 
 
 import java.util.Stack;

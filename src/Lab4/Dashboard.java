@@ -1,5 +1,5 @@
 package Lab4;
-import Cola.Cola;
+import Lab4.Cola.Cola;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
@@ -10,7 +10,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.ImageIcon;
 import static JPanelArrayButton.JPanelBtn.*;
-import Notacion.NotacionPolaca;
+import Lab4.Notacion.NotacionPolaca;
 
 public class Dashboard extends javax.swing.JFrame {
     //Creando variables de control

@@ -1,5 +1,5 @@
 package Lab2;
-import Formularios.Lab2.Laboratorio2;
+import Lab2.Formularios.Laboratorio2;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.time.LocalDate;
