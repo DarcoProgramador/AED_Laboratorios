@@ -64,7 +64,7 @@ public class Dashboard extends javax.swing.JFrame {
     int ejeX = 0;//---->
     int ejeY = 0;//Abajo
     Color colorReSet = new Color(18,90,173);//Color predefinido
-    Color colorSet = new Color(21,101,192);//Color seleccionado
+    Color colorSet = new Color(21,101,192);//Cambio de color
     public JPanel [][] JPaneles = new JPanel [filas][colum];//Tipo de boton
     boolean [] boton = new boolean [filas];//Boton seleccionado
     public JLabel [][] TitulosBtn = new JLabel [filas][colum+1];//El mas 1 es para las imagenes
@@ -482,16 +482,40 @@ public class Dashboard extends javax.swing.JFrame {
 
     }//GEN-LAST:event_Activar_color
 
-//Funciones para volver a Poner y quitar el color de los botones
-    void setColor(JPanel panel){
-        panel.setBackground(new Color(21,101,192));
-    }
-    void resetColor(JPanel panel){
-        panel.setBackground(new Color(18,90,173));
-    }
     /**
      * @param args the command line arguments
      */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Dashboard().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Background;
