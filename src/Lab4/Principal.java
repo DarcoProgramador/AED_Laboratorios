@@ -72,7 +72,7 @@ public class Principal extends javax.swing.JPanel {
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, -1));
 
         Image.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Lab4/images/universidad-de-ingenieria-02.png"))); // NOI18N
+        Image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/universidad-de-ingenieria-02.png"))); // NOI18N
         add(Image, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 80, 370, 250));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N

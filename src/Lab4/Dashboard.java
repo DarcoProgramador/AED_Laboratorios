@@ -76,8 +76,8 @@ public class Dashboard extends javax.swing.JFrame {
     {
         //Imagenes De botones
         //*************ImageIcon calendarioPlus = new ImageIcon("src/Lab4/images/calendar-plus.png");*******************
-        ImageIcon calendarioMultiple = new ImageIcon("src/Lab4/images/calendar-multiple-check.png");
-        ImageIcon home = new ImageIcon("src/Lab4/images/home-outline.png");
+        ImageIcon calendarioMultiple = new ImageIcon("src/Imagenes/calendar-multiple-check.png");
+        ImageIcon home = new ImageIcon("src/Imagenes/home-outline.png");
         //Texto para cada Label
         Titulos[0][0] = new JLabel("Principal", JLabel.LEFT);
         Titulos[1][0] = new JLabel("Ejercicio 1", JLabel.LEFT);
