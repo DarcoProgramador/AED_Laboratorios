@@ -5,7 +5,6 @@
 package Formularios;
 
 import Lab2.Formularios.Laboratorio2;
-import Lab3.Dashboard;
 import Lab3.Lab3;
 import java.awt.Color;
 import lab1grafico.Laboratorio1;
@@ -22,6 +21,7 @@ public class Menu extends javax.swing.JFrame {
      */
     public Menu() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

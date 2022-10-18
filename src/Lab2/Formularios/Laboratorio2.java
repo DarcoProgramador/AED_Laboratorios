@@ -19,8 +19,8 @@ public class Laboratorio2 extends javax.swing.JFrame {
      * Creates new form Laboratorio2
      */
     public Laboratorio2() {
-        this.setLocationRelativeTo(null);
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

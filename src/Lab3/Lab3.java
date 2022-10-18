@@ -17,7 +17,7 @@ public class Lab3 extends javax.swing.JFrame {
      */
     public Lab3() {
         initComponents();
-        this.setLocationRelativeTo(null);
+        setLocationRelativeTo(null);
     }
 
     /**

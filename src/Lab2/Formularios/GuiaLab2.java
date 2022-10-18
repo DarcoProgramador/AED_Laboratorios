@@ -19,8 +19,8 @@ public class GuiaLab2 extends javax.swing.JFrame {
      * Creates new form GuiaLab2
      */
     public GuiaLab2() {
-        this.setLocationRelativeTo(null);
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

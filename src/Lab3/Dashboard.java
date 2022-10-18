@@ -18,7 +18,7 @@ public class Dashboard extends javax.swing.JFrame {
     
     public Dashboard() {
         initComponents();
-        this.setLocationRelativeTo(null);
+        setLocationRelativeTo(null);
         
         LocalDate now = LocalDate.now();
         int year = now.getYear();

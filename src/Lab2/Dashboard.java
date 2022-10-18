@@ -22,7 +22,7 @@ public class Dashboard extends javax.swing.JFrame {
     
     public Dashboard() {
         initComponents();
-        
+        setLocationRelativeTo(null);
         LocalDate now = LocalDate.now();
         int year = now.getYear();
         int dia = now.getDayOfMonth();

@@ -19,7 +19,7 @@ public class Laboratorio4 extends javax.swing.JFrame {
      */
     public Laboratorio4() {
         initComponents();
-        this.setLocationRelativeTo(null);
+        setLocationRelativeTo(null);
     }
 
     /**

@@ -15,7 +15,7 @@ public class Guia3 extends javax.swing.JFrame {
      */
     public Guia3() {
         initComponents();
-        this.setLocationRelativeTo(null);
+        setLocationRelativeTo(null);
     }
 
     /**
