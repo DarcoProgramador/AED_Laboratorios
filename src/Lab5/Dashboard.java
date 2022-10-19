@@ -15,6 +15,8 @@ public class Dashboard extends javax.swing.JFrame {
     //Ubicacion de la ventana
     int xMouse;
     int yMouse;
+
+    
     /**
      * Creates new form Dashboard
      */
@@ -39,8 +41,9 @@ public class Dashboard extends javax.swing.JFrame {
         content.add(p1, BorderLayout.CENTER);
         content.revalidate();
         content.repaint();
-        
         setLocationRelativeTo(null);
+        
+        // <editor-fold defaultstate="collapsed" desc="Cargando Botones">
         //cargando botones----------------------------------------------------------------------------------------------
         //iniciando parametros del boton
         JpanelArray(Botones, JPaneles,filas,colum, largoBoton, anchoBoton);
@@ -54,8 +57,10 @@ public class Dashboard extends javax.swing.JFrame {
         Font Estilo = new Font("Segoe UI", Font.BOLD, 14);
         Color color_texto = new Color(255,255,255);
         iniciando_titulos(TitulosBtn,Estilo, color_texto);//iniciando los titulos
+        //</editor-fold>
     }
     
+    // <editor-fold defaultstate="collapsed" desc="Variables de los botones">
     //Variables globales botones
     int filas = 4;
     int colum = 1;
@@ -68,19 +73,25 @@ public class Dashboard extends javax.swing.JFrame {
     public JPanel [][] JPaneles = new JPanel [filas][colum];//Tipo de boton
     boolean [] boton = new boolean [filas];//Boton seleccionado
     public JLabel [][] TitulosBtn = new JLabel [filas][colum+1];//El mas 1 es para las imagenes
-    
+    //</editor-fold>
     
     private void iniciando_titulos(JLabel[][] Titulos, Font font, Color color)
     {
+        // <editor-fold defaultstate="collapsed" desc="Iconos de Botones">
         //Imagenes De botones
         //*************ImageIcon calendarioPlus = new ImageIcon("src/Lab4/images/calendar-plus.png");*******************
         ImageIcon calendarioMultiple = new ImageIcon("src/Imagenes/calendar-multiple-check.png");
         ImageIcon home = new ImageIcon("src/Imagenes/home-outline.png");
+        //</editor-fold>
+        
+        // <editor-fold defaultstate="collapsed" desc="Label por Boton">
         //Texto para cada Label
         Titulos[0][0] = new JLabel("Principal", JLabel.LEFT);
         Titulos[1][0] = new JLabel("Ejercicio 1", JLabel.LEFT);
         Titulos[2][0] = new JLabel("Ejercicio 2", JLabel.LEFT);
         Titulos[3][0] = new JLabel("Ejercicio 3", JLabel.LEFT);
+        //</editor-fold>
+        
         //Iconos en los Jpanel
         Titulos[0][1] = new JLabel(home);
         setLabelIconJPanelArray(JPaneles,Titulos[0][1],0,0); 
@@ -102,6 +113,7 @@ public class Dashboard extends javax.swing.JFrame {
         
     }
     
+    // <editor-fold defaultstate="collapsed" desc="Setear Botones en Falso">
     //Botones En falso
     private void setBoton(boolean [] button, int filas)
     {
@@ -110,6 +122,9 @@ public class Dashboard extends javax.swing.JFrame {
             boton[i] = false;
         }
     }
+    //</editor-fold>
+    
+    // <editor-fold defaultstate="collapsed" desc="MauseListener para cada Boton">
     //Metiendo un MouseListener a cada boton
     private void setMouseListener(JPanel [][] Botones)
     {
@@ -122,7 +137,9 @@ public class Dashboard extends javax.swing.JFrame {
             }
         }
     }
+    //</editor-fold>
     
+    // <editor-fold defaultstate="collapsed" desc="Acciones del MouseListener">
     //Acciones de los botones
     public class AccionBotones implements MouseListener
     {
@@ -206,7 +223,14 @@ public class Dashboard extends javax.swing.JFrame {
             
             case 1 -> {
                 //Arreglo en global;
-                
+                RegistroAlumnos p2 = new RegistroAlumnos();
+                p2.setSize(750, 430);
+                p2.setLocation(0,0);
+
+                content.removeAll();
+                content.add(p2, BorderLayout.CENTER);
+                content.revalidate();
+                content.repaint();
             }
             
             case 2 -> {
@@ -220,6 +244,7 @@ public class Dashboard extends javax.swing.JFrame {
             }
         }
     }
+    //</editor-fold>
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -438,6 +463,8 @@ public class Dashboard extends javax.swing.JFrame {
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
         // TODO add your handling code here:
     }//GEN-LAST:event_formWindowActivated
+
+// <editor-fold defaultstate="collapsed" desc="Animaciones y Acciones del Menu">
 //Arrastrar ventana
     private void TitleMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TitleMouseDragged
         int x = evt.getXOnScreen();
@@ -449,6 +476,8 @@ public class Dashboard extends javax.swing.JFrame {
         xMouse = evt.getX();
         yMouse = evt.getY();
     }//GEN-LAST:event_TitleMousePressed
+
+
 // Funciones de los Botones
     private void exitMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMousePressed
         System.exit(0);
@@ -477,6 +506,7 @@ public class Dashboard extends javax.swing.JFrame {
         red_squr.setBackground(new Color(255,255,255));
         exit.setForeground(new Color(102,102,102));
     }//GEN-LAST:event_exitMouseExited
+//</editor-fold>
 
     private void Activar_color(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Activar_color
 
