@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Lab5;
+package Lab5.Alumnos;
 import Lab5.Alumnos.MetodoAlumno;
 import java.awt.Color;
 import java.awt.event.KeyEvent;
@@ -173,7 +173,7 @@ public class RegistroAlumnos extends javax.swing.JPanel{
         Añadir();
     }//GEN-LAST:event_EnterSelect
     
-   //Funcion Añadir
+    //Funcion Añadir
     private void Añadir()
     {
         String nombre = textNombre.getText();

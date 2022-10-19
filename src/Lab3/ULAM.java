@@ -123,23 +123,23 @@ public class ULAM extends javax.swing.JPanel {
     }
     
     public static int ULAM(int n, StringBuilder Mensaje)
-	{
-		Mensaje.append(String.valueOf(n)+"  ");
-		if (n == 1)
-		{
-			return 1;
-		}
-		else if (n%2 == 0) 
-		{
-			n =  ULAM(n/2, Mensaje);
-			return n;
-		}
-		else
-		{
-			n = ULAM(n*3+1, Mensaje);
-			return n;
-		}	
-	}
+    {
+        Mensaje.append(String.valueOf(n)+"  ");
+        if (n == 1)
+        {
+                return 1;
+        }
+        else if (n%2 == 0) 
+        {
+                n =  ULAM(n/2, Mensaje);
+                return n;
+        }
+        else
+        {
+                n = ULAM(n*3+1, Mensaje);
+                return n;
+        }	
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Lb_TextAñadir;

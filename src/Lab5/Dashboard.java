@@ -1,4 +1,5 @@
 package Lab5;
+import Lab5.Alumnos.RegistroAlumnos;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
@@ -9,6 +10,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.ImageIcon;
 import static JPanelArrayButton.JPanelBtn.*;
+import Lab5.ListNegativoPositivo.Numeros;
 
 public class Dashboard extends javax.swing.JFrame {
     //Creando variables de control
@@ -18,6 +20,7 @@ public class Dashboard extends javax.swing.JFrame {
     
     //Panel de RegistroAlumnos sin Reabrir
     RegistroAlumnos p2 = new RegistroAlumnos();
+    Numeros p3 = new Numeros();
     
     /**
      * Creates new form Dashboard
@@ -237,8 +240,14 @@ public class Dashboard extends javax.swing.JFrame {
             }
             
             case 2 -> {
-                // Abrir sección
-                
+                //Registro en global;
+                p3.setSize(750, 430);
+                p3.setLocation(0,0);
+
+                content.removeAll();
+                content.add(p3, BorderLayout.CENTER);
+                content.revalidate();
+                content.repaint();
             }
             
             case 3 -> {
