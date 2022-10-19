@@ -64,7 +64,7 @@ public class Dashboard extends javax.swing.JFrame {
     
     // <editor-fold defaultstate="collapsed" desc="Variables de los botones">
     //Variables globales botones
-    int filas = 4;
+    int filas = 6;
     int colum = 1;
     int largoBoton = 270;
     int anchoBoton = 50;
@@ -92,6 +92,8 @@ public class Dashboard extends javax.swing.JFrame {
         Titulos[1][0] = new JLabel("Ejercicio 1", JLabel.LEFT);
         Titulos[2][0] = new JLabel("Ejercicio 2", JLabel.LEFT);
         Titulos[3][0] = new JLabel("Ejercicio 3", JLabel.LEFT);
+        Titulos[4][0] = new JLabel("Ejercicio 4", JLabel.LEFT);
+        Titulos[5][0] = new JLabel("Ejercicio 5", JLabel.LEFT);
         //</editor-fold>
         
         //Iconos en los Jpanel
