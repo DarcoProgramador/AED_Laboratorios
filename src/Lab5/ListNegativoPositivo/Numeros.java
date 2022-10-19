@@ -6,9 +6,7 @@
 package Lab5.ListNegativoPositivo;
 import java.awt.Color;
 import java.awt.event.KeyEvent;
-import java.util.Stack;
 import javax.swing.JPanel;
-import javax.swing.table.DefaultTableModel;
 
 
 

@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Lab5.Alumnos;
+package Lab5.Empresa;
 
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
@@ -11,20 +11,20 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author david
  */
-public class MetodoAlumno extends ArrayListAlumno{
+public class MetodoEmpresa extends ArrayListEmpresa{
     /**
      *
      * @param nombre
-     * @param carrera
-     * @param carnet
+     * @param nempresa
+     * @param salario
      */
-    // <editor-fold defaultstate="collapsed" desc="Añadir a los atributos de ArrayListAlumno">
+    // <editor-fold defaultstate="collapsed" desc="Añadir a los atributos de ArrayListEmpresa">
     //Añadiendo a el ArrayList
-    public void add(String nombre, String carrera, String carnet)
+    public void add(String nombre, int nempresa, float salario)
     {
         Nombre.add(nombre);
-        Carrera.add(carrera);
-        Carnet.add(carnet);
+        nEmpresa.add(nempresa);
+        Salario.add(salario);
     }
     //</editor-fold>
     
@@ -38,8 +38,8 @@ public class MetodoAlumno extends ArrayListAlumno{
         {
             data[i][0] = String.valueOf(i); 
             data[i][1] = String.valueOf(Nombre.get(i));
-            data[i][2] = String.valueOf(Carrera.get(i));
-            data[i][3] = String.valueOf(Carnet.get(i));
+            data[i][2] = String.valueOf(nEmpresa.get(i));
+            data[i][3] = String.valueOf(Salario.get(i));
         }
        datos.setModel(new DefaultTableModel(data, nombreColumnas));
     }

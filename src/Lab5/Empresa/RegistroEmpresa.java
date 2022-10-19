@@ -3,19 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Lab5.Alumnos;
-import Lab5.Alumnos.MetodoEmpresa;
+package Lab5.Empresa;
 import java.awt.Color;
 import java.awt.event.KeyEvent;
 import javax.swing.JPanel;
 
 
 
-public class RegistroAlumnos extends javax.swing.JPanel{
+public class RegistroEmpresa extends javax.swing.JPanel{
    
-    MetodoEmpresa Alumno = new MetodoEmpresa();
+    MetodoEmpresa Empresa = new MetodoEmpresa();
     
-    public RegistroAlumnos() {
+    public RegistroEmpresa() {
         initComponents();
     }
 
@@ -139,16 +138,16 @@ public class RegistroAlumnos extends javax.swing.JPanel{
         add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 210, 200, 10));
 
         lbCarnet.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
-        lbCarnet.setText("Carnet:");
-        add(lbCarnet, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 180, -1, -1));
+        lbCarnet.setText("Salario:");
+        add(lbCarnet, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 180, -1, -1));
 
         lbNombre.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
         lbNombre.setText("Nombre:");
         add(lbNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 100, -1, -1));
 
         lbCarrera.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
-        lbCarrera.setText("Carrera:");
-        add(lbCarrera, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, -1, -1));
+        lbCarrera.setText("N Empresa:");
+        add(lbCarrera, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 140, 90, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void button_AñadirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_AñadirMouseEntered
@@ -177,14 +176,14 @@ public class RegistroAlumnos extends javax.swing.JPanel{
     private void Añadir()
     {
         String nombre = textNombre.getText();
-        String carrera = textCarrera.getText();
-        String carnet = textCarnet.getText();
-        if(nombre.isEmpty() || carrera.isEmpty() || carnet.isEmpty())
+        String nEmpresa = textCarrera.getText();
+        String Salario = textCarnet.getText();
+        if(nombre.isEmpty() || nEmpresa.isEmpty() || Salario.isEmpty())
         {
             return;
         }
-        Alumno.add(nombre, carrera, carnet);
-        Alumno.mostrar(JtableRegistro);
+        Empresa.add(nombre, Integer.parseInt(nEmpresa), Float.parseFloat(Salario));
+        Empresa.mostrar(JtableRegistro);
         textNombre.setText("");
         textCarrera.setText("");
         textCarnet.setText("");
