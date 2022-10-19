@@ -6,6 +6,7 @@
 package Lab5;
 import Lab5.Alumnos.MetodoAlumno;
 import java.awt.Color;
+import java.awt.event.KeyEvent;
 import javax.swing.JPanel;
 
 
@@ -100,6 +101,11 @@ public class RegistroAlumnos extends javax.swing.JPanel{
 
         textNombre.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         textNombre.setBorder(null);
+        textNombre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                EnterSelect(evt);
+            }
+        });
         add(textNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 100, 180, -1));
 
         Title1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -112,10 +118,20 @@ public class RegistroAlumnos extends javax.swing.JPanel{
 
         textCarrera.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         textCarrera.setBorder(null);
+        textCarrera.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                EnterSelect(evt);
+            }
+        });
         add(textCarrera, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 140, 180, -1));
 
         textCarnet.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         textCarnet.setBorder(null);
+        textCarnet.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                EnterSelect(evt);
+            }
+        });
         add(textCarnet, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 180, 180, -1));
 
         jSeparator4.setForeground(new java.awt.Color(0, 153, 255));
@@ -142,8 +158,24 @@ public class RegistroAlumnos extends javax.swing.JPanel{
     private void button_AñadirMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_AñadirMouseExited
         resetColor(button_Añadir);
     }//GEN-LAST:event_button_AñadirMouseExited
+    
+    // <editor-fold defaultstate="collapsed" desc="Funciones para insertar en el JTable Registro">
     // Añadir a registro Alumnos
     private void button_AñadirMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_AñadirMousePressed
+        Añadir();
+    }//GEN-LAST:event_button_AñadirMousePressed
+
+    private void EnterSelect(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_EnterSelect
+        if(evt.getKeyCode() != KeyEvent.VK_ENTER)
+        {
+            return;
+        }
+        Añadir();
+    }//GEN-LAST:event_EnterSelect
+    
+   //Funcion Añadir
+    private void Añadir()
+    {
         String nombre = textNombre.getText();
         String carrera = textCarrera.getText();
         String carnet = textCarnet.getText();
@@ -156,8 +188,9 @@ public class RegistroAlumnos extends javax.swing.JPanel{
         textNombre.setText("");
         textCarrera.setText("");
         textCarnet.setText("");
-    }//GEN-LAST:event_button_AñadirMousePressed
-
+    }
+    //</editor-fold>
+    
    //colores
     void setColor(JPanel panel){
         panel.setBackground(new Color(21,101,192));

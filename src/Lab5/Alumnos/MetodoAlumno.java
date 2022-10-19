@@ -18,6 +18,7 @@ public class MetodoAlumno extends ArrayListAlumno{
      * @param carrera
      * @param carnet
      */
+    // <editor-fold defaultstate="collapsed" desc="Añadir a los atributos de ArrayListAlumno">
     //Añadiendo a el ArrayList
     public void add(String nombre, String carrera, String carnet)
     {
@@ -25,7 +26,9 @@ public class MetodoAlumno extends ArrayListAlumno{
         Carrera.add(carrera);
         Carnet.add(carnet);
     }
-    // <editor-fold defaultstate="collapsed" desc="Mostrar en JTable">
+    //</editor-fold>
+    
+    // <editor-fold defaultstate="collapsed" desc="Mostrar en JTable El ArrayList">
     //Mostrando en JTable
     public void mostrar(JTable datos)
     {

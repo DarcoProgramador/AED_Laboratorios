@@ -15,7 +15,9 @@ public class Dashboard extends javax.swing.JFrame {
     //Ubicacion de la ventana
     int xMouse;
     int yMouse;
-
+    
+    //Panel de RegistroAlumnos sin Reabrir
+    RegistroAlumnos p2 = new RegistroAlumnos();
     
     /**
      * Creates new form Dashboard
@@ -222,8 +224,7 @@ public class Dashboard extends javax.swing.JFrame {
             }
             
             case 1 -> {
-                //Arreglo en global;
-                RegistroAlumnos p2 = new RegistroAlumnos();
+                //Registro en global;
                 p2.setSize(750, 430);
                 p2.setLocation(0,0);
 
