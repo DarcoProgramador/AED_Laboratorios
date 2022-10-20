@@ -33,25 +33,28 @@ public class Menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        bg = new javax.swing.JPanel();
         Title = new javax.swing.JPanel();
         red_squr = new javax.swing.JPanel();
         exit = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        bg = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         btn_Lab2 = new javax.swing.JButton();
         btn_lab1 = new javax.swing.JButton();
         btn_Regresar = new javax.swing.JButton();
         btn_Lab3 = new javax.swing.JButton();
         btn_Lab4 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        btn_Lab5 = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(500, 230));
         setUndecorated(true);
-
-        bg.setBackground(new java.awt.Color(51, 51, 255));
-        bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Title.setBackground(new java.awt.Color(255, 255, 255));
         Title.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -78,6 +81,7 @@ public class Menu extends javax.swing.JFrame {
                 red_squrMousePressed(evt);
             }
         });
+        red_squr.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         exit.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         exit.setForeground(new java.awt.Color(102, 102, 102));
@@ -96,49 +100,34 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout red_squrLayout = new javax.swing.GroupLayout(red_squr);
-        red_squr.setLayout(red_squrLayout);
-        red_squrLayout.setHorizontalGroup(
-            red_squrLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(exit, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        red_squrLayout.setVerticalGroup(
-            red_squrLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(red_squrLayout.createSequentialGroup()
-                .addComponent(exit, javax.swing.GroupLayout.PREFERRED_SIZE, 19, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
         javax.swing.GroupLayout TitleLayout = new javax.swing.GroupLayout(Title);
         Title.setLayout(TitleLayout);
         TitleLayout.setHorizontalGroup(
             TitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TitleLayout.createSequentialGroup()
-                .addGap(0, 274, Short.MAX_VALUE)
-                .addComponent(red_squr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(978, Short.MAX_VALUE)
+                .addComponent(red_squr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(exit, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         TitleLayout.setVerticalGroup(
             TitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(red_squr, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(red_squr, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+            .addGroup(TitleLayout.createSequentialGroup()
+                .addComponent(exit, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        bg.add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 310, 20));
+        getContentPane().add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 30));
 
-        jPanel1.setBackground(new java.awt.Color(51, 51, 255));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(204, 204, 255));
-        jLabel1.setText("Menu de Laboratorios");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
-
-        bg.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 310, 70));
+        bg.setBackground(new java.awt.Color(51, 51, 255));
+        bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 255));
         jPanel2.setForeground(new java.awt.Color(204, 204, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btn_Lab2.setBackground(new java.awt.Color(204, 204, 255));
+        btn_Lab2.setBackground(new java.awt.Color(51, 0, 255));
         btn_Lab2.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         btn_Lab2.setForeground(new java.awt.Color(0, 0, 153));
         btn_Lab2.setText("Laboratorio 2");
@@ -148,9 +137,9 @@ public class Menu extends javax.swing.JFrame {
                 btn_Lab2MousePressed(evt);
             }
         });
-        jPanel2.add(btn_Lab2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 310, 50));
+        jPanel2.add(btn_Lab2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 90, 310, 50));
 
-        btn_lab1.setBackground(new java.awt.Color(204, 204, 255));
+        btn_lab1.setBackground(new java.awt.Color(51, 0, 255));
         btn_lab1.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         btn_lab1.setForeground(new java.awt.Color(0, 0, 153));
         btn_lab1.setText("Laboratorio 1");
@@ -160,7 +149,7 @@ public class Menu extends javax.swing.JFrame {
                 btn_lab1MousePressed(evt);
             }
         });
-        jPanel2.add(btn_lab1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 310, 50));
+        jPanel2.add(btn_lab1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, 310, 50));
 
         btn_Regresar.setBackground(new java.awt.Color(204, 204, 255));
         btn_Regresar.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
@@ -178,9 +167,9 @@ public class Menu extends javax.swing.JFrame {
                 btn_RegresarActionPerformed(evt);
             }
         });
-        jPanel2.add(btn_Regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 440, 310, 50));
+        jPanel2.add(btn_Regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 490, 310, 50));
 
-        btn_Lab3.setBackground(new java.awt.Color(204, 204, 255));
+        btn_Lab3.setBackground(new java.awt.Color(51, 0, 255));
         btn_Lab3.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         btn_Lab3.setForeground(new java.awt.Color(0, 0, 153));
         btn_Lab3.setText("Laboratorio 3");
@@ -190,9 +179,9 @@ public class Menu extends javax.swing.JFrame {
                 btn_Lab3MousePressed(evt);
             }
         });
-        jPanel2.add(btn_Lab3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 310, 50));
+        jPanel2.add(btn_Lab3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 250, 310, 50));
 
-        btn_Lab4.setBackground(new java.awt.Color(204, 204, 255));
+        btn_Lab4.setBackground(new java.awt.Color(51, 0, 255));
         btn_Lab4.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         btn_Lab4.setForeground(new java.awt.Color(0, 0, 153));
         btn_Lab4.setText("Laboratorio 4");
@@ -202,25 +191,43 @@ public class Menu extends javax.swing.JFrame {
                 btn_Lab4MousePressed(evt);
             }
         });
-        jPanel2.add(btn_Lab4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 310, 50));
+        jPanel2.add(btn_Lab4, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 250, 310, 50));
 
-        bg.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 310, 490));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Lab2.png"))); // NOI18N
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 10, 170, 60));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(bg, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(bg, javax.swing.GroupLayout.PREFERRED_SIZE, 560, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Lab4.png"))); // NOI18N
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 170, 170, 60));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Lab1.png"))); // NOI18N
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, 170, 60));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Lab3.jpg"))); // NOI18N
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 170, 170, 60));
+
+        btn_Lab5.setBackground(new java.awt.Color(51, 0, 255));
+        btn_Lab5.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        btn_Lab5.setForeground(new java.awt.Color(0, 0, 153));
+        btn_Lab5.setText("Laboratorio 5");
+        btn_Lab5.setBorderPainted(false);
+        btn_Lab5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btn_Lab5MousePressed(evt);
+            }
+        });
+        jPanel2.add(btn_Lab5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 410, 310, 50));
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Lab5.png"))); // NOI18N
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 330, 170, 60));
+
+        bg.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 1020, 550));
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 204, 255));
+        jLabel1.setText("Menu de Laboratorios");
+        bg.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 40, -1, -1));
+
+        getContentPane().add(bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 640));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -293,6 +300,11 @@ public class Menu extends javax.swing.JFrame {
         new Lab4.Laboratorio4().setVisible(true);
     }//GEN-LAST:event_btn_Lab4MousePressed
 
+    private void btn_Lab5MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_Lab5MousePressed
+        dispose();
+        new Lab5.Laboratorio5().setVisible(true);
+    }//GEN-LAST:event_btn_Lab5MousePressed
+
     /**
      * @param args the command line arguments
      */
@@ -303,11 +315,16 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton btn_Lab2;
     private javax.swing.JButton btn_Lab3;
     private javax.swing.JButton btn_Lab4;
+    private javax.swing.JButton btn_Lab5;
     private javax.swing.JButton btn_Regresar;
     private javax.swing.JButton btn_lab1;
     private javax.swing.JLabel exit;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel red_squr;
     // End of variables declaration//GEN-END:variables

@@ -579,7 +579,8 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_RegresarMouseExited
     //Accion de el boton regresar
     private void btn_RegresarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_RegresarMousePressed
-        
+        dispose();
+        new Laboratorio5().setVisible(true);
     }//GEN-LAST:event_btn_RegresarMousePressed
 //</editor-fold>
     /**

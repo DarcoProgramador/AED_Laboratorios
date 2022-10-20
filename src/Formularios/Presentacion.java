@@ -37,7 +37,6 @@ public class Presentacion extends javax.swing.JFrame {
         exit = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -54,6 +53,7 @@ public class Presentacion extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Presentacion");
@@ -123,7 +123,7 @@ public class Presentacion extends javax.swing.JFrame {
         TitleLayout.setHorizontalGroup(
             TitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TitleLayout.createSequentialGroup()
-                .addGap(0, 694, Short.MAX_VALUE)
+                .addGap(0, 984, Short.MAX_VALUE)
                 .addComponent(red_squr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         TitleLayout.setVerticalGroup(
@@ -131,18 +131,13 @@ public class Presentacion extends javax.swing.JFrame {
             .addComponent(red_squr, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        bg.add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, -1));
+        bg.add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 30));
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recurso-17@300x 2.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, -1, -1));
-
-        jLabel2.setFont(new java.awt.Font("Segoe UI Black", 1, 22)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(204, 204, 255));
-        jLabel2.setText("PRESENTACIÓN");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(502, 26, -1, -1));
 
         bg.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 730, 80));
 
@@ -152,68 +147,68 @@ public class Presentacion extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 102));
         jLabel3.setText("Integrantes:");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, -1, -1));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI Black", 1, 16)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 51, 255));
         jLabel4.setText("Sergio Rafael Manzanares Cano");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, -1, 20));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 230, -1, 20));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 102));
         jLabel5.setText("Profesor:");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 0, 102));
         jLabel6.setText("Asignatura");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 0, 102));
         jLabel7.setText("Netbeans");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 60, -1, -1));
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 70, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI Black", 1, 16)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 51, 255));
         jLabel8.setText("2M5-CO");
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, -1, -1));
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 50, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI Black", 1, 16)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 51, 255));
         jLabel9.setText("Eliezer Aburto");
-        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 70, -1, 20));
+        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, -1, 20));
 
         jLabel10.setFont(new java.awt.Font("Segoe UI Black", 1, 16)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(0, 51, 255));
         jLabel10.setText("Algoritmización y Estructura de Datos");
-        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, -1, 20));
+        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, -1, 20));
 
         jLabel11.setFont(new java.awt.Font("Segoe UI Black", 1, 16)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(0, 51, 255));
         jLabel11.setText("David Antonio Carcache");
-        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, -1, 20));
+        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 200, -1, 20));
 
         jLabel12.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(0, 0, 102));
         jLabel12.setText("Grupo:");
-        jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
+        jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, -1, -1));
 
         jLabel13.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(0, 0, 102));
         jLabel13.setText("Herramientas");
-        jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 20, -1, -1));
+        jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 30, -1, -1));
 
         jLabel14.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(0, 0, 102));
         jLabel14.setText("Java");
-        jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 60, -1, -1));
+        jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 70, -1, -1));
 
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/NetBeans-Logo.wine.png"))); // NOI18N
-        jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 90, -1, -1));
+        jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 100, -1, -1));
 
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pngwing.com.png"))); // NOI18N
-        jPanel2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 90, -1, -1));
+        jPanel2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 100, -1, -1));
 
         jButton1.setBackground(new java.awt.Color(204, 204, 255));
         jButton1.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
@@ -226,9 +221,14 @@ public class Presentacion extends javax.swing.JFrame {
                 jButton1MousePressed(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 270, 120, 40));
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 370, 120, 40));
 
-        bg.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 730, 330));
+        bg.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 1020, 530));
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(204, 204, 255));
+        jLabel2.setText("PRESENTACIÓN");
+        bg.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 50, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
