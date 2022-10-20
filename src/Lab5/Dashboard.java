@@ -26,9 +26,7 @@ public class Dashboard extends javax.swing.JFrame {
     RegistroEmpresa p4 = new RegistroEmpresa();
     MayorMenor p6 = new MayorMenor();
     
-    /**
-     * Creates new form Dashboard
-     */
+    
     //Iniciando componentes y cargando el menu principal
     
     
@@ -313,6 +311,8 @@ public class Dashboard extends javax.swing.JFrame {
         app_name = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         Botones = new javax.swing.JPanel();
+        btn_Regresar = new javax.swing.JPanel();
+        jLabel20 = new javax.swing.JLabel();
         Header = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         fecha = new javax.swing.JLabel();
@@ -328,11 +328,6 @@ public class Dashboard extends javax.swing.JFrame {
         setLocationByPlatform(true);
         setUndecorated(true);
         setResizable(false);
-        addWindowListener(new java.awt.event.WindowAdapter() {
-            public void windowActivated(java.awt.event.WindowEvent evt) {
-                formWindowActivated(evt);
-            }
-        });
 
         Background.setBackground(new java.awt.Color(255, 255, 255));
         Background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -362,6 +357,29 @@ public class Dashboard extends javax.swing.JFrame {
         );
 
         Menu.add(Botones, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 270, 460));
+
+        btn_Regresar.setBackground(new java.awt.Color(13, 71, 161));
+        btn_Regresar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btn_Regresar.setPreferredSize(new java.awt.Dimension(270, 51));
+        btn_Regresar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_RegresarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_RegresarMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btn_RegresarMousePressed(evt);
+            }
+        });
+        btn_Regresar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel20.setText("Regresar");
+        btn_Regresar.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, -1, 30));
+
+        Menu.add(btn_Regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 590, -1, -1));
 
         Background.add(Menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 640));
 
@@ -505,10 +523,6 @@ public class Dashboard extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
-        // TODO add your handling code here:
-    }//GEN-LAST:event_formWindowActivated
-
 // <editor-fold defaultstate="collapsed" desc="Animaciones y Acciones del Menu">
 //Arrastrar ventana
     private void TitleMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TitleMouseDragged
@@ -551,12 +565,23 @@ public class Dashboard extends javax.swing.JFrame {
         red_squr.setBackground(new Color(255,255,255));
         exit.setForeground(new Color(102,102,102));
     }//GEN-LAST:event_exitMouseExited
-//</editor-fold>
 
     private void Activar_color(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Activar_color
 
     }//GEN-LAST:event_Activar_color
-
+    //Animacion de color regresar
+    private void btn_RegresarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_RegresarMouseEntered
+        btn_Regresar.setBackground(colorSet);
+    }//GEN-LAST:event_btn_RegresarMouseEntered
+    
+    private void btn_RegresarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_RegresarMouseExited
+        btn_Regresar.setBackground(colorReSet);
+    }//GEN-LAST:event_btn_RegresarMouseExited
+    //Accion de el boton regresar
+    private void btn_RegresarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_RegresarMousePressed
+        
+    }//GEN-LAST:event_btn_RegresarMousePressed
+//</editor-fold>
     /**
      * @param args the command line arguments
      */
@@ -569,10 +594,12 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JPanel Menu;
     private javax.swing.JPanel Title;
     private javax.swing.JLabel app_name;
+    private javax.swing.JPanel btn_Regresar;
     public static javax.swing.JPanel content;
     private javax.swing.JLabel exit;
     private javax.swing.JLabel fecha;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JPanel red_squr;
     private javax.swing.JLabel slogan;
