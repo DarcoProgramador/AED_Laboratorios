@@ -12,6 +12,7 @@ import javax.swing.ImageIcon;
 import static JPanelArrayButton.JPanelBtn.*;
 import Lab5.Empresa.RegistroEmpresa;
 import Lab5.ListNegativoPositivo.Numeros;
+import Lab5.MayorMenor.MayorMenor;
 
 public class Dashboard extends javax.swing.JFrame {
     //Creando variables de control
@@ -23,6 +24,7 @@ public class Dashboard extends javax.swing.JFrame {
     RegistroAlumnos p2 = new RegistroAlumnos();
     Numeros p3 = new Numeros();
     RegistroEmpresa p4 = new RegistroEmpresa();
+    MayorMenor p6 = new MayorMenor();
     
     /**
      * Creates new form Dashboard
@@ -271,6 +273,17 @@ public class Dashboard extends javax.swing.JFrame {
 
                 content.removeAll();
                 content.add(p5, BorderLayout.CENTER);
+                content.revalidate();
+                content.repaint(); 
+            }
+            
+            case 5 -> {
+                // Abrir sección
+                p6.setSize(750, 430);
+                p6.setLocation(0,0);
+
+                content.removeAll();
+                content.add(p6, BorderLayout.CENTER);
                 content.revalidate();
                 content.repaint(); 
             }

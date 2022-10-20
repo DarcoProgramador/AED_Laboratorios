@@ -2,7 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Lab5.ListNegativoPositivo;
+package Lab5.MayorMenor;
+
+import Lab5.ListNegativoPositivo.*;
 import java.util.ArrayList;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
@@ -11,28 +13,40 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author david
  */
-public class ListaNegPos {
+public class ListaMayMen {
     ArrayList<Integer> Numeros =new ArrayList<>();
-    ArrayList<Integer> Negativo =new ArrayList<>(); 
-    ArrayList<Integer> Positivo =new ArrayList<>();
+    ArrayList<Integer> Mayor =new ArrayList<>(); 
+    ArrayList<Integer> Menor =new ArrayList<>();
+    int Num;
+    
+    
+    ListaMayMen()
+    {
+        Num = 0;
+    }
+    
+    ListaMayMen(int Limite)
+    {
+        Num = Limite;
+    }
     
     // <editor-fold defaultstate="collapsed" desc="Agregando a los ArrayList">
-    //agregando segun si es Negativo o Positivo
+    //agregando segun si es Mayor o Menor que 10
     public void add(int numero)
     {
         Numeros.add(numero);
-        if(numero > 0)
+        if(numero < 10)
         {
-            Positivo.add(numero);
+            Menor.add(numero);
         }
-        else if(numero < 0)
+        else if(numero > 10)
         {
-            Negativo.add(numero);
+            Mayor.add(numero);
         }
         else
         {
-            Positivo.add(numero);
-            Negativo.add(numero);
+            Menor.add(numero);
+            Mayor.add(numero);
         }
     }
     //</editor-fold>
@@ -51,20 +65,20 @@ public class ListaNegPos {
     }
     //</editor-fold>
     
-    // <editor-fold defaultstate="collapsed" desc="Mostrar en StringBuilder El ArrayList Negativo y Positivo">
+    // <editor-fold defaultstate="collapsed" desc="Mostrar en StringBuilder El ArrayList Mayor o Menor">
     //Imprimiendo en StringBuilder
     public StringBuilder mostrarPN()
     {
         StringBuilder MessageBuilder = new StringBuilder();
-        MessageBuilder.append("Numeros Positivos de la Lista:\n");
-        for(int i = 0; i < Positivo.size() ; i++)
+        MessageBuilder.append("Numeros Mayores a ").append(Num).append(":\n");
+        for(int i = 0; i < Mayor.size() ; i++)
         {
-            MessageBuilder.append(String.valueOf(Positivo.get(i))).append("  ");
+            MessageBuilder.append(String.valueOf(Mayor.get(i))).append("  ");
         }
-        MessageBuilder.append("\nNumeros Negativos de la Lista:\n");
-        for(int i = 0; i < Negativo.size() ; i++)
+        MessageBuilder.append("\nNumeros Menores a ").append(Num).append(":\n");
+        for(int i = 0; i < Menor.size() ; i++)
         {
-            MessageBuilder.append(String.valueOf(Negativo.get(i))).append("  ");
+            MessageBuilder.append(String.valueOf(Menor.get(i))).append("  ");
         }
         
         return MessageBuilder;
