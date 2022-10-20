@@ -4,7 +4,6 @@
  */
 package Lab5.MayorMenor;
 
-import Lab5.ListNegativoPositivo.*;
 import java.util.ArrayList;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
