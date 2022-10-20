@@ -11,7 +11,7 @@ import javax.swing.JPanel;
 
 
 public class RegistroEmpresa extends javax.swing.JPanel{
-   
+   //Creando ArrayList de Empresa
     MetodoEmpresa Empresa = new MetodoEmpresa();
     
     public RegistroEmpresa() {
@@ -34,8 +34,8 @@ public class RegistroEmpresa extends javax.swing.JPanel{
         textNombre = new javax.swing.JTextField();
         Title1 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
-        textCarrera = new javax.swing.JTextField();
-        textCarnet = new javax.swing.JTextField();
+        textnEmpresa = new javax.swing.JTextField();
+        textSalario = new javax.swing.JTextField();
         jSeparator4 = new javax.swing.JSeparator();
         lbCarnet = new javax.swing.JLabel();
         lbNombre = new javax.swing.JLabel();
@@ -56,7 +56,7 @@ public class RegistroEmpresa extends javax.swing.JPanel{
 
         jSeparator1.setForeground(new java.awt.Color(0, 153, 255));
         jSeparator1.setPreferredSize(new java.awt.Dimension(200, 10));
-        add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 130, 200, 10));
+        add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 110, 200, 10));
 
         jSeparator3.setForeground(new java.awt.Color(204, 204, 204));
         jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
@@ -84,7 +84,7 @@ public class RegistroEmpresa extends javax.swing.JPanel{
         Lb_TextAñadir.setText("Añadir");
         button_Añadir.add(Lb_TextAñadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, -1, -1));
 
-        add(button_Añadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 280, 260, 50));
+        add(button_Añadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 210, 260, 50));
 
         JtableRegistro.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -105,7 +105,7 @@ public class RegistroEmpresa extends javax.swing.JPanel{
                 EnterSelect(evt);
             }
         });
-        add(textNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 100, 180, -1));
+        add(textNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 80, 180, -1));
 
         Title1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Title1.setText("Añadir  al Registro:");
@@ -113,41 +113,47 @@ public class RegistroEmpresa extends javax.swing.JPanel{
 
         jSeparator2.setForeground(new java.awt.Color(0, 153, 255));
         jSeparator2.setPreferredSize(new java.awt.Dimension(200, 10));
-        add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 170, 200, 10));
+        add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 150, 200, 10));
 
-        textCarrera.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        textCarrera.setBorder(null);
-        textCarrera.addKeyListener(new java.awt.event.KeyAdapter() {
+        textnEmpresa.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        textnEmpresa.setBorder(null);
+        textnEmpresa.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 EnterSelect(evt);
             }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                ValidarEmpresa(evt);
+            }
         });
-        add(textCarrera, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 140, 180, -1));
+        add(textnEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 120, 180, -1));
 
-        textCarnet.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        textCarnet.setBorder(null);
-        textCarnet.addKeyListener(new java.awt.event.KeyAdapter() {
+        textSalario.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        textSalario.setBorder(null);
+        textSalario.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 EnterSelect(evt);
             }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                ValidarSalario(evt);
+            }
         });
-        add(textCarnet, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 180, 180, -1));
+        add(textSalario, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 160, 180, -1));
 
         jSeparator4.setForeground(new java.awt.Color(0, 153, 255));
         jSeparator4.setPreferredSize(new java.awt.Dimension(200, 10));
-        add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 210, 200, 10));
+        add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 190, 200, 10));
 
         lbCarnet.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
         lbCarnet.setText("Salario:");
-        add(lbCarnet, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 180, -1, -1));
+        add(lbCarnet, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 160, -1, -1));
 
         lbNombre.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
         lbNombre.setText("Nombre:");
-        add(lbNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 100, -1, -1));
+        add(lbNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 80, -1, -1));
 
         lbCarrera.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
         lbCarrera.setText("N Empresa:");
-        add(lbCarrera, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 140, 90, -1));
+        add(lbCarrera, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 120, 90, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void button_AñadirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_AñadirMouseEntered
@@ -171,26 +177,86 @@ public class RegistroEmpresa extends javax.swing.JPanel{
         }
         Añadir();
     }//GEN-LAST:event_EnterSelect
+    //valida que solo se escriban char para representar enteros y no mas de 4 digitos
+    private void ValidarEmpresa(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ValidarEmpresa
+        int key = evt.getKeyChar();
+        String num = textnEmpresa.getText();
+        boolean numeros = key >= 48 && key <= 57;
+
+        if (!numeros || num.length() > 3)
+        {
+            evt.consume();
+        }
+    }//GEN-LAST:event_ValidarEmpresa
+    //Valida que solo se escriban char para representar flotantes
+    private void ValidarSalario(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ValidarSalario
+        int key = evt.getKeyChar();
+
+        boolean numeros = key >= 48 && key <= 57 || key == 46;
+
+        if (!numeros)
+        {
+            evt.consume();
+        }
+    }//GEN-LAST:event_ValidarSalario
     
     //Funcion Añadir
     private void Añadir()
     {
         String nombre = textNombre.getText();
-        String nEmpresa = textCarrera.getText();
-        String Salario = textCarnet.getText();
+        String nEmpresa = textnEmpresa.getText();
+        String Salario = textSalario.getText();
         if(nombre.isEmpty() || nEmpresa.isEmpty() || Salario.isEmpty())
         {
             return;
         }
+        if(!isNumericEmpresa(nEmpresa))
+        {
+            return;
+        }
+        if(!isNumericSalario(Salario))
+        {
+            return;
+        }
+        
         Empresa.add(nombre, Integer.parseInt(nEmpresa), Float.parseFloat(Salario));
         Empresa.mostrar(JtableRegistro);
         textNombre.setText("");
-        textCarrera.setText("");
-        textCarnet.setText("");
+        textnEmpresa.setText("");
+        textSalario.setText("");
+    }
+    
+    //validar nEmpresa si este es posible convertir
+    public boolean isNumericEmpresa(String str)
+    {
+      try
+      {
+          Integer.parseInt(str);
+      }
+      catch(NumberFormatException ex)
+      {
+          return false;
+      }
+      return str.length() == 4;
+    }
+    
+    //validar nEmpresa si este es posible convertir
+    public boolean isNumericSalario(String str)
+    {
+      try
+      {
+          Float.parseFloat(str);
+      }
+      catch(NumberFormatException ex)
+      {
+          return false;
+      }
+      return true;
     }
     //</editor-fold>
     
-   //colores
+    
+    //colores
     void setColor(JPanel panel){
         panel.setBackground(new Color(21,101,192));
     }
@@ -213,8 +279,8 @@ public class RegistroEmpresa extends javax.swing.JPanel{
     private javax.swing.JLabel lbCarnet;
     private javax.swing.JLabel lbCarrera;
     private javax.swing.JLabel lbNombre;
-    private javax.swing.JTextField textCarnet;
-    private javax.swing.JTextField textCarrera;
     private javax.swing.JTextField textNombre;
+    private javax.swing.JTextField textSalario;
+    private javax.swing.JTextField textnEmpresa;
     // End of variables declaration//GEN-END:variables
 }

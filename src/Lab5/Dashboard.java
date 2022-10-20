@@ -10,6 +10,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.ImageIcon;
 import static JPanelArrayButton.JPanelBtn.*;
+import Lab5.Empresa.RegistroEmpresa;
 import Lab5.ListNegativoPositivo.Numeros;
 
 public class Dashboard extends javax.swing.JFrame {
@@ -21,6 +22,7 @@ public class Dashboard extends javax.swing.JFrame {
     //Panel de RegistroAlumnos sin Reabrir
     RegistroAlumnos p2 = new RegistroAlumnos();
     Numeros p3 = new Numeros();
+    RegistroEmpresa p4 = new RegistroEmpresa();
     
     /**
      * Creates new form Dashboard
@@ -252,6 +254,13 @@ public class Dashboard extends javax.swing.JFrame {
             
             case 3 -> {
                 // Abrir sección
+                p4.setSize(750, 430);
+                p4.setLocation(0,0);
+
+                content.removeAll();
+                content.add(p4, BorderLayout.CENTER);
+                content.revalidate();
+                content.repaint();
                 
             }
         }
