@@ -255,7 +255,6 @@ public class RegistroEmpresa extends javax.swing.JPanel{
     }
     //</editor-fold>
     
-    
     //colores
     void setColor(JPanel panel){
         panel.setBackground(new Color(21,101,192));

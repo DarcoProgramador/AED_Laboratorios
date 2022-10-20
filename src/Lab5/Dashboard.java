@@ -260,8 +260,19 @@ public class Dashboard extends javax.swing.JFrame {
                 content.removeAll();
                 content.add(p4, BorderLayout.CENTER);
                 content.revalidate();
-                content.repaint();
-                
+                content.repaint(); 
+            }
+            
+            case 4 -> {
+                // Abrir sección
+                Pilas p5 = new Pilas();
+                p5.setSize(750, 430);
+                p5.setLocation(0,0);
+
+                content.removeAll();
+                content.add(p5, BorderLayout.CENTER);
+                content.revalidate();
+                content.repaint(); 
             }
         }
     }
