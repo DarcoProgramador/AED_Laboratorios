@@ -22,7 +22,7 @@ public class Dashboard extends javax.swing.JFrame {
     int yMouse;
     
     //PanelArray
-    JPanelArray PanelArray = new JPanelArray();
+    JPanelArray PanelArray;
     //Panel de RegistroAlumnos sin Reabrir
     RegistroAlumnos p2 = new RegistroAlumnos();
     Numeros p3 = new Numeros();
@@ -53,21 +53,24 @@ public class Dashboard extends javax.swing.JFrame {
         content.repaint();
         setLocationRelativeTo(null);
         
-        PanelArray = new JPanelArray(Botones,filas);//Numero de botones y el panel donde va a estar
-        PanelArray.Panel_Bounds(ejeX , ejeY, anchoBoton, altoBoton);
-        PanelArray.Panel_Separacion(separacion);
-        iniciando_titulos();
-        setMouseListener(PanelArray.JPaneles);
+        
+        
+        
+        
         // <editor-fold defaultstate="collapsed" desc="Cargando Botones">
         //cargando botones----------------------------------------------------------------------------------------------
         //iniciando parametros del boton
-        setBoton(boton, filas);//Arreglo de seleccionados en falso
-        setColorJPanelArray(JPaneles,filas,colum,colorReSet);
+        PanelArray = new JPanelArray(Botones,filas);//Numero de botones y el panel donde va a estar
+        PanelArray.Panel_Bounds(ejeX , ejeY, anchoBoton, altoBoton);
+        PanelArray.Panel_Separacion(separacion);
+        PanelArray.Panel_set_colors(colorReSet);
         //Iniciando boton seleccionado
-        boton[0] = true;//primer elemento Arreglo de seleccionados en True
-        JPaneles[0][0].setBackground(colorSet);//color del seleccionado
+        PanelArray.button_active[0] = true; 
+        PanelArray.JPaneles[0].setBackground(colorSet);//color del seleccionado
         //Iniciando los Texto, Colores y fuente de Texto
-     
+        iniciando_titulos();
+        //añadiendo el MouseListener
+        setMouseListener(PanelArray.JPaneles);
         //</editor-fold>
     }
     
@@ -124,16 +127,13 @@ public class Dashboard extends javax.swing.JFrame {
         
     }
     
-    // <editor-fold defaultstate="collapsed" desc="Setear Botones en Falso">
-    //Botones En falso
-    private void setBoton(boolean [] button, int filas)
+    private void setBoton(boolean [] button)
     {
-        for(int i = 0; i<filas ; i++)
+        for(int i = 0 ; i < filas ; i++)
         {
-            boton[i] = false;
+            button[i] = false;
         }
     }
-    //</editor-fold>
     
     // <editor-fold defaultstate="collapsed" desc="MauseListener para cada Boton">
     //Metiendo un MouseListener a cada boton
@@ -162,18 +162,15 @@ public class Dashboard extends javax.swing.JFrame {
         public void mousePressed(MouseEvent event) {
             for(int i = 0 ; i < filas ; i++)//inicializando botones
             {
-                for (int j = 0 ; j < colum ; j++)
+                if(event.getComponent().equals(PanelArray.JPaneles[i]))
                 {
-                    if(event.getComponent().equals(JPaneles[i][j]))
+                    if(!boton[i])
                     {
-                        if(!boton[i])
-                        {
-                            setBoton(boton, filas);//Arreglo de seleccionados en falso
-                            boton[i] = true;//primer elemento Arreglo de seleccionados en True
-                            setColorJPanelArray(JPaneles,filas,colum,colorReSet);//Color general para todos los botones
-                            JPaneles[i][j].setBackground(colorSet);//color del seleccionado
-                            boton_selec_Action(i);
-                        }
+                        setBoton(PanelArray.button_active);//Configurando todos los botones en falso
+                        PanelArray.button_active[i] = true;//boton seleccionado en true
+                        PanelArray.Panel_set_colors(colorReSet);//Color normal para todos los botones
+                        PanelArray.JPaneles[i].setBackground(colorSet);//Color diferente para el seleccionado
+                        boton_selec_Action(i);
                     }
                 }
             }
@@ -188,12 +185,9 @@ public class Dashboard extends javax.swing.JFrame {
         public void mouseEntered(MouseEvent event) {
             for(int i = 0 ; i < filas ; i++)//inicializando botones
             {
-                for (int j = 0 ; j < colum ; j++)
+                if(event.getComponent().equals(PanelArray.JPaneles[i]))
                 {
-                    if(event.getComponent().equals(JPaneles[i][j]))
-                    {
-                       JPaneles[i][j].setBackground(colorSet);
-                    }
+                   PanelArray.JPaneles[i].setBackground(colorSet);
                 }
             }
         }
@@ -202,14 +196,11 @@ public class Dashboard extends javax.swing.JFrame {
         public void mouseExited(MouseEvent event) {
             for(int i = 0 ; i < filas ; i++)//inicializando botones
             {
-                for (int j = 0 ; j < colum ; j++)
+                if(event.getComponent().equals(PanelArray.JPaneles[i]))
                 {
-                    if(event.getComponent().equals(JPaneles[i][j]))
-                    {
-                        if(!boton[i]){
-                            JPaneles[i][j].setBackground(colorReSet);
-                        }   
-                    }
+                    if(!PanelArray.button_active[i]){
+                        PanelArray.JPaneles[i].setBackground(colorReSet);
+                    }   
                 }
             }
         }
