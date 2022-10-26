@@ -24,21 +24,16 @@ public class JPanelMetod {
      * @param separacion
      */
    //Iniciando arreglo de botones y sobrecargando el metodo
-    public static void JpanelArray(JPanel Panel, JPanel [][] Botones,int filas, int fila, int largo, int ancho, int posicion_x, int posicion_y, int separacion)
+    public static void JpanelArray(JPanel Panel, JPanel [] Botones,int NumPanel)
     {
         int x = posicion_x;
         int y = posicion_y;
         for(int i = 0 ; i < filas ; i++)//inicializando botones
         {
-            for (int j = 0 ; j < fila ; j++)
-            {
-                Botones[i][j] = new JPanel();//Modoficar en caso de cambiar
-                Botones[i][j].setBounds(x, y, largo, ancho);
-                Panel.add(Botones[i][j]);
-                x += largo+separacion;
-            }
-            x = posicion_x;
-            y += ancho+separacion;
+            Botones[i] = new JPanel();//Modoficar en caso de cambiar
+            Botones[i].setBounds(x, y, largo, ancho);
+            Panel.add(Botones[i]);
+            x += largo+separacion;
         }
     }
     
