@@ -22,8 +22,7 @@ public class JPanelArray {
     int ejeX = 0;//---->
     int ejeY = 0;//Abajo
     int separacion = 0;
-    Color colorReSet = new Color(18,90,173);//Color predefinido
-    Color colorSet = new Color(21,101,192);//Cambio de color
+    Color color_background = new Color(18,90,173);//Color de fondo
     public JPanel [] JPaneles;//Tipo de boton
     public JLabel[] TitulosPanel;//El mas 1 es para las imagenes
     public JLabel[] IconPanel;//Icono del boton
@@ -108,5 +107,10 @@ public class JPanelArray {
         {
             IconPanel[i].setBounds(x, y, ancho, alto);
         }
+    }
+    
+    public void Panel_set_colors(Color color_fondo)
+    {
+        this.color_background = color_fondo;
     }
 }
