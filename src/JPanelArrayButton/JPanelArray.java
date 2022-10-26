@@ -18,11 +18,11 @@ public class JPanelArray {
     // <editor-fold defaultstate="collapsed" desc="Variables de los botones">
     //Variables globales botones
     int filas = 0;
-    int altoBoton = 0;
-    int anchoBoton = 0;
+    int altoBoton;
+    int anchoBoton;
     int ejeX = 0;//---->
     int ejeY = 0;//Abajo
-    int separacion = 0;
+    int separacion;
     Color color_background = new Color(18,90,173);//Color de fondo
     public JPanel [] JPaneles;//Tipo de boton
     public JLabel[] TitulosPanel;//El mas 1 es para las imagenes
@@ -41,11 +41,15 @@ public class JPanelArray {
         TitulosPanel = new JLabel [filas];
         IconPanel = new JLabel [filas];
         button_active = new boolean [filas];
+        
+        int x = 0;
+        int y = 0;
+        
         for(int i = 0 ; i < filas ; i++)//inicializando botones
         {
             JPaneles[i] = new JPanel();
-            Set_PanelText(i);
             Panel.add(JPaneles[i]);
+            Set_PanelText(i);
             button_active[i] = false;
         }
     }
@@ -62,10 +66,10 @@ public class JPanelArray {
     public void Panel_Separacion(int separacion)
     {
         this.separacion = separacion;
-        int espacio = this.altoBoton;
+        int espacio = this.ejeY;
         for(int i = 0 ; i < filas ; i++)//Setbounds Space Panel
         {
-            JPaneles[i].setBounds(ejeX, ejeY, this.anchoBoton, this.altoBoton);
+            JPaneles[i].setBounds(ejeX, espacio, this.anchoBoton, this.altoBoton);
             espacio += this.altoBoton + this.separacion;
         }
     }
@@ -76,12 +80,12 @@ public class JPanelArray {
         this.ejeY = y;
         this.anchoBoton = ancho;
         this.altoBoton = alto;
-        int espacio = this.altoBoton;
+        int espacio = this.ejeY;
         
         for(int i = 0 ; i < filas ; i++)//Setbounds Panels
         {
-            JPaneles[i].setBounds(x, y, this.anchoBoton, this.altoBoton);
-            espacio += this.altoBoton + this.separacion;
+            JPaneles[i].setBounds(x, espacio, this.anchoBoton, this.altoBoton);
+            espacio += this.altoBoton;
         }
     }
     
@@ -114,6 +118,10 @@ public class JPanelArray {
     public void Panel_set_colors(Color color_fondo)
     {
         this.color_background = color_fondo;
+        for(int i = 0 ; i < filas ; i++)//SetColor Background
+        {
+            JPaneles[i].setBackground(color_background);
+        }
     }
     
     public void Panel_set_text_colors(Color color_fondo)

@@ -36,6 +36,7 @@ public class Dashboard extends javax.swing.JFrame {
     public Dashboard() {
         initComponents();
         
+        // <editor-fold defaultstate="collapsed" desc="Cargando la fecha actual">
         LocalDate now = LocalDate.now();
         int year = now.getYear();
         int dia = now.getDayOfMonth();
@@ -43,7 +44,9 @@ public class Dashboard extends javax.swing.JFrame {
         String[] meses = {"Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto"," Septiembre"
             ,"Octubre","Noviembre","Diciemrbre"};
         fecha.setText("Hoy es "+dia+" de "+meses[month - 1]+" de "+year);
+        //</editor-fold>
         
+        // <editor-fold defaultstate="collapsed" desc="Cargando el Panel Principal">
         Principal p1 = new Principal();
         p1.setSize(750, 430);
         p1.setLocation(0,0);
@@ -52,10 +55,7 @@ public class Dashboard extends javax.swing.JFrame {
         content.revalidate();
         content.repaint();
         setLocationRelativeTo(null);
-        
-        
-        
-        
+        //</editor-fold>
         
         // <editor-fold defaultstate="collapsed" desc="Cargando Botones">
         //cargando botones----------------------------------------------------------------------------------------------
@@ -92,14 +92,14 @@ public class Dashboard extends javax.swing.JFrame {
     public JLabel [][] TitulosBtn = new JLabel [filas][colum+1];//El mas 1 es para las imagenes
     //</editor-fold>
     
+    // <editor-fold defaultstate="collapsed" desc="Metodo para cargar los titulos de los botones">
     private void iniciando_titulos()
     {
-        // <editor-fold defaultstate="collapsed" desc="Iconos de Botones">
+
         //Imagenes De botones
         //*************ImageIcon calendarioPlus = new ImageIcon("src/Lab4/images/calendar-plus.png");*******************
         ImageIcon calendarioMultiple = new ImageIcon("src/Imagenes/calendar-multiple-check.png");
         ImageIcon home = new ImageIcon("src/Imagenes/home-outline.png");
-        //</editor-fold>
         
         //configurando la posicion de los textos e iconos
         PanelArray.Panel_text_bounds(50, 10, 100, 30);
@@ -126,7 +126,9 @@ public class Dashboard extends javax.swing.JFrame {
         PanelArray.Panel_set_text_fonts(Estilo); 
         
     }
+    //</editor-fold>
     
+    //Setear botones en falso
     private void setBoton(boolean [] button)
     {
         for(int i = 0 ; i < filas ; i++)
