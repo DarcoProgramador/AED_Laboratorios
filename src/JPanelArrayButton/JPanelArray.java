@@ -123,7 +123,7 @@ public class JPanelArray {
         }
     }
     
-    public void Panel_set_text_fonds(Font tipo_letra)
+    public void Panel_set_text_fonts(Font tipo_letra)
     {
         for(int i = 0 ; i < filas ; i++)//Color Text
         {
