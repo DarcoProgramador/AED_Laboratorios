@@ -5,6 +5,7 @@
 package JPanelArrayButton;
 
 import java.awt.Color;
+import java.awt.Font;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -112,5 +113,21 @@ public class JPanelArray {
     public void Panel_set_colors(Color color_fondo)
     {
         this.color_background = color_fondo;
+    }
+    
+    public void Panel_set_text_colors(Color color_fondo)
+    {
+        for(int i = 0 ; i < filas ; i++)//Color Text
+        {
+            this.TitulosPanel[i].setForeground(color_fondo);
+        }
+    }
+    
+    public void Panel_set_text_fonds(Font tipo_letra)
+    {
+        for(int i = 0 ; i < filas ; i++)//Color Text
+        {
+            this.TitulosPanel[i].setFont(tipo_letra);
+        }
     }
 }
