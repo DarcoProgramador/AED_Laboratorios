@@ -56,6 +56,7 @@ public class Dashboard extends javax.swing.JFrame {
         PanelArray = new JPanelArray(Botones,filas);//Numero de botones y el panel donde va a estar
         PanelArray.Panel_Bounds(ejeX , ejeY, anchoBoton, altoBoton);
         PanelArray.Panel_Separacion(separacion);
+        iniciando_titulos();
         setMouseListener(PanelArray.JPaneles);
         // <editor-fold defaultstate="collapsed" desc="Cargando Botones">
         //cargando botones----------------------------------------------------------------------------------------------
@@ -66,9 +67,7 @@ public class Dashboard extends javax.swing.JFrame {
         boton[0] = true;//primer elemento Arreglo de seleccionados en True
         JPaneles[0][0].setBackground(colorSet);//color del seleccionado
         //Iniciando los Texto, Colores y fuente de Texto
-        Font Estilo = new Font("Segoe UI", Font.BOLD, 14);
-        Color color_texto = new Color(255,255,255);
-        iniciando_titulos(TitulosBtn,Estilo, color_texto);//iniciando los titulos
+     
         //</editor-fold>
     }
     
@@ -81,6 +80,8 @@ public class Dashboard extends javax.swing.JFrame {
     int altoBoton = 50;
     int ejeX = 0;//---->
     int ejeY = 0;//Abajo
+    Font Estilo = new Font("Segoe UI", Font.BOLD, 14);
+    Color color_texto = new Color(255,255,255);
     Color colorReSet = new Color(18,90,173);//Color predefinido
     Color colorSet = new Color(21,101,192);//Cambio de color
     public JPanel [][] JPaneles = new JPanel [filas][colum];//Tipo de boton
@@ -88,7 +89,7 @@ public class Dashboard extends javax.swing.JFrame {
     public JLabel [][] TitulosBtn = new JLabel [filas][colum+1];//El mas 1 es para las imagenes
     //</editor-fold>
     
-    private void iniciando_titulos(JLabel[][] Titulos, Font font, Color color)
+    private void iniciando_titulos()
     {
         // <editor-fold defaultstate="collapsed" desc="Iconos de Botones">
         //Imagenes De botones
@@ -97,34 +98,29 @@ public class Dashboard extends javax.swing.JFrame {
         ImageIcon home = new ImageIcon("src/Imagenes/home-outline.png");
         //</editor-fold>
         
-        // <editor-fold defaultstate="collapsed" desc="Label por Boton">
+        //configurando la posicion de los textos e iconos
+        PanelArray.Panel_text_bounds(50, 10, 100, 30);
+        PanelArray.Panel_icon_bounds(0, 10, 60, 30);
+        
+        // <editor-fold defaultstate="collapsed" desc="Texto de los botones">
         //Texto para cada Label
-        Titulos[0][0] = new JLabel("Principal", JLabel.LEFT);
-        Titulos[1][0] = new JLabel("Ejercicio 1", JLabel.LEFT);
-        Titulos[2][0] = new JLabel("Ejercicio 2", JLabel.LEFT);
-        Titulos[3][0] = new JLabel("Ejercicio 3", JLabel.LEFT);
-        Titulos[4][0] = new JLabel("Ejercicio 4", JLabel.LEFT);
-        Titulos[5][0] = new JLabel("Ejercicio 5", JLabel.LEFT);
+        PanelArray.Panel_text("Principal", 0);
+        PanelArray.Panel_text("Ejercicio 1", 1);
+        PanelArray.Panel_text("Ejercicio 2", 2);
+        PanelArray.Panel_text("Ejercicio 3", 3);
+        PanelArray.Panel_text("Ejercicio 4", 4);
+        PanelArray.Panel_text("Ejercicio 5", 5);
         //</editor-fold>
         
         //Iconos en los Jpanel
-        Titulos[0][1] = new JLabel(home);
-        setLabelIconJPanelArray(JPaneles,Titulos[0][1],0,0); 
+        PanelArray.Panel_icon(home, 0);
         for(int i = 1 ; i < filas ; i++)//Font y Color Text
         {
-            Titulos[i][1] = new JLabel(calendarioMultiple);//Icono para todos
-            setLabelIconJPanelArray(JPaneles,Titulos[i][1],i,0); 
-        } 
-        //Texto de los Jpanel
-        for(int i = 0 ; i < filas ; i++)//Font y Color Text
-        {
-            for (int j = 0 ; j < colum ; j++)
-            {
-                Titulos[i][j].setFont(font);
-                Titulos[i][j].setForeground(color);
-                setLabelJPanelArray(JPaneles,Titulos[i][j],i,j);
-            }
-        }     
+            PanelArray.Panel_icon(calendarioMultiple, 0);
+        }
+        //Color y Estilo del texto
+        PanelArray.Panel_set_text_colors(color_texto);
+        PanelArray.Panel_set_text_fonts(Estilo); 
         
     }
     

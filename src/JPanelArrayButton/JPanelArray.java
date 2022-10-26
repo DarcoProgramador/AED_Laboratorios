@@ -31,6 +31,7 @@ public class JPanelArray {
     //</editor-fold>
     
     /**
+     * @param Panel
      * @param NumPanel
      */
     public JPanelArray(JPanel Panel, int NumPanel)
