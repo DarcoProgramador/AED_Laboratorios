@@ -85,6 +85,14 @@ public class JPanelArray {
     
     public void Panel_text(String text, int NumButton)
     {
-        
+        TitulosPanel[NumButton].setText(text);
+    }
+    
+    public void Panel_text_bounds(int x, int y, int ancho, int alto)
+    {
+        for(int i = 0 ; i < filas ; i++)//SetBounds Text
+        {
+            TitulosPanel[i].setBounds(x, y, ancho, alto);
+        }
     }
 }
