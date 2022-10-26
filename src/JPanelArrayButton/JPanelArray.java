@@ -26,7 +26,7 @@ public class JPanelArray {
     public JPanel [] JPaneles;//Tipo de boton
     public JLabel[] TitulosPanel;//El mas 1 es para las imagenes
     public JLabel[] ImagenesPanel;//Icono del boton
-    boolean [] boton = new boolean [filas];//Boton seleccionado
+    boolean [] boton_active;//Boton seleccionado
     //</editor-fold>
     
     /**
@@ -38,11 +38,13 @@ public class JPanelArray {
         JPaneles = new JPanel [filas];
         TitulosPanel = new JLabel [filas];
         ImagenesPanel = new JLabel [filas];
+        boton_active = new boolean [filas];
         for(int i = 0 ; i < filas ; i++)//inicializando botones
         {
             JPaneles[i] = new JPanel();
             Set_PanelText(i);
             Panel.add(JPaneles[i]);
+            boton_active[i] = false;
         }
     }
     
