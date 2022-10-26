@@ -54,13 +54,13 @@ public class Dashboard extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         
         PanelArray = new JPanelArray(Botones,filas);//Numero de botones y el panel donde va a estar
+        PanelArray.Panel_Bounds(ejeX , ejeY, anchoBoton, altoBoton);
+        PanelArray.Panel_Separacion(separacion);
         setMouseListener(PanelArray.JPaneles);
         // <editor-fold defaultstate="collapsed" desc="Cargando Botones">
         //cargando botones----------------------------------------------------------------------------------------------
         //iniciando parametros del boton
-        JpanelArray(Botones, JPaneles,filas,colum, largoBoton, anchoBoton);
         setBoton(boton, filas);//Arreglo de seleccionados en falso
-        setMouseListener(JPaneles);
         setColorJPanelArray(JPaneles,filas,colum,colorReSet);
         //Iniciando boton seleccionado
         boton[0] = true;//primer elemento Arreglo de seleccionados en True
@@ -76,8 +76,9 @@ public class Dashboard extends javax.swing.JFrame {
     //Variables globales botones
     int filas = 6;
     int colum = 1;
-    int largoBoton = 270;
-    int anchoBoton = 50;
+    int separacion = 0;
+    int anchoBoton = 270;
+    int altoBoton = 50;
     int ejeX = 0;//---->
     int ejeY = 0;//Abajo
     Color colorReSet = new Color(18,90,173);//Color predefinido
