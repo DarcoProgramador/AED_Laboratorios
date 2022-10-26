@@ -33,7 +33,7 @@ public class JPanelArray {
     /**
      * @param NumPanel
      */
-    JPanelArray(JPanel Panel, int NumPanel)
+    public JPanelArray(JPanel Panel, int NumPanel)
     {
         this.filas = NumPanel;
         JPaneles = new JPanel [filas];

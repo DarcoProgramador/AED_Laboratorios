@@ -1,4 +1,5 @@
 package Lab5;
+import JPanelArrayButton.JPanelArray;
 import Lab5.Alumnos.RegistroAlumnos;
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -20,6 +21,8 @@ public class Dashboard extends javax.swing.JFrame {
     int xMouse;
     int yMouse;
     
+    //PanelArray
+    JPanelArray PanelArray = new JPanelArray();
     //Panel de RegistroAlumnos sin Reabrir
     RegistroAlumnos p2 = new RegistroAlumnos();
     Numeros p3 = new Numeros();
@@ -50,6 +53,8 @@ public class Dashboard extends javax.swing.JFrame {
         content.repaint();
         setLocationRelativeTo(null);
         
+        PanelArray = new JPanelArray(Botones,filas);//Numero de botones y el panel donde va a estar
+        setMouseListener(PanelArray.JPaneles);
         // <editor-fold defaultstate="collapsed" desc="Cargando Botones">
         //cargando botones----------------------------------------------------------------------------------------------
         //iniciando parametros del boton
@@ -135,15 +140,14 @@ public class Dashboard extends javax.swing.JFrame {
     
     // <editor-fold defaultstate="collapsed" desc="MauseListener para cada Boton">
     //Metiendo un MouseListener a cada boton
-    private void setMouseListener(JPanel [][] Botones)
+    private void setMouseListener(JPanel [] Botones)
     {
         for(int i = 0 ; i < filas ; i++)//inicializando botones
         {
-            for (int j = 0 ; j < colum ; j++)
-            {
-                AccionBotones accion = new AccionBotones();
-                Botones[i][j].addMouseListener(accion);
-            }
+           
+            AccionBotones accion = new AccionBotones();
+            Botones[i].addMouseListener(accion);
+
         }
     }
     //</editor-fold>
