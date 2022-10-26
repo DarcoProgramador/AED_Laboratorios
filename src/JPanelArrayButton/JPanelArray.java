@@ -5,6 +5,7 @@
 package JPanelArrayButton;
 
 import java.awt.Color;
+import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
@@ -25,7 +26,7 @@ public class JPanelArray {
     Color colorSet = new Color(21,101,192);//Cambio de color
     public JPanel [] JPaneles;//Tipo de boton
     public JLabel[] TitulosPanel;//El mas 1 es para las imagenes
-    public JLabel[] ImagenesPanel;//Icono del boton
+    public JLabel[] IconPanel;//Icono del boton
     boolean [] boton_active;//Boton seleccionado
     //</editor-fold>
     
@@ -37,7 +38,7 @@ public class JPanelArray {
         this.filas = NumPanel;
         JPaneles = new JPanel [filas];
         TitulosPanel = new JLabel [filas];
-        ImagenesPanel = new JLabel [filas];
+        IconPanel = new JLabel [filas];
         boton_active = new boolean [filas];
         for(int i = 0 ; i < filas ; i++)//inicializando botones
         {
@@ -52,9 +53,9 @@ public class JPanelArray {
     {
         JPaneles[NumButton].setLayout(null);
         TitulosPanel[NumButton] = new JLabel("");
-        ImagenesPanel[NumButton] = new JLabel("");
+        IconPanel[NumButton] = new JLabel("");
         JPaneles[NumButton].add(TitulosPanel[NumButton]);
-        JPaneles[NumButton].add(ImagenesPanel[NumButton]);
+        JPaneles[NumButton].add(IconPanel[NumButton]);
     }
     
     public void Panel_Separacion(int separacion)
@@ -93,6 +94,19 @@ public class JPanelArray {
         for(int i = 0 ; i < filas ; i++)//SetBounds Text
         {
             TitulosPanel[i].setBounds(x, y, ancho, alto);
+        }
+    }
+    
+    public void Panel_icon(ImageIcon icono, int NumButton)
+    {
+        IconPanel[NumButton].setIcon(icono);
+    }
+    
+    public void Panel_icon_bounds(int x, int y, int ancho, int alto)
+    {
+        for(int i = 0 ; i < filas ; i++)//SetBounds Text
+        {
+            IconPanel[i].setBounds(x, y, ancho, alto);
         }
     }
 }
