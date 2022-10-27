@@ -22,7 +22,7 @@ public class JPanelArray {
     int anchoBoton;
     int ejeX = 0;//---->
     int ejeY = 0;//Abajo
-    int separacion;
+    int separacion = 0;
     Color color_background = new Color(18,90,173);//Color de fondo
     public JPanel [] JPaneles;//Tipo de boton
     public JLabel[] TitulosPanel;//El mas 1 es para las imagenes
@@ -85,7 +85,7 @@ public class JPanelArray {
         for(int i = 0 ; i < filas ; i++)//Setbounds Panels
         {
             JPaneles[i].setBounds(x, espacio, this.anchoBoton, this.altoBoton);
-            espacio += this.altoBoton;
+            espacio += this.altoBoton + this.separacion;
         }
     }
     

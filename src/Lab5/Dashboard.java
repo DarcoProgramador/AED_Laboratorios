@@ -62,7 +62,6 @@ public class Dashboard extends javax.swing.JFrame {
         //iniciando parametros del boton
         PanelArray = new JPanelArray(Botones,filas);//Numero de botones y el panel donde va a estar
         PanelArray.Panel_Bounds(ejeX , ejeY, anchoBoton, altoBoton);
-        PanelArray.Panel_Separacion(separacion);
         PanelArray.Panel_set_colors(colorReSet);
         //Iniciando boton seleccionado
         PanelArray.button_active[0] = true; 
@@ -102,8 +101,8 @@ public class Dashboard extends javax.swing.JFrame {
         ImageIcon home = new ImageIcon("src/Imagenes/home-outline.png");
         
         //configurando la posicion de los textos e iconos
-        PanelArray.Panel_text_bounds(50, 10, 100, 30);
-        PanelArray.Panel_icon_bounds(0, 10, 60, 30);
+        PanelArray.Panel_text_bounds(55, 10, 100, 30);
+        PanelArray.Panel_icon_bounds(10, 10, 60, 30);
         
         // <editor-fold defaultstate="collapsed" desc="Texto de los botones">
         //Texto para cada Label
@@ -119,7 +118,7 @@ public class Dashboard extends javax.swing.JFrame {
         PanelArray.Panel_icon(home, 0);
         for(int i = 1 ; i < filas ; i++)//Font y Color Text
         {
-            PanelArray.Panel_icon(calendarioMultiple, 0);
+            PanelArray.Panel_icon(calendarioMultiple, i);
         }
         //Color y Estilo del texto
         PanelArray.Panel_set_text_colors(color_texto);
@@ -164,17 +163,15 @@ public class Dashboard extends javax.swing.JFrame {
         public void mousePressed(MouseEvent event) {
             for(int i = 0 ; i < filas ; i++)//inicializando botones
             {
-                if(event.getComponent().equals(PanelArray.JPaneles[i]))
+                if(!event.getComponent().equals(PanelArray.JPaneles[i]))
                 {
-                    if(!boton[i])
-                    {
-                        setBoton(PanelArray.button_active);//Configurando todos los botones en falso
-                        PanelArray.button_active[i] = true;//boton seleccionado en true
-                        PanelArray.Panel_set_colors(colorReSet);//Color normal para todos los botones
-                        PanelArray.JPaneles[i].setBackground(colorSet);//Color diferente para el seleccionado
-                        boton_selec_Action(i);
-                    }
+                    continue;
                 }
+                setBoton(PanelArray.button_active);//Configurando todos los botones en falso
+                PanelArray.button_active[i] = true;//boton seleccionado en true
+                PanelArray.Panel_set_colors(colorReSet);//Color normal para todos los botones
+                PanelArray.JPaneles[i].setBackground(colorSet);//Color diferente para el seleccionado
+                boton_selec_Action(i);
             }
         }
         
@@ -198,12 +195,14 @@ public class Dashboard extends javax.swing.JFrame {
         public void mouseExited(MouseEvent event) {
             for(int i = 0 ; i < filas ; i++)//inicializando botones
             {
-                if(event.getComponent().equals(PanelArray.JPaneles[i]))
+                if(!event.getComponent().equals(PanelArray.JPaneles[i]))
                 {
-                    if(!PanelArray.button_active[i]){
-                        PanelArray.JPaneles[i].setBackground(colorReSet);
-                    }   
+                    continue;
                 }
+                if(!PanelArray.button_active[i]){
+                    PanelArray.JPaneles[i].setBackground(colorReSet);
+                }   
+                
             }
         }
     
@@ -565,11 +564,11 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_Activar_color
     //Animacion de color regresar
     private void btn_RegresarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_RegresarMouseEntered
-        btn_Regresar.setBackground(colorSet);
+        btn_Regresar.setBackground(new Color(21,101,192));
     }//GEN-LAST:event_btn_RegresarMouseEntered
     
     private void btn_RegresarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_RegresarMouseExited
-        btn_Regresar.setBackground(colorReSet);
+        btn_Regresar.setBackground(new Color(13,71,161));
     }//GEN-LAST:event_btn_RegresarMouseExited
     //Accion de el boton regresar
     private void btn_RegresarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_RegresarMousePressed
