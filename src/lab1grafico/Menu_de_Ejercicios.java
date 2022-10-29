@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package lab1grafico;
-
+import  Principal.Principal;
 /**
  *
  * @author Thebeast
@@ -185,7 +185,7 @@ public class Menu_de_Ejercicios extends javax.swing.JFrame {
 
     private void jButton8MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MousePressed
         dispose();
-        new Laboratorio1().setVisible(true);
+        new Principal().setVisible(true);
     }//GEN-LAST:event_jButton8MousePressed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed

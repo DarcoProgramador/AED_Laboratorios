@@ -1,5 +1,6 @@
 package Lab4;
 import Lab4.Cola.Cola;
+import Principal.Principal;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
@@ -34,7 +35,7 @@ public class Dashboard extends javax.swing.JFrame {
             ,"Octubre","Noviembre","Diciemrbre"};
         fecha.setText("Hoy es "+dia+" de "+meses[month - 1]+" de "+year);
         
-        Principal p1 = new Principal();
+        Principal4 p1 = new Principal4();
         p1.setSize(750, 430);
         p1.setLocation(0,0);
         content.removeAll();
@@ -196,7 +197,7 @@ public class Dashboard extends javax.swing.JFrame {
         switch(i) {
             case 0 -> {
                 // Abrir sección
-                Principal p1 = new Principal();
+                Principal4 p1 = new Principal4();
                 p1.setSize(750, 430);
                 p1.setLocation(0,0);
 
@@ -516,7 +517,7 @@ public class Dashboard extends javax.swing.JFrame {
 
     private void jButton1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MousePressed
         dispose();
-        new Laboratorio4().setVisible(true);
+        new Principal().setVisible(true);
     }//GEN-LAST:event_jButton1MousePressed
 
 //Funciones para volver a Poner y quitar el color de los botones

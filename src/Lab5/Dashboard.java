@@ -14,6 +14,7 @@ import static JPanelArrayButton.JPanelBtn.*;
 import Lab5.Empresa.RegistroEmpresa;
 import Lab5.ListNegativoPositivo.Numeros;
 import Lab5.MayorMenor.MayorMenor;
+import Principal.Principal;
 
 public class Dashboard extends javax.swing.JFrame {
     //Creando variables de control
@@ -47,7 +48,7 @@ public class Dashboard extends javax.swing.JFrame {
         //</editor-fold>
         
         // <editor-fold defaultstate="collapsed" desc="Cargando el Panel Principal">
-        Principal p1 = new Principal();
+        Principal5 p1 = new Principal5();
         p1.setSize(750, 430);
         p1.setLocation(0,0);
         content.removeAll();
@@ -213,7 +214,7 @@ public class Dashboard extends javax.swing.JFrame {
         switch(i) {
             case 0 -> {
                 // Abrir sección
-                Principal p1 = new Principal();
+                Principal5 p1 = new Principal5();
                 p1.setSize(750, 430);
                 p1.setLocation(0,0);
 
@@ -573,7 +574,7 @@ public class Dashboard extends javax.swing.JFrame {
     //Accion de el boton regresar
     private void btn_RegresarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_RegresarMousePressed
         dispose();
-        new Laboratorio5().setVisible(true);
+        new Principal().setVisible(true);
     }//GEN-LAST:event_btn_RegresarMousePressed
 //</editor-fold>
     /**
