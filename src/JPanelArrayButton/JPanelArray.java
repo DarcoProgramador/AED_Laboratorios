@@ -42,9 +42,6 @@ public class JPanelArray {
         IconPanel = new JLabel [filas];
         button_active = new boolean [filas];
         
-        int x = 0;
-        int y = 0;
-        
         for(int i = 0 ; i < filas ; i++)//inicializando botones
         {
             JPaneles[i] = new JPanel();

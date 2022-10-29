@@ -1,0 +1,33 @@
+[33m6ce4f65[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Merge pull request #1 from DarcoProgramador/panelArray
+[33m7070681[m[33m ([m[1;31morigin/panelArray[m[33m)[m Solucionando errores y haciendo codigo mas limpio en lab5
+[33mc6bf913[m Solucionando error de los paneles cargandose a lo ancho y no a lo alto
+[33m2d3f9c8[m Terminando de modificar el lab5 con PanelArray
+[33m9cd885f[m Iniciando Titulos de los botones con Su icono en Lab 5
+[33mbbdb3f7[m Configurando Los bounds y la separacion por panel
+[33mcdf313d[m Iniciando a implementar JPanelArray en el Lab5
+[33m126b62c[m Eliminando JPanelMetods
+[33m58859da[m Añadiendo metodo de color de texto y font
+[33m1501e37[m Añadiendo Panel_set_color
+[33m2b736fc[m añadiendo metodo de poner icono y icono_bounds
+[33mc3b3955[m añadiendo metodo para añadir texto y setear los bounds del texto
+[33m4244f6b[m Seteando boton_active en false
+[33m39df54a[m Añadiendo Set_PanelText a el constructor de JPanelArray
+[33m8df0f22[m Iniciando la Clase JPanel Array y su iniciacion
+[33m6c00353[m Modificacion de menu de laboratorios, creacion menu Lab5, modificacion tamaño de jframe para adecuarse a las soluciones
+[33m4969945[m Añadiendo boton regresar al Lab5
+[33me6dd353[m Eliminando el Main que esta en Dashboard en Lab5
+[33mdb6059b[m Añadiendo Ejercicio 5 al Dasboard
+[33m5c10d6c[m Añadiendo Ejercicio 4 de Pilas a Dasboard
+[33mcca7111[m[33m ([m[1;31morigin/Lab5[m[33m)[m Finalizando el ejercicio 3
+[33mae35c46[m Creando Lab5.Empresa y sus Metodos y Atributos Iniciales
+[33m9604cdf[m Añadiendo Ejercicio 2 de Numeros en el Dashboard
+[33mc2c8823[m Añadiendo 2 botones mas a los botones de ejercicios
+[33m7a1fee8[m Añadiendo Funcion para Añadir con Enter en el Ejercicio 1
+[33m9059295[m Añadiendo ejercicio 1 Registro de Alumnos
+[33m766f596[m Añadiendo un main a Lab5 y eliminando funciones basura
+[33me67c17b[m Iniciando el Lab5
+[33m4f5eb2a[m "Añadiendo RelativeToNull a los formularios" añadi relatives tu nul al formulario del lab2 lab3 y lab4 ademas de las guias
+[33mfdab8d6[m Moviendo de lugar las carpetas y organizando
+[33m9aba0ac[m Moviendo de lugar las imagenes Lab4.imagenes a Imagenes
+[33m8b45bea[m Añadiendo Los Archivos al Repositorio
+[33m34ddc01[m Initial commit
