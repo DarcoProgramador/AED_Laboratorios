@@ -1,6 +1,6 @@
 package Lab6;
 import JPanelArrayButton.JPanelArray;
-import Lab5.Alumnos.RegistroAlumnos;
+import Lab6.ArbolBinario.Pilas;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
@@ -18,9 +18,7 @@ public class Dashboard extends javax.swing.JFrame {
     
     //PanelArray
     JPanelArray PanelArray;
-    //Panel de RegistroAlumnos sin Reabrir
-    RegistroAlumnos p2 = new RegistroAlumnos();
-    
+
     //Iniciando componentes y cargando el menu principal
     
     
@@ -207,6 +205,7 @@ public class Dashboard extends javax.swing.JFrame {
             
             case 1 -> {
                 //Registro en global;
+                Pilas p2 = new Pilas();
                 p2.setSize(750, 430);
                 p2.setLocation(0,0);
 
