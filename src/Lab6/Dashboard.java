@@ -1,4 +1,4 @@
-package Lab5;
+package Lab6;
 import JPanelArrayButton.JPanelArray;
 import Lab5.Alumnos.RegistroAlumnos;
 import java.awt.BorderLayout;
@@ -9,10 +9,6 @@ import java.awt.event.MouseListener;
 import java.time.LocalDate;
 import javax.swing.JPanel;
 import javax.swing.ImageIcon;
-import Lab5.Empresa.RegistroEmpresa;
-import Lab5.ListNegativoPositivo.Numeros;
-import Lab5.MayorMenor.MayorMenor;
-import Principal.Principal;
 
 public class Dashboard extends javax.swing.JFrame {
     //Creando variables de control
@@ -24,10 +20,6 @@ public class Dashboard extends javax.swing.JFrame {
     JPanelArray PanelArray;
     //Panel de RegistroAlumnos sin Reabrir
     RegistroAlumnos p2 = new RegistroAlumnos();
-    Numeros p3 = new Numeros();
-    RegistroEmpresa p4 = new RegistroEmpresa();
-    MayorMenor p6 = new MayorMenor();
-    
     
     //Iniciando componentes y cargando el menu principal
     
@@ -46,7 +38,7 @@ public class Dashboard extends javax.swing.JFrame {
         //</editor-fold>
         
         // <editor-fold defaultstate="collapsed" desc="Cargando el Panel Principal">
-        Principal5 p1 = new Principal5();
+        Principal p1 = new Principal();
         p1.setSize(750, 430);
         p1.setLocation(0,0);
         content.removeAll();
@@ -74,7 +66,7 @@ public class Dashboard extends javax.swing.JFrame {
     
     // <editor-fold defaultstate="collapsed" desc="Variables de los botones">
     //Variables globales botones
-    int filas = 6;
+    int filas = 2;
     int colum = 1;
     int separacion = 0;
     int anchoBoton = 270;
@@ -103,19 +95,13 @@ public class Dashboard extends javax.swing.JFrame {
         // <editor-fold defaultstate="collapsed" desc="Texto de los botones">
         //Texto para cada Label
         PanelArray.Panel_text("Principal", 0);
-        PanelArray.Panel_text("Ejercicio 1", 1);
-        PanelArray.Panel_text("Ejercicio 2", 2);
-        PanelArray.Panel_text("Ejercicio 3", 3);
-        PanelArray.Panel_text("Ejercicio 4", 4);
-        PanelArray.Panel_text("Ejercicio 5", 5);
+        PanelArray.Panel_text("Ejercicio Arbol", 1);
         //</editor-fold>
         
         //Iconos en los Jpanel
         PanelArray.Panel_icon(home, 0);
-        for(int i = 1 ; i < filas ; i++)//Font y Color Text
-        {
-            PanelArray.Panel_icon(calendarioMultiple, i);
-        }
+        PanelArray.Panel_icon(calendarioMultiple, 1);
+        
         //Color y Estilo del texto
         PanelArray.Panel_set_text_colors(color_texto);
         PanelArray.Panel_set_text_fonts(Estilo); 
@@ -209,7 +195,7 @@ public class Dashboard extends javax.swing.JFrame {
         switch(i) {
             case 0 -> {
                 // Abrir sección
-                Principal5 p1 = new Principal5();
+                Principal p1 = new Principal();
                 p1.setSize(750, 430);
                 p1.setLocation(0,0);
 
@@ -230,50 +216,6 @@ public class Dashboard extends javax.swing.JFrame {
                 content.repaint();
             }
             
-            case 2 -> {
-                //Registro en global;
-                p3.setSize(750, 430);
-                p3.setLocation(0,0);
-
-                content.removeAll();
-                content.add(p3, BorderLayout.CENTER);
-                content.revalidate();
-                content.repaint();
-            }
-            
-            case 3 -> {
-                // Abrir sección
-                p4.setSize(750, 430);
-                p4.setLocation(0,0);
-
-                content.removeAll();
-                content.add(p4, BorderLayout.CENTER);
-                content.revalidate();
-                content.repaint(); 
-            }
-            
-            case 4 -> {
-                // Abrir sección
-                Pilas p5 = new Pilas();
-                p5.setSize(750, 430);
-                p5.setLocation(0,0);
-
-                content.removeAll();
-                content.add(p5, BorderLayout.CENTER);
-                content.revalidate();
-                content.repaint(); 
-            }
-            
-            case 5 -> {
-                // Abrir sección
-                p6.setSize(750, 430);
-                p6.setLocation(0,0);
-
-                content.removeAll();
-                content.add(p6, BorderLayout.CENTER);
-                content.revalidate();
-                content.repaint(); 
-            }
         }
     }
     //</editor-fold>
@@ -297,12 +239,11 @@ public class Dashboard extends javax.swing.JFrame {
 
         Background = new javax.swing.JPanel();
         Menu = new javax.swing.JPanel();
+        app_name = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
         Botones = new javax.swing.JPanel();
         btn_Regresar = new javax.swing.JPanel();
         jLabel20 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        app_name = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
         Header = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         fecha = new javax.swing.JLabel();
@@ -319,13 +260,21 @@ public class Dashboard extends javax.swing.JFrame {
         setUndecorated(true);
         setResizable(false);
 
-        Background.setBackground(new java.awt.Color(0, 75, 50));
+        Background.setBackground(new java.awt.Color(255, 255, 255));
         Background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Menu.setBackground(new java.awt.Color(51, 51, 51));
+        Menu.setBackground(new java.awt.Color(13, 71, 161));
         Menu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Botones.setBackground(new java.awt.Color(51, 51, 51));
+        app_name.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        app_name.setForeground(new java.awt.Color(255, 255, 255));
+        app_name.setText("Lab 6 java");
+        Menu.add(app_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, -1, -1));
+
+        jSeparator1.setPreferredSize(new java.awt.Dimension(50, 5));
+        Menu.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 190, 20));
+
+        Botones.setBackground(new java.awt.Color(13, 71, 161));
 
         javax.swing.GroupLayout BotonesLayout = new javax.swing.GroupLayout(Botones);
         Botones.setLayout(BotonesLayout);
@@ -340,7 +289,7 @@ public class Dashboard extends javax.swing.JFrame {
 
         Menu.add(Botones, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 270, 460));
 
-        btn_Regresar.setBackground(new java.awt.Color(51, 51, 51));
+        btn_Regresar.setBackground(new java.awt.Color(13, 71, 161));
         btn_Regresar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btn_Regresar.setPreferredSize(new java.awt.Dimension(270, 51));
         btn_Regresar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -363,35 +312,16 @@ public class Dashboard extends javax.swing.JFrame {
 
         Menu.add(btn_Regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 590, -1, -1));
 
-        jPanel1.setBackground(new java.awt.Color(0, 51, 0));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        app_name.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        app_name.setForeground(new java.awt.Color(255, 255, 255));
-        app_name.setText("LABORATORIO 5");
-        jPanel1.add(app_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, -1, -1));
-
-        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
-        jSeparator1.setPreferredSize(new java.awt.Dimension(50, 5));
-        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 190, 20));
-
-        Menu.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 60));
-
         Background.add(Menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 640));
 
-        Header.setBackground(new java.awt.Color(255, 255, 255));
+        Header.setBackground(new java.awt.Color(25, 118, 210));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-<<<<<<< HEAD
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("Pilas y Colas");
-=======
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Arraylis y Pilas");
->>>>>>> 0482cc8 (Creado el DashBoard del Lab6)
+        jLabel2.setText("Arbol Binario");
 
         fecha.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        fecha.setForeground(new java.awt.Color(0, 0, 0));
+        fecha.setForeground(new java.awt.Color(255, 255, 255));
         fecha.setText("Hoy es Sábado 28 de Abril de 2018");
 
         javax.swing.GroupLayout HeaderLayout = new javax.swing.GroupLayout(Header);
@@ -417,7 +347,7 @@ public class Dashboard extends javax.swing.JFrame {
 
         Background.add(Header, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 60, 750, 150));
 
-        Title.setBackground(new java.awt.Color(0, 75, 50));
+        Title.setBackground(new java.awt.Color(255, 255, 255));
         Title.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 TitleMouseDragged(evt);
@@ -487,7 +417,6 @@ public class Dashboard extends javax.swing.JFrame {
         Background.add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, -1));
 
         slogan.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        slogan.setForeground(new java.awt.Color(255, 255, 255));
         slogan.setText("Facultad de Electrotecnia y Computación (F.E.C)");
         Background.add(slogan, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 30, 300, 30));
 
@@ -581,8 +510,7 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_RegresarMouseExited
     //Accion de el boton regresar
     private void btn_RegresarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_RegresarMousePressed
-        dispose();
-        new Principal().setVisible(true);
+        
     }//GEN-LAST:event_btn_RegresarMousePressed
 //</editor-fold>
     /**
@@ -603,7 +531,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel fecha;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JPanel red_squr;
     private javax.swing.JLabel slogan;
