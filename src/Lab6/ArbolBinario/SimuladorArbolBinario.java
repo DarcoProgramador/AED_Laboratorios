@@ -16,7 +16,7 @@ public class SimuladorArbolBinario {
     public SimuladorArbolBinario() {
     }
 
-    public boolean insertar(Integer dato) {
+    public boolean insertar(Character dato) {
         return (this.miArbol.agregar(dato));
     }
     //metodo para mostrar los recorridos del arbol
@@ -48,7 +48,7 @@ public class SimuladorArbolBinario {
     
     
     //Metodo para buscar dato en el nodo
-    public String buscar(Integer dato) {
+    public String buscar(Character dato) {
         boolean siEsta = this.miArbol.existe(dato);
         String r = "El dato:" + dato.toString() + "\n";
         r += siEsta ? "Si se encuentra en el arbol" : "No se encuentra en el arbol";

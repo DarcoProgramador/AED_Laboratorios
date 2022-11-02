@@ -10,20 +10,20 @@ package Lab6.ArbolBinario;
  * @author Toloza XD
  */
 public class Nodo {
-    private int dato;
+    private char dato;
     private Nodo izq,der;
 
-    public Nodo(int dato, Nodo izq, Nodo der) {
+    public Nodo(char dato, Nodo izq, Nodo der) {
         this.dato = dato;
         this.izq = izq;
         this.der = der;
     }
 
-    public int getDato() {
+    public char getDato() {
         return dato;
     }
 
-    public void setDato(int dato) {
+    public void setDato(char dato) {
         this.dato = dato;
     }
 

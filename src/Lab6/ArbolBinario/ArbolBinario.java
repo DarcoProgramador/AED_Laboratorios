@@ -4,11 +4,8 @@
  * and open the template in the editor.
  */
 package Lab6.ArbolBinario;
-import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
-import javax.swing.JInternalFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -33,7 +30,7 @@ public class ArbolBinario extends javax.swing.JPanel {
         Lb_TextAñadir = new javax.swing.JLabel();
         textDato = new javax.swing.JTextField();
         Title1 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
+        jPGrafico = new javax.swing.JPanel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(750, 430));
@@ -69,7 +66,7 @@ public class ArbolBinario extends javax.swing.JPanel {
         Lb_TextAñadir.setText("Añadir");
         button_Añadir.add(Lb_TextAñadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, -1));
 
-        add(button_Añadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 10, 80, 24));
+        add(button_Añadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 10, 80, 24));
 
         textDato.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         textDato.setBorder(null);
@@ -77,15 +74,18 @@ public class ArbolBinario extends javax.swing.JPanel {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 textDatoKeyPressed(evt);
             }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                keyTypedValidar(evt);
+            }
         });
-        add(textDato, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 10, 234, -1));
+        add(textDato, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 10, 80, -1));
 
         Title1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         Title1.setText("Añadir al Arbol:");
-        add(Title1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 130, -1));
+        add(Title1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 10, 130, -1));
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 750, 380));
+        jPGrafico.setBackground(new java.awt.Color(255, 255, 255));
+        add(jPGrafico, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 750, 380));
     }// </editor-fold>//GEN-END:initComponents
 
     private void button_AñadirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_AñadirMouseEntered
@@ -109,11 +109,24 @@ public class ArbolBinario extends javax.swing.JPanel {
         Añadir();
     }//GEN-LAST:event_textDatoKeyPressed
     
+    private void keyTypedValidar(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_keyTypedValidar
+        //Valida si solo se a digitado un caracter
+        String caracter = textDato.getText();
+        boolean valida = caracter.length() < 1;
+        
+        if(!valida)
+        {
+            evt.consume();
+        }
+    }//GEN-LAST:event_keyTypedValidar
+    
 
     private void Añadir()
     {
         try {
-            int dato = Integer.parseInt(textDato.getText());
+            String subChar = textDato.getText();
+            char dato = subChar.charAt(0);
+            
             if (this.simulador.insertar(dato)) {
                 textDato.setText("");
                 JOptionPane.showMessageDialog(null, "El dato fue insertado correctamente", " ...", 1);
@@ -127,13 +140,13 @@ public class ArbolBinario extends javax.swing.JPanel {
         this.repintarArbol();
     }
     private void repintarArbol() {
-        this.jPanel1.removeAll();
-        jPanel1.setLayout(null);
-        JPanel interno = this.simulador.getDibujo();
-        interno.setBounds(0, 0, 750, 380);
-        jPanel1.add(interno);
-        jPanel1.revalidate();
-        jPanel1.repaint();
+        this.jPGrafico.removeAll();
+        jPGrafico.setLayout(null);
+        JPanel Grafico = this.simulador.getDibujo();
+        Grafico.setBounds(0, 0, 750, 380);
+        jPGrafico.add(Grafico);
+        jPGrafico.revalidate();
+        jPGrafico.repaint();
     }
     
 
@@ -150,7 +163,7 @@ public class ArbolBinario extends javax.swing.JPanel {
     private javax.swing.JLabel Title1;
     private javax.swing.JPanel body;
     private javax.swing.JPanel button_Añadir;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPGrafico;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTextField textDato;
     // End of variables declaration//GEN-END:variables

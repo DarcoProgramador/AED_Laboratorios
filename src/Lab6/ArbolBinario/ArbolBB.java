@@ -23,7 +23,7 @@ public class ArbolBB {
         raiz = null;
     }
     
-    public boolean agregar(int dato) {
+    public boolean agregar(char dato) {
         Nodo nuevo = new Nodo(dato, null, null);
         insertar(nuevo, raiz);
         return true;
@@ -34,20 +34,19 @@ public class ArbolBB {
         if (this.raiz == null) {
             raiz = nuevo;
         } else {
-            if (nuevo.getDato() <= pivote.getDato()) {
-                if (pivote.getIzq() == null) {
-                    pivote.setIzq(nuevo);
-                } else {
-                    insertar(nuevo, pivote.getIzq());
-                }
+            
+            if (pivote.getIzq() == null) {
+                pivote.setIzq(nuevo);
             } else {
-                if (pivote.getDer() == null) {
-                    pivote.setDer(nuevo);
-                } else {
-                    insertar(nuevo, pivote.getDer());
-                }
+                insertar(nuevo, pivote.getIzq());
             }
-        }
+            /*
+            if (pivote.getDer() == null) {
+                pivote.setDer(nuevo);
+            } else {
+                insertar(nuevo, pivote.getDer());
+            }*/
+    }
 
     }
 
@@ -104,7 +103,7 @@ public class ArbolBB {
     }
 
     //Metodo para verificar si hay un nodo en el arbol
-    public boolean existe(int dato) {
+    public boolean existe(char dato) {
         Nodo aux = raiz;
         while (aux != null) {
             if (dato == aux.getDato()) {
