@@ -33,8 +33,7 @@ public class ArbolBinario extends javax.swing.JPanel {
         Lb_TextAñadir = new javax.swing.JLabel();
         textDato = new javax.swing.JTextField();
         Title1 = new javax.swing.JLabel();
-        jDesktopPane1 = new javax.swing.JDesktopPane();
-        jInternalFrame2 = new javax.swing.JInternalFrame();
+        jPanel1 = new javax.swing.JPanel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(750, 430));
@@ -85,11 +84,8 @@ public class ArbolBinario extends javax.swing.JPanel {
         Title1.setText("Añadir al Arbol:");
         add(Title1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 130, -1));
 
-        jInternalFrame2.setVisible(true);
-        jDesktopPane1.add(jInternalFrame2);
-        jInternalFrame2.setBounds(10, 10, 730, 360);
-
-        add(jDesktopPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 750, 380));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 750, 380));
     }// </editor-fold>//GEN-END:initComponents
 
     private void button_AñadirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_AñadirMouseEntered
@@ -131,15 +127,13 @@ public class ArbolBinario extends javax.swing.JPanel {
         this.repintarArbol();
     }
     private void repintarArbol() {
-        this.jDesktopPane1.removeAll();
-        Rectangle tamaño = this.jInternalFrame2.getBounds();
-        this.jInternalFrame2 = null;
-        this.jInternalFrame2 = new JInternalFrame("Representación gráfica", true);
-        this.jDesktopPane1.add(this.jInternalFrame2);
-        this.jInternalFrame2.setVisible(true);
-        this.jInternalFrame2.setBounds(tamaño);
-        this.jInternalFrame2.setEnabled(false);
-        this.jInternalFrame2.add(this.simulador.getDibujo(), BorderLayout.CENTER);
+        this.jPanel1.removeAll();
+        jPanel1.setLayout(null);
+        JPanel interno = this.simulador.getDibujo();
+        interno.setBounds(0, 0, 750, 380);
+        jPanel1.add(interno);
+        jPanel1.revalidate();
+        jPanel1.repaint();
     }
     
 
@@ -156,8 +150,7 @@ public class ArbolBinario extends javax.swing.JPanel {
     private javax.swing.JLabel Title1;
     private javax.swing.JPanel body;
     private javax.swing.JPanel button_Añadir;
-    private javax.swing.JDesktopPane jDesktopPane1;
-    private javax.swing.JInternalFrame jInternalFrame2;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTextField textDato;
     // End of variables declaration//GEN-END:variables
