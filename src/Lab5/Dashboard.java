@@ -60,8 +60,8 @@ public class Dashboard extends javax.swing.JFrame {
         //cargando botones----------------------------------------------------------------------------------------------
         //iniciando parametros del boton
         PanelArray = new JPanelArray(Botones,filas);//Numero de botones y el panel donde va a estar
-        PanelArray.Panel_Bounds(ejeX , ejeY, anchoBoton, altoBoton);
-        PanelArray.Panel_set_colors(colorReSet);
+        PanelArray.panelBounds(ejeX , ejeY, anchoBoton, altoBoton);
+        PanelArray.panelSetColors(colorReSet);
         //Iniciando boton seleccionado
         PanelArray.button_active[0] = true; 
         PanelArray.JPaneles[0].setBackground(colorSet);//color del seleccionado
@@ -97,28 +97,28 @@ public class Dashboard extends javax.swing.JFrame {
         ImageIcon home = new ImageIcon("src/Imagenes/home-outline.png");
         
         //configurando la posicion de los textos e iconos
-        PanelArray.Panel_text_bounds(55, 10, 100, 30);
-        PanelArray.Panel_icon_bounds(10, 10, 60, 30);
+        PanelArray.panelTextBounds(55, 10, 100, 30);
+        PanelArray.panelIconBounds(10, 10, 60, 30);
         
         // <editor-fold defaultstate="collapsed" desc="Texto de los botones">
         //Texto para cada Label
-        PanelArray.Panel_text("Principal", 0);
-        PanelArray.Panel_text("Ejercicio 1", 1);
-        PanelArray.Panel_text("Ejercicio 2", 2);
-        PanelArray.Panel_text("Ejercicio 3", 3);
-        PanelArray.Panel_text("Ejercicio 4", 4);
-        PanelArray.Panel_text("Ejercicio 5", 5);
+        PanelArray.panelText("Principal", 0);
+        PanelArray.panelText("Ejercicio 1", 1);
+        PanelArray.panelText("Ejercicio 2", 2);
+        PanelArray.panelText("Ejercicio 3", 3);
+        PanelArray.panelText("Ejercicio 4", 4);
+        PanelArray.panelText("Ejercicio 5", 5);
         //</editor-fold>
         
         //Iconos en los Jpanel
-        PanelArray.Panel_icon(home, 0);
+        PanelArray.panelIcon(home, 0);
         for(int i = 1 ; i < filas ; i++)//Font y Color Text
         {
-            PanelArray.Panel_icon(calendarioMultiple, i);
+            PanelArray.panelIcon(calendarioMultiple, i);
         }
         //Color y Estilo del texto
-        PanelArray.Panel_set_text_colors(color_texto);
-        PanelArray.Panel_set_text_fonts(Estilo); 
+        PanelArray.panelSetTextColors(color_texto);
+        PanelArray.panelSetTextFonts(Estilo); 
         
     }
     //</editor-fold>
@@ -165,7 +165,7 @@ public class Dashboard extends javax.swing.JFrame {
                 }
                 setBoton(PanelArray.button_active);//Configurando todos los botones en falso
                 PanelArray.button_active[i] = true;//boton seleccionado en true
-                PanelArray.Panel_set_colors(colorReSet);//Color normal para todos los botones
+                PanelArray.panelSetColors(colorReSet);//Color normal para todos los botones
                 PanelArray.JPaneles[i].setBackground(colorSet);//Color diferente para el seleccionado
                 boton_selec_Action(i);
             }
