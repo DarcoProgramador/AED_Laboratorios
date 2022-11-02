@@ -1,6 +1,6 @@
 package Lab6;
 import JPanelArrayButton.JPanelArray;
-import Lab6.ArbolBinario.Pilas;
+import Lab6.ArbolBinario.ArbolBinario;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
@@ -205,7 +205,7 @@ public class Dashboard extends javax.swing.JFrame {
             
             case 1 -> {
                 //Registro en global;
-                Pilas p2 = new Pilas();
+                ArbolBinario p2 = new ArbolBinario();
                 p2.setSize(750, 430);
                 p2.setLocation(0,0);
 
@@ -214,6 +214,7 @@ public class Dashboard extends javax.swing.JFrame {
                 content.revalidate();
                 content.repaint();
             }
+
             
         }
     }
