@@ -6,6 +6,7 @@
 package Lab6.ArbolBinario;
 
 import java.util.LinkedList;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
@@ -24,32 +25,47 @@ public class ArbolBB {
     }
     
     public boolean agregar(char dato) {
-        Nodo nuevo = new Nodo(dato, null, null);
-        insertar(nuevo, raiz);
+        if (raiz != null)
+        {
+            return false;
+        }
+        Nodo pivote = new Nodo(dato, null, null);
+        raiz = pivote;
+        insertar(pivote);
         return true;
     }
     
-    //Metodo para insertar un dato en el arbol...no acepta repetidos :)
-    public void insertar(Nodo nuevo, Nodo pivote) {
-        if (this.raiz == null) {
-            raiz = nuevo;
-        } else {
-            
-            if (pivote.getIzq() == null) {
-                pivote.setIzq(nuevo);
-            } else {
-                insertar(nuevo, pivote.getIzq());
-            }
-            /*
-            if (pivote.getDer() == null) {
-                pivote.setDer(nuevo);
-            } else {
-                insertar(nuevo, pivote.getDer());
-            }*/
-    }
+    //Metodo para insertar datos en el arbol
+    public void insertar(Nodo pivote) {
+        if(pivote == null)
+        {
+            return;
+        }
+        Nodo nuevo;
+        int seleccion = JOptionPane.showConfirmDialog(null, "Quiere añadir un hijo a la izquierda de "+ pivote.getDato() +"?",
+                "YES_NO_OPTION", JOptionPane.YES_NO_OPTION,
+                JOptionPane.INFORMATION_MESSAGE);
+        if(seleccion == 0)
+        {
+            String nuevoDato = JOptionPane.showInputDialog("Ingrese el nuevo hijo de "+ pivote.getDato() +":");
+            nuevo = new Nodo(nuevoDato.charAt(0), null, null);
+            pivote.setIzq(nuevo);
+            insertar(pivote.getIzq());
+        }
+        
+        seleccion = JOptionPane.showConfirmDialog(null, "Quiere añadir un hijo a la derecha de "+ pivote.getDato() +"?",
+                "YES_NO_OPTION", JOptionPane.YES_NO_OPTION,
+                JOptionPane.INFORMATION_MESSAGE);
+        if(seleccion == 0)
+        {
+            String nuevoDato = JOptionPane.showInputDialog("Ingrese el nuevo hijo de "+ pivote.getDato() +":");
+            nuevo = new Nodo(nuevoDato.charAt(0), null, null);
+            pivote.setDer(nuevo);
+            insertar(pivote.getDer());
+        }
 
     }
-
+    
     public Nodo getRaiz() {
         return raiz;
     }
