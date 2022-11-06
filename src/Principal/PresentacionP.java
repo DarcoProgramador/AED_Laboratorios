@@ -44,76 +44,77 @@ public class PresentacionP extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
 
+        setForeground(new java.awt.Color(0, 0, 0));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel12.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("Grupo:");
         jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI Black", 1, 16)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 51, 255));
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("2M5-CO");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, -1, -1));
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Profesor:");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, -1, -1));
 
-        jLabel9.setFont(new java.awt.Font("Segoe UI Black", 1, 16)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 51, 255));
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Eliezer Aburto");
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, -1, 20));
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Clase:");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
 
-        jLabel10.setFont(new java.awt.Font("Segoe UI Black", 1, 16)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(0, 51, 255));
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("Estructura de Datos");
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, 20));
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Integrantes:");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, -1, -1));
 
-        jLabel11.setFont(new java.awt.Font("Segoe UI Black", 1, 16)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(0, 51, 255));
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("David Antonio Carcache Torres");
         jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, -1, 20));
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI Black", 1, 16)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 51, 255));
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Sergio Rafael Manzanares Cano");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, -1, 20));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/universidad-de-ingenieria-02_1.png"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 160, 80));
 
-        jLabel13.setFont(new java.awt.Font("Segoe UI Black", 1, 16)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(0, 51, 255));
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("Algoritmización y");
         jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, -1, 20));
 
-        jLabel14.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
         jLabel14.setText("Herramientas");
         jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 90, -1, -1));
 
-        jLabel15.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(0, 0, 0));
         jLabel15.setText("Java");
         jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 130, -1, -1));
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("Netbeans");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 130, -1, -1));
 

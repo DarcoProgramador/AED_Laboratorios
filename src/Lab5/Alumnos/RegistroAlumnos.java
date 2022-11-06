@@ -52,10 +52,11 @@ public class RegistroAlumnos extends javax.swing.JPanel{
         add(body, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         Title.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        Title.setForeground(new java.awt.Color(0, 0, 0));
         Title.setText("Registro");
         add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, -1, -1));
 
-        jSeparator1.setForeground(new java.awt.Color(0, 153, 255));
+        jSeparator1.setForeground(new java.awt.Color(0, 75, 50));
         jSeparator1.setPreferredSize(new java.awt.Dimension(200, 10));
         add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 130, 200, 10));
 
@@ -64,7 +65,7 @@ public class RegistroAlumnos extends javax.swing.JPanel{
         jSeparator3.setPreferredSize(new java.awt.Dimension(200, 10));
         add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 50, 10, 350));
 
-        button_Añadir.setBackground(new java.awt.Color(18, 90, 173));
+        button_Añadir.setBackground(new java.awt.Color(0, 75, 50));
         button_Añadir.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         button_Añadir.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -109,10 +110,11 @@ public class RegistroAlumnos extends javax.swing.JPanel{
         add(textNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 100, 180, -1));
 
         Title1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        Title1.setForeground(new java.awt.Color(0, 0, 0));
         Title1.setText("Añadir  al Registro:");
         add(Title1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 30, 200, -1));
 
-        jSeparator2.setForeground(new java.awt.Color(0, 153, 255));
+        jSeparator2.setForeground(new java.awt.Color(0, 75, 50));
         jSeparator2.setPreferredSize(new java.awt.Dimension(200, 10));
         add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 170, 200, 10));
 
@@ -134,19 +136,22 @@ public class RegistroAlumnos extends javax.swing.JPanel{
         });
         add(textCarnet, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 180, 180, -1));
 
-        jSeparator4.setForeground(new java.awt.Color(0, 153, 255));
+        jSeparator4.setForeground(new java.awt.Color(0, 75, 50));
         jSeparator4.setPreferredSize(new java.awt.Dimension(200, 10));
         add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 210, 200, 10));
 
         lbCarnet.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
+        lbCarnet.setForeground(new java.awt.Color(0, 0, 0));
         lbCarnet.setText("Carnet:");
         add(lbCarnet, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 180, -1, -1));
 
         lbNombre.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
+        lbNombre.setForeground(new java.awt.Color(0, 0, 0));
         lbNombre.setText("Nombre:");
         add(lbNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 100, -1, -1));
 
         lbCarrera.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
+        lbCarrera.setForeground(new java.awt.Color(0, 0, 0));
         lbCarrera.setText("Carrera:");
         add(lbCarrera, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, -1, -1));
     }// </editor-fold>//GEN-END:initComponents

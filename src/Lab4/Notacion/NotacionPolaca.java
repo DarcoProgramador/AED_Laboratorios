@@ -41,6 +41,7 @@ public class NotacionPolaca extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Introduce una notación infija para convertirla a prefija y postfija:");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, 560, 20));
 
@@ -55,7 +56,7 @@ public class NotacionPolaca extends javax.swing.JPanel {
         mostrarInfija.setText(" ");
         add(mostrarInfija, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 290, 371, -1));
 
-        button_Añadir.setBackground(new java.awt.Color(18, 90, 173));
+        button_Añadir.setBackground(new java.awt.Color(0, 75, 50));
         button_Añadir.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         button_Añadir.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {

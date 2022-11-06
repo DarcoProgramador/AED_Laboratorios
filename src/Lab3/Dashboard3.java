@@ -64,15 +64,17 @@ public class Dashboard3 extends javax.swing.JFrame {
         btn_Ejercicio1 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        app_name = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
         btn_Ejercicio5 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         btn_Ejercicio6 = new javax.swing.JPanel();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        app_name = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        Regresarp = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
         Header = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         fecha = new javax.swing.JLabel();
@@ -94,13 +96,13 @@ public class Dashboard3 extends javax.swing.JFrame {
             }
         });
 
-        Background.setBackground(new java.awt.Color(255, 255, 255));
+        Background.setBackground(new java.awt.Color(0, 75, 50));
         Background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Menu.setBackground(new java.awt.Color(13, 71, 161));
+        Menu.setBackground(new java.awt.Color(51, 51, 51));
         Menu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btn_prin.setBackground(new java.awt.Color(21, 101, 192));
+        btn_prin.setBackground(new java.awt.Color(51, 51, 51));
         btn_prin.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btn_prin.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -126,7 +128,7 @@ public class Dashboard3 extends javax.swing.JFrame {
 
         Menu.add(btn_prin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 270, 50));
 
-        btn_Ejercicio2.setBackground(new java.awt.Color(18, 90, 173));
+        btn_Ejercicio2.setBackground(new java.awt.Color(51, 51, 51));
         btn_Ejercicio2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btn_Ejercicio2.setPreferredSize(new java.awt.Dimension(270, 51));
         btn_Ejercicio2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -153,7 +155,7 @@ public class Dashboard3 extends javax.swing.JFrame {
 
         Menu.add(btn_Ejercicio2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, -1, -1));
 
-        btn_Ejercicio3.setBackground(new java.awt.Color(18, 90, 173));
+        btn_Ejercicio3.setBackground(new java.awt.Color(51, 51, 51));
         btn_Ejercicio3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btn_Ejercicio3.setPreferredSize(new java.awt.Dimension(270, 51));
         btn_Ejercicio3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -180,7 +182,7 @@ public class Dashboard3 extends javax.swing.JFrame {
 
         Menu.add(btn_Ejercicio3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, -1, -1));
 
-        btn_Espacios.setBackground(new java.awt.Color(18, 90, 173));
+        btn_Espacios.setBackground(new java.awt.Color(51, 51, 51));
         btn_Espacios.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btn_Espacios.setPreferredSize(new java.awt.Dimension(270, 51));
         btn_Espacios.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -207,7 +209,7 @@ public class Dashboard3 extends javax.swing.JFrame {
 
         Menu.add(btn_Espacios, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, -1, -1));
 
-        btn_Ejercicio1.setBackground(new java.awt.Color(18, 90, 173));
+        btn_Ejercicio1.setBackground(new java.awt.Color(51, 51, 51));
         btn_Ejercicio1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btn_Ejercicio1.setPreferredSize(new java.awt.Dimension(270, 51));
         btn_Ejercicio1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -234,15 +236,7 @@ public class Dashboard3 extends javax.swing.JFrame {
 
         Menu.add(btn_Ejercicio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, -1, -1));
 
-        app_name.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        app_name.setForeground(new java.awt.Color(255, 255, 255));
-        app_name.setText("Lab 3 java");
-        Menu.add(app_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, -1, -1));
-
-        jSeparator1.setPreferredSize(new java.awt.Dimension(50, 5));
-        Menu.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 190, 20));
-
-        btn_Ejercicio5.setBackground(new java.awt.Color(18, 90, 173));
+        btn_Ejercicio5.setBackground(new java.awt.Color(51, 51, 51));
         btn_Ejercicio5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btn_Ejercicio5.setPreferredSize(new java.awt.Dimension(270, 51));
         btn_Ejercicio5.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -269,7 +263,7 @@ public class Dashboard3 extends javax.swing.JFrame {
 
         Menu.add(btn_Ejercicio5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 380, -1, -1));
 
-        btn_Ejercicio6.setBackground(new java.awt.Color(18, 90, 173));
+        btn_Ejercicio6.setBackground(new java.awt.Color(51, 51, 51));
         btn_Ejercicio6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btn_Ejercicio6.setPreferredSize(new java.awt.Dimension(270, 51));
         btn_Ejercicio6.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -296,27 +290,53 @@ public class Dashboard3 extends javax.swing.JFrame {
 
         Menu.add(btn_Ejercicio6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 430, -1, -1));
 
-        jButton1.setBackground(new java.awt.Color(18, 90, 173));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton1.setText("Regresar");
-        jButton1.setBorder(null);
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        jPanel1.setBackground(new java.awt.Color(0, 51, 0));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        app_name.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        app_name.setForeground(new java.awt.Color(255, 255, 255));
+        app_name.setText("LABORATORIO 3");
+        jPanel1.add(app_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, -1, -1));
+
+        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator1.setPreferredSize(new java.awt.Dimension(50, 5));
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 190, 20));
+
+        Menu.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 60));
+
+        Regresarp.setBackground(new java.awt.Color(51, 51, 51));
+        Regresarp.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                RegresarpMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                RegresarpMouseExited(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jButton1MousePressed(evt);
+                RegresarpMousePressed(evt);
             }
         });
-        Menu.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 600, 140, 30));
+        Regresarp.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Regresar");
+        Regresarp.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, -1, -1));
+
+        Menu.add(Regresarp, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 590, 270, 50));
 
         Background.add(Menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 640));
 
-        Header.setBackground(new java.awt.Color(25, 118, 210));
+        Header.setBackground(new java.awt.Color(255, 255, 255));
 
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Ejercicios de Recursividad");
 
+        fecha.setBackground(new java.awt.Color(255, 255, 255));
         fecha.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        fecha.setForeground(new java.awt.Color(255, 255, 255));
+        fecha.setForeground(new java.awt.Color(0, 0, 0));
         fecha.setText("Hoy es Sábado 28 de Abril de 2018");
 
         javax.swing.GroupLayout HeaderLayout = new javax.swing.GroupLayout(Header);
@@ -342,7 +362,7 @@ public class Dashboard3 extends javax.swing.JFrame {
 
         Background.add(Header, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 60, 750, 150));
 
-        Title.setBackground(new java.awt.Color(255, 255, 255));
+        Title.setBackground(new java.awt.Color(0, 75, 50));
         Title.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 TitleMouseDragged(evt);
@@ -354,7 +374,7 @@ public class Dashboard3 extends javax.swing.JFrame {
             }
         });
 
-        red_squr.setBackground(new java.awt.Color(255, 255, 255));
+        red_squr.setBackground(new java.awt.Color(0, 75, 50));
         red_squr.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         red_squr.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -369,7 +389,7 @@ public class Dashboard3 extends javax.swing.JFrame {
         });
 
         exit.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        exit.setForeground(new java.awt.Color(102, 102, 102));
+        exit.setForeground(new java.awt.Color(255, 255, 255));
         exit.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         exit.setText("X");
         exit.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -412,6 +432,7 @@ public class Dashboard3 extends javax.swing.JFrame {
         Background.add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, -1));
 
         slogan.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        slogan.setForeground(new java.awt.Color(255, 255, 255));
         slogan.setText("Facultad de Electrotecnia y Computación (F.E.C)");
         Background.add(slogan, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 30, 300, 30));
 
@@ -663,8 +684,8 @@ public class Dashboard3 extends javax.swing.JFrame {
     }//GEN-LAST:event_red_squrMouseEntered
 
     private void red_squrMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_red_squrMouseExited
-        red_squr.setBackground(new Color(255,255,255));
-        exit.setForeground(new Color(102,102,102));
+        red_squr.setBackground(new Color(0,75,50));
+        exit.setForeground(Color.white);
     }//GEN-LAST:event_red_squrMouseExited
 
     private void exitMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMouseEntered
@@ -673,8 +694,8 @@ public class Dashboard3 extends javax.swing.JFrame {
     }//GEN-LAST:event_exitMouseEntered
 
     private void exitMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMouseExited
-        red_squr.setBackground(new Color(255,255,255));
-        exit.setForeground(new Color(102,102,102));
+        red_squr.setBackground(new Color(0,75,50));
+        exit.setForeground(Color.white);
     }//GEN-LAST:event_exitMouseExited
 
     private void btn_Ejercicio5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_Ejercicio5MouseEntered
@@ -756,10 +777,18 @@ public class Dashboard3 extends javax.swing.JFrame {
 
     }//GEN-LAST:event_Activar_color
 
-    private void jButton1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MousePressed
+    private void RegresarpMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegresarpMousePressed
         dispose();
         new Principal().setVisible(true);
-    }//GEN-LAST:event_jButton1MousePressed
+    }//GEN-LAST:event_RegresarpMousePressed
+
+    private void RegresarpMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegresarpMouseEntered
+        Regresarp.setBackground(new Color(0,51,0));
+    }//GEN-LAST:event_RegresarpMouseEntered
+
+    private void RegresarpMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegresarpMouseExited
+        Regresarp.setBackground(new Color(51,51,51));
+    }//GEN-LAST:event_RegresarpMouseExited
 
 //Funciones para volver a Poner y quitar el color de los botones
     void setColor(JPanel panel){
@@ -775,6 +804,7 @@ public class Dashboard3 extends javax.swing.JFrame {
     private javax.swing.JPanel Background;
     private javax.swing.JPanel Header;
     private javax.swing.JPanel Menu;
+    private javax.swing.JPanel Regresarp;
     private javax.swing.JPanel Title;
     private javax.swing.JLabel app_name;
     private javax.swing.JPanel btn_Ejercicio1;
@@ -787,7 +817,6 @@ public class Dashboard3 extends javax.swing.JFrame {
     public static javax.swing.JPanel content;
     private javax.swing.JLabel exit;
     private javax.swing.JLabel fecha;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel13;
@@ -800,9 +829,11 @@ public class Dashboard3 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JPanel red_squr;
     private javax.swing.JLabel slogan;

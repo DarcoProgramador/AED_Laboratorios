@@ -48,10 +48,11 @@ public class Numeros extends javax.swing.JPanel {
         add(body, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         Title.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        Title.setForeground(new java.awt.Color(0, 0, 0));
         Title.setText("Numeros");
         add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, -1));
 
-        jSeparator1.setForeground(new java.awt.Color(0, 153, 255));
+        jSeparator1.setForeground(new java.awt.Color(0, 75, 50));
         jSeparator1.setPreferredSize(new java.awt.Dimension(200, 10));
         add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 120, 260, 10));
 
@@ -60,7 +61,7 @@ public class Numeros extends javax.swing.JPanel {
         jSeparator3.setPreferredSize(new java.awt.Dimension(200, 10));
         add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 40, 10, 350));
 
-        button_Añadir.setBackground(new java.awt.Color(18, 90, 173));
+        button_Añadir.setBackground(new java.awt.Color(0, 75, 50));
         button_Añadir.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         button_Añadir.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -83,7 +84,7 @@ public class Numeros extends javax.swing.JPanel {
 
         add(button_Añadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 130, 260, 50));
 
-        button_Eliminar.setBackground(new java.awt.Color(18, 90, 173));
+        button_Eliminar.setBackground(new java.awt.Color(0, 75, 50));
         button_Eliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         button_Eliminar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -131,6 +132,7 @@ public class Numeros extends javax.swing.JPanel {
         add(textPila, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 90, 234, -1));
 
         Title1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        Title1.setForeground(new java.awt.Color(0, 0, 0));
         Title1.setText("Añadir  Numeros:");
         add(Title1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 40, 200, -1));
 

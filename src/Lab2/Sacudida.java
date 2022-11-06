@@ -62,14 +62,16 @@ public class Sacudida extends javax.swing.JPanel {
         add(body, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         Title.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        Title.setForeground(new java.awt.Color(0, 0, 0));
         Title.setText("Sacudida");
         add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 50, -1, -1));
 
         Text1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        Text1.setForeground(new java.awt.Color(0, 0, 0));
         Text1.setText("Buscar:");
         add(Text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 20, -1, -1));
 
-        jSeparator1.setForeground(new java.awt.Color(0, 153, 255));
+        jSeparator1.setForeground(new java.awt.Color(0, 75, 50));
         jSeparator1.setPreferredSize(new java.awt.Dimension(200, 10));
         add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 40, 180, 10));
 
@@ -78,7 +80,7 @@ public class Sacudida extends javax.swing.JPanel {
         jSeparator3.setPreferredSize(new java.awt.Dimension(200, 10));
         add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 80, 10, 300));
 
-        button.setBackground(new java.awt.Color(18, 90, 173));
+        button.setBackground(new java.awt.Color(0, 75, 50));
         button.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         button.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -114,6 +116,7 @@ public class Sacudida extends javax.swing.JPanel {
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 90, 290, 270));
 
         Title1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        Title1.setForeground(new java.awt.Color(0, 0, 0));
         Title1.setText("Desordenado");
         add(Title1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, -1, -1));
 

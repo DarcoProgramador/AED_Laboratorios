@@ -50,19 +50,20 @@ public class Espacios extends javax.swing.JPanel {
         add(body, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         Text1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        Text1.setForeground(new java.awt.Color(0, 0, 0));
         Text1.setText("Numero de Espacios:");
         add(Text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 170, -1, -1));
 
-        jSeparator1.setForeground(new java.awt.Color(0, 153, 255));
+        jSeparator1.setForeground(new java.awt.Color(0, 75, 50));
         jSeparator1.setPreferredSize(new java.awt.Dimension(200, 10));
         add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 180, 10));
 
-        jSeparator3.setForeground(new java.awt.Color(204, 204, 204));
+        jSeparator3.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jSeparator3.setPreferredSize(new java.awt.Dimension(200, 10));
         add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 80, 10, 300));
 
-        button.setBackground(new java.awt.Color(18, 90, 173));
+        button.setBackground(new java.awt.Color(0, 75, 50));
         button.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         button.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -86,6 +87,7 @@ public class Espacios extends javax.swing.JPanel {
         add(button, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, 110, 30));
 
         Title1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        Title1.setForeground(new java.awt.Color(0, 0, 0));
         Title1.setText("Contador de Espacios");
         add(Title1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, -1, -1));
 
@@ -135,6 +137,7 @@ public class Espacios extends javax.swing.JPanel {
         add(txtEspacios, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 170, 220, 20));
 
         Text2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        Text2.setForeground(new java.awt.Color(0, 0, 0));
         Text2.setText("Frase:");
         add(Text2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, -1, -1));
     }// </editor-fold>//GEN-END:initComponents

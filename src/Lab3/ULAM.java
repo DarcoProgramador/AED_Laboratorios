@@ -47,6 +47,7 @@ public class ULAM extends javax.swing.JPanel {
         add(body, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         Title1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        Title1.setForeground(new java.awt.Color(0, 0, 0));
         Title1.setText("Secuencia ULAM");
         add(Title1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, -1, -1));
 
@@ -66,10 +67,11 @@ public class ULAM extends javax.swing.JPanel {
         add(jSpinner2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 170, 260, -1));
 
         Text1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        Text1.setForeground(new java.awt.Color(0, 0, 0));
         Text1.setText("Añadir numero");
         add(Text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 150, -1, -1));
 
-        button_Añadir.setBackground(new java.awt.Color(18, 90, 173));
+        button_Añadir.setBackground(new java.awt.Color(0, 75, 50));
         button_Añadir.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         button_Añadir.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {

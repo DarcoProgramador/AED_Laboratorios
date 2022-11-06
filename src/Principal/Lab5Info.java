@@ -38,39 +38,39 @@ public class Lab5Info extends javax.swing.JPanel {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 51, 255));
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("- Arraylist");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
 
-        jLabel10.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(0, 51, 255));
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("- List");
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, -1, -1));
 
-        jLabel12.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(0, 0, 153));
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("Abordados:");
         jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, -1, -1));
 
-        jLabel13.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(0, 0, 153));
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("Temas");
         jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, -1, -1));
 
-        jLabel14.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(0, 0, 153));
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
         jLabel14.setText("Fecha:");
         jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
 
-        jLabel15.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(0, 51, 255));
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(0, 0, 0));
         jLabel15.setText("Jueves 19 de Octubre 2022");
         jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
 
-        jLabel16.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(0, 0, 153));
-        jLabel16.setText("Informacion del Laboratorio 5");
+        jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel16.setText("INFORMACIÓN LABORATORIO 5");
         jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

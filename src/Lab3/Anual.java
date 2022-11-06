@@ -49,6 +49,7 @@ public class Anual extends javax.swing.JPanel {
         add(body, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         Title1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        Title1.setForeground(new java.awt.Color(0, 0, 0));
         Title1.setText("Incremento anual");
         add(Title1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, -1, -1));
 

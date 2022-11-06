@@ -60,15 +60,19 @@ public class Producto_Arreglo extends javax.swing.JPanel {
         body.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         add(body, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
+        Title.setBackground(new java.awt.Color(255, 255, 255));
         Title.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        Title.setForeground(new java.awt.Color(0, 0, 0));
         Title.setText("Añadir Arreglo");
         add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
 
+        Text1.setBackground(new java.awt.Color(255, 255, 255));
         Text1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        Text1.setForeground(new java.awt.Color(0, 0, 0));
         Text1.setText("Añadir numero");
         add(Text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 130, -1, -1));
 
-        jSeparator1.setForeground(new java.awt.Color(0, 153, 255));
+        jSeparator1.setForeground(new java.awt.Color(0, 75, 50));
         jSeparator1.setPreferredSize(new java.awt.Dimension(200, 10));
         add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 180, 260, 10));
 
@@ -77,7 +81,7 @@ public class Producto_Arreglo extends javax.swing.JPanel {
         jSeparator3.setPreferredSize(new java.awt.Dimension(200, 10));
         add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 40, 10, 350));
 
-        button_Añadir.setBackground(new java.awt.Color(18, 90, 173));
+        button_Añadir.setBackground(new java.awt.Color(0, 75, 50));
         button_Añadir.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         button_Añadir.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -113,7 +117,9 @@ public class Producto_Arreglo extends javax.swing.JPanel {
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 170, 360));
         add(jSpinner2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 150, 260, -1));
 
+        Text2.setBackground(new java.awt.Color(255, 255, 255));
         Text2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        Text2.setForeground(new java.awt.Color(0, 0, 0));
         Text2.setText("Producto:");
         add(Text2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 220, -1, -1));
 
@@ -138,7 +144,7 @@ public class Producto_Arreglo extends javax.swing.JPanel {
         });
         add(txtProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 220, 180, 20));
 
-        jSeparator2.setForeground(new java.awt.Color(0, 153, 255));
+        jSeparator2.setForeground(new java.awt.Color(0, 75, 50));
         jSeparator2.setPreferredSize(new java.awt.Dimension(200, 10));
         add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 240, 180, 10));
     }// </editor-fold>//GEN-END:initComponents

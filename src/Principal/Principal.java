@@ -21,9 +21,10 @@ public class Principal extends javax.swing.JFrame {
     /**
      * Creates new form Principal
      */
-    
+    int xx, xy;
     public Principal() {
         initComponents();
+        
         setLocationRelativeTo(null);
         
         LocalDate now = LocalDate.now();
@@ -70,6 +71,8 @@ public class Principal extends javax.swing.JFrame {
         fecha = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         slogan = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         Lab1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -79,12 +82,12 @@ public class Principal extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         Lab4 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
+        app_name = new javax.swing.JLabel();
         Lab5 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         Lab6 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
-        jPanel5 = new javax.swing.JPanel();
-        app_name = new javax.swing.JLabel();
         Presentacionl = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
         content2 = new javax.swing.JPanel();
@@ -102,6 +105,7 @@ public class Principal extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         content.setBackground(new java.awt.Color(255, 255, 255));
@@ -131,12 +135,43 @@ public class Principal extends javax.swing.JFrame {
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, 620, 80));
 
         jPanel3.setBackground(new java.awt.Color(0, 75, 50));
+        jPanel3.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                jPanel3MouseDragged(evt);
+            }
+        });
+        jPanel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jPanel3MousePressed(evt);
+            }
+        });
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         slogan.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         slogan.setForeground(new java.awt.Color(255, 255, 255));
         slogan.setText("Facultad de Electrotecnia y Computación (F.E.C)");
         jPanel3.add(slogan, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 300, 30));
+
+        jPanel4.setBackground(new java.awt.Color(0, 75, 50));
+        jPanel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jPanel4MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jPanel4MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jPanel4MousePressed(evt);
+            }
+        });
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setText("X");
+        jPanel4.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 10, 20));
+
+        jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 0, 30, 30));
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 0, 620, 80));
 
@@ -227,6 +262,16 @@ public class Principal extends javax.swing.JFrame {
 
         jPanel1.add(Lab4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 410, 210, 40));
 
+        jPanel5.setBackground(new java.awt.Color(0, 51, 0));
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        app_name.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        app_name.setForeground(new java.awt.Color(255, 255, 255));
+        app_name.setText("INICIO");
+        jPanel5.add(app_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, -1));
+
+        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 210, 80));
+
         Lab5.setBackground(new java.awt.Color(51, 51, 51));
         Lab5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -268,16 +313,6 @@ public class Principal extends javax.swing.JFrame {
         Lab6.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, -1));
 
         jPanel1.add(Lab6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 530, 210, 40));
-
-        jPanel5.setBackground(new java.awt.Color(0, 51, 0));
-        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        app_name.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        app_name.setForeground(new java.awt.Color(255, 255, 255));
-        app_name.setText("INICIO");
-        jPanel5.add(app_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, -1));
-
-        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 210, 80));
 
         Presentacionl.setBackground(new java.awt.Color(51, 51, 51));
         Presentacionl.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -706,6 +741,30 @@ public class Principal extends javax.swing.JFrame {
     private void Lab6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lab6MouseExited
         Lab6.setBackground(new Color(51,51,51));
     }//GEN-LAST:event_Lab6MouseExited
+
+    private void jPanel3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MousePressed
+        xx = evt.getX();
+        xy = evt.getY();
+    }//GEN-LAST:event_jPanel3MousePressed
+
+    private void jPanel3MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseDragged
+        int x=evt.getXOnScreen();
+        int y=evt.getYOnScreen();
+        
+        this.setLocation(x-xx, y-xy);
+    }//GEN-LAST:event_jPanel3MouseDragged
+
+    private void jPanel4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MousePressed
+        System.exit(0);
+    }//GEN-LAST:event_jPanel4MousePressed
+
+    private void jPanel4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseEntered
+        jPanel4.setBackground(new Color(204,0,0));
+    }//GEN-LAST:event_jPanel4MouseEntered
+
+    private void jPanel4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseExited
+        jPanel4.setBackground(new Color(0,75,50));
+    }//GEN-LAST:event_jPanel4MouseExited
     //</editor-fold>
     
     /**
@@ -767,6 +826,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -778,6 +838,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JLabel slogan;
     // End of variables declaration//GEN-END:variables

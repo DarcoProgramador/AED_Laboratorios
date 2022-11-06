@@ -321,8 +321,8 @@ public class Dashboard2 extends javax.swing.JFrame {
 
         app_name.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         app_name.setForeground(new java.awt.Color(255, 255, 255));
-        app_name.setText("Lab 2 java");
-        jPanel1.add(app_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, -1, 30));
+        app_name.setText("LABORATORIO 2");
+        jPanel1.add(app_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, -1, 30));
 
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
         jSeparator1.setPreferredSize(new java.awt.Dimension(50, 5));
@@ -377,7 +377,7 @@ public class Dashboard2 extends javax.swing.JFrame {
             }
         });
 
-        red_squr.setBackground(new java.awt.Color(255, 255, 255));
+        red_squr.setBackground(new java.awt.Color(0, 75, 50));
         red_squr.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         red_squr.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -391,8 +391,9 @@ public class Dashboard2 extends javax.swing.JFrame {
             }
         });
 
+        exit.setBackground(new java.awt.Color(0, 75, 50));
         exit.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        exit.setForeground(new java.awt.Color(102, 102, 102));
+        exit.setForeground(new java.awt.Color(255, 255, 255));
         exit.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         exit.setText("X");
         exit.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -487,10 +488,6 @@ public class Dashboard2 extends javax.swing.JFrame {
         xMouse = evt.getX();
         yMouse = evt.getY();
     }//GEN-LAST:event_TitleMousePressed
-// Funciones de los Botones
-    private void exitMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMousePressed
-        System.exit(0);
-    }//GEN-LAST:event_exitMousePressed
 
     private void btn_prinMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_prinMousePressed
         setColor(btn_prin);
@@ -691,19 +688,9 @@ public class Dashboard2 extends javax.swing.JFrame {
     }//GEN-LAST:event_red_squrMouseEntered
 
     private void red_squrMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_red_squrMouseExited
-        red_squr.setBackground(new Color(255,255,255));
+        red_squr.setBackground(new Color(0,75,50));
         exit.setForeground(new Color(102,102,102));
     }//GEN-LAST:event_red_squrMouseExited
-
-    private void exitMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMouseEntered
-        red_squr.setBackground(new Color(204,0,0));
-        exit.setForeground(Color.white);
-    }//GEN-LAST:event_exitMouseEntered
-
-    private void exitMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMouseExited
-        red_squr.setBackground(new Color(255,255,255));
-        exit.setForeground(new Color(102,102,102));
-    }//GEN-LAST:event_exitMouseExited
 
     private void btn_SacudidaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_SacudidaMouseEntered
         if(btn_Sacudida.getBackground().getRGB() == -15574355)
@@ -808,6 +795,21 @@ public class Dashboard2 extends javax.swing.JFrame {
         dispose();
         new Principal().setVisible(true);
     }//GEN-LAST:event_btn_RegresarMousePressed
+
+// Funciones de los Botones
+    private void exitMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMousePressed
+        System.exit(0);
+    }//GEN-LAST:event_exitMousePressed
+
+    private void exitMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMouseExited
+        red_squr.setBackground(new Color(0,75,50));
+        exit.setForeground(new Color(255,255,255));
+    }//GEN-LAST:event_exitMouseExited
+
+    private void exitMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMouseEntered
+        red_squr.setBackground(new Color(204,0,0));
+        exit.setForeground(Color.white);
+    }//GEN-LAST:event_exitMouseEntered
 
 //Funciones para volver a Poner y quitar el color de los botones
     void setColor(JPanel panel){
