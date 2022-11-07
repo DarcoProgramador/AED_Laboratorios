@@ -48,7 +48,7 @@ public class ArbolBinario extends javax.swing.JPanel {
         jSeparator1.setPreferredSize(new java.awt.Dimension(200, 10));
         add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(165, 57, 90, 10));
 
-        button_Añadir.setBackground(new java.awt.Color(18, 90, 173));
+        button_Añadir.setBackground(new java.awt.Color(51, 51, 51));
         button_Añadir.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         button_Añadir.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -195,10 +195,10 @@ public class ArbolBinario extends javax.swing.JPanel {
 
     //colores
     void setColor(JPanel panel){
-        panel.setBackground(new Color(21,101,192));
+        panel.setBackground(new Color(0,51,0));
     }
     void resetColor(JPanel panel){
-        panel.setBackground(new Color(18,90,173));
+        panel.setBackground(new Color(51,51,51));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
