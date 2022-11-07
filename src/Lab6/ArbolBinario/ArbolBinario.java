@@ -48,7 +48,7 @@ public class ArbolBinario extends javax.swing.JPanel {
         jSeparator1.setPreferredSize(new java.awt.Dimension(200, 10));
         add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(165, 57, 90, 10));
 
-        button_Añadir.setBackground(new java.awt.Color(51, 51, 51));
+        button_Añadir.setBackground(new java.awt.Color(0, 75, 50));
         button_Añadir.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         button_Añadir.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -63,6 +63,7 @@ public class ArbolBinario extends javax.swing.JPanel {
         });
         button_Añadir.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        Lb_TextAñadir.setBackground(new java.awt.Color(0, 75, 50));
         Lb_TextAñadir.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         Lb_TextAñadir.setForeground(new java.awt.Color(255, 255, 255));
         Lb_TextAñadir.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -198,7 +199,7 @@ public class ArbolBinario extends javax.swing.JPanel {
         panel.setBackground(new Color(0,51,0));
     }
     void resetColor(JPanel panel){
-        panel.setBackground(new Color(51,51,51));
+        panel.setBackground(new Color(0,75,50));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
