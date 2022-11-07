@@ -4,10 +4,10 @@
  */
 package lab1grafico;
 
+import Principal.Principal;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import javax.swing.*;
-import lab1grafico.Menu_de_Ejercicios;
 
 /**
  *
@@ -245,62 +245,27 @@ public class MarcoEj2 extends javax.swing.JFrame {
 
     private void MostrarAlumno2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MostrarAlumno2MousePressed
         dispose();
-        new Menu_de_Ejercicios().setVisible(true);
+        new Principal().setVisible(true);
     }//GEN-LAST:event_MostrarAlumno2MousePressed
 
     private void nuevoclMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nuevoclMousePressed
-            nuevocl p1 = new nuevocl();
-            p1.setSize(580, 400);
-            p1.setLocation(0,0);
             
-            Content.removeAll();
-            Content.add(p1, BorderLayout.CENTER);
-            Content.revalidate();
-            Content.repaint();
     }//GEN-LAST:event_nuevoclMousePressed
 
     private void modificarmorosoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarmorosoMousePressed
-            modificarcl p2 = new modificarcl();
-            p2.setSize(580, 400);
-            p2.setLocation(0,0);
             
-            Content.removeAll();
-            Content.add(p2, BorderLayout.CENTER);
-            Content.revalidate();
-            Content.repaint();
     }//GEN-LAST:event_modificarmorosoMousePressed
 
     private void EliminarclienteMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EliminarclienteMousePressed
-            eliminarcl p3 = new eliminarcl();
-            p3.setSize(580, 400);
-            p3.setLocation(0,0);
             
-            Content.removeAll();
-            Content.add(p3, BorderLayout.CENTER);
-            Content.revalidate();
-            Content.repaint();
     }//GEN-LAST:event_EliminarclienteMousePressed
 
     private void infoclMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_infoclMousePressed
-            Infocl p4 = new Infocl();
-            p4.setSize(580, 400);
-            p4.setLocation(0,0);
             
-            Content.removeAll();
-            Content.add(p4, BorderLayout.CENTER);
-            Content.revalidate();
-            Content.repaint();
     }//GEN-LAST:event_infoclMousePressed
 
     private void mostrarclMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mostrarclMousePressed
-            Mostrarcl p5 = new Mostrarcl();
-            p5.setSize(580, 400);
-            p5.setLocation(0,0);
-            
-            Content.removeAll();
-            Content.add(p5, BorderLayout.CENTER);
-            Content.revalidate();
-            Content.repaint();
+           
     }//GEN-LAST:event_mostrarclMousePressed
 
     /**

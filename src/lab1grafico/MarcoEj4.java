@@ -4,10 +4,10 @@
  */
 package lab1grafico;
 
+import Principal.Principal;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import javax.swing.JOptionPane;
-import lab1grafico.Menu_de_Ejercicios;
 
 /**
  *
@@ -248,40 +248,19 @@ public class MarcoEj4 extends javax.swing.JFrame {
 
     private void MostrarAlumno2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MostrarAlumno2MousePressed
         dispose();
-        new Menu_de_Ejercicios().setVisible(true);
+        new Principal().setVisible(true);
     }//GEN-LAST:event_MostrarAlumno2MousePressed
 
     private void IngresarNMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IngresarNMousePressed
-            mostrarem1 p1 = new mostrarem1();
-            p1.setSize(580, 400);
-            p1.setLocation(0,0);
             
-            Content.removeAll();
-            Content.add(p1, BorderLayout.CENTER);
-            Content.revalidate();
-            Content.repaint();
     }//GEN-LAST:event_IngresarNMousePressed
 
     private void NuevoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NuevoMousePressed
-            nuevoem1 p2 = new nuevoem1();
-            p2.setSize(580, 400);
-            p2.setLocation(0,0);
             
-            Content.removeAll();
-            Content.add(p2, BorderLayout.CENTER);
-            Content.revalidate();
-            Content.repaint();
     }//GEN-LAST:event_NuevoMousePressed
 
     private void EliminarAlumnoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EliminarAlumnoMousePressed
-            eliminarem1 p3 = new eliminarem1();
-            p3.setSize(580, 400);
-            p3.setLocation(0,0);
             
-            Content.removeAll();
-            Content.add(p3, BorderLayout.CENTER);
-            Content.revalidate();
-            Content.repaint();
     }//GEN-LAST:event_EliminarAlumnoMousePressed
 
     private void ModificarMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModificarMouseReleased
@@ -289,25 +268,11 @@ public class MarcoEj4 extends javax.swing.JFrame {
     }//GEN-LAST:event_ModificarMouseReleased
 
     private void ModificarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModificarMousePressed
-            modificarem1 p4 = new modificarem1();
-            p4.setSize(580, 400);
-            p4.setLocation(0,0);
             
-            Content.removeAll();
-            Content.add(p4, BorderLayout.CENTER);
-            Content.revalidate();
-            Content.repaint();
     }//GEN-LAST:event_ModificarMousePressed
 
     private void MostrarTodosMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MostrarTodosMousePressed
-            infoem1 p5 = new infoem1();
-            p5.setSize(580, 400);
-            p5.setLocation(0,0);
             
-            Content.removeAll();
-            Content.add(p5, BorderLayout.CENTER);
-            Content.revalidate();
-            Content.repaint();
     }//GEN-LAST:event_MostrarTodosMousePressed
 
     /**

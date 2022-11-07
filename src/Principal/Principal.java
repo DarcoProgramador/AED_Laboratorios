@@ -8,7 +8,7 @@ import Lab2.Dashboard2;
 import Lab3.Dashboard3;
 import java.awt.*;
 import java.time.LocalDate;
-import lab1grafico.Menu_de_Ejercicios;
+import lab1grafico.*;
 import javax.swing.*;
 
 
@@ -43,8 +43,18 @@ public class Principal extends javax.swing.JFrame {
         content.add(p1, BorderLayout.CENTER);
         content.revalidate();
         content.repaint();
-        this.Solucion1.setVisible(false);
-        Solucion1.setEnabled(false);
+        this.Solucion1_1.setVisible(false);
+        Solucion1_1.setEnabled(false);
+        this.Solucion1_2.setVisible(false);
+        Solucion1_2.setEnabled(false);
+        this.Solucion1_3.setVisible(false);
+        Solucion1_3.setEnabled(false);
+        this.Solucion1_4.setVisible(false);
+        Solucion1_4.setEnabled(false);
+        this.Solucion1_5.setVisible(false);
+        Solucion1_5.setEnabled(false);
+        this.Solucion1_6.setVisible(false);
+        Solucion1_6.setEnabled(false);
         this.Solucion2.setVisible(false);
         Solucion2.setEnabled(false);
         this.Solucion3.setVisible(false);
@@ -91,7 +101,7 @@ public class Principal extends javax.swing.JFrame {
         Presentacionl = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
         content2 = new javax.swing.JPanel();
-        Solucion1 = new javax.swing.JPanel();
+        Solucion1_6 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         Solucion2 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
@@ -103,6 +113,16 @@ public class Principal extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         Solucion6 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
+        Solucion1_3 = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
+        Solucion1_1 = new javax.swing.JPanel();
+        jLabel16 = new javax.swing.JLabel();
+        Solucion1_2 = new javax.swing.JPanel();
+        jLabel17 = new javax.swing.JLabel();
+        Solucion1_4 = new javax.swing.JPanel();
+        jLabel18 = new javax.swing.JLabel();
+        Solucion1_5 = new javax.swing.JPanel();
+        jLabel19 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -340,26 +360,26 @@ public class Principal extends javax.swing.JFrame {
         content2.setBackground(new java.awt.Color(255, 255, 255));
         content2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Solucion1.setBackground(new java.awt.Color(0, 75, 50));
-        Solucion1.addMouseListener(new java.awt.event.MouseAdapter() {
+        Solucion1_6.setBackground(new java.awt.Color(0, 75, 50));
+        Solucion1_6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                Solucion1MouseEntered(evt);
+                Solucion1_6MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                Solucion1MouseExited(evt);
+                Solucion1_6MouseExited(evt);
             }
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                Solucion1MousePressed(evt);
+                Solucion1_6MousePressed(evt);
             }
         });
-        Solucion1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        Solucion1_6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("SOLUCIÓN");
-        Solucion1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+        jLabel7.setText("SOLUCIÓN EJ6");
+        Solucion1_6.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
 
-        content2.add(Solucion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 30, 130, 40));
+        content2.add(Solucion1_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 60, 130, 40));
 
         Solucion2.setBackground(new java.awt.Color(0, 75, 50));
         Solucion2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -466,6 +486,111 @@ public class Principal extends javax.swing.JFrame {
 
         content2.add(Solucion6, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 30, 130, 40));
 
+        Solucion1_3.setBackground(new java.awt.Color(0, 75, 50));
+        Solucion1_3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Solucion1_3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Solucion1_3MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                Solucion1_3MousePressed(evt);
+            }
+        });
+        Solucion1_3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setText("SOLUCIÓN EJ3");
+        Solucion1_3.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
+
+        content2.add(Solucion1_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 10, 130, 40));
+
+        Solucion1_1.setBackground(new java.awt.Color(0, 75, 50));
+        Solucion1_1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Solucion1_1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Solucion1_1MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                Solucion1_1MousePressed(evt);
+            }
+        });
+        Solucion1_1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setText("SOLUCIÓN EJ1");
+        Solucion1_1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
+
+        content2.add(Solucion1_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 130, 40));
+
+        Solucion1_2.setBackground(new java.awt.Color(0, 75, 50));
+        Solucion1_2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Solucion1_2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Solucion1_2MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                Solucion1_2MousePressed(evt);
+            }
+        });
+        Solucion1_2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel17.setText("SOLUCIÓN EJ2");
+        Solucion1_2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
+
+        content2.add(Solucion1_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 10, 130, 40));
+
+        Solucion1_4.setBackground(new java.awt.Color(0, 75, 50));
+        Solucion1_4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Solucion1_4MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Solucion1_4MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                Solucion1_4MousePressed(evt);
+            }
+        });
+        Solucion1_4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel18.setText("SOLUCIÓN EJ4");
+        Solucion1_4.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
+
+        content2.add(Solucion1_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 130, 40));
+
+        Solucion1_5.setBackground(new java.awt.Color(0, 75, 50));
+        Solucion1_5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Solucion1_5MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Solucion1_5MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                Solucion1_5MousePressed(evt);
+            }
+        });
+        Solucion1_5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel19.setText("SOLUCIÓN EJ5");
+        Solucion1_5.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
+
+        content2.add(Solucion1_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, 130, 40));
+
         getContentPane().add(content2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 520, 620, 110));
 
         pack();
@@ -479,8 +604,18 @@ public class Principal extends javax.swing.JFrame {
         content.add(p1, BorderLayout.CENTER);
         content.revalidate();
         content.repaint();
-        this.Solucion1.setVisible(true);
-        Solucion1.setEnabled(true);
+        this.Solucion1_1.setVisible(true);
+        Solucion1_1.setEnabled(true);
+        this.Solucion1_2.setVisible(true);
+        Solucion1_2.setEnabled(true);
+        this.Solucion1_3.setVisible(true);
+        Solucion1_3.setEnabled(true);
+        this.Solucion1_4.setVisible(true);
+        Solucion1_4.setEnabled(true);
+        this.Solucion1_5.setVisible(true);
+        Solucion1_5.setEnabled(true);
+        this.Solucion1_6.setVisible(true);
+        Solucion1_6.setEnabled(true);
         this.Solucion2.setVisible(false);
         Solucion2.setEnabled(false);
         this.Solucion3.setVisible(false);
@@ -501,8 +636,18 @@ public class Principal extends javax.swing.JFrame {
         content.add(p1, BorderLayout.CENTER);
         content.revalidate();
         content.repaint();
-        this.Solucion1.setVisible(false);
-        Solucion1.setEnabled(false);
+        this.Solucion1_1.setVisible(false);
+        Solucion1_1.setEnabled(false);
+        this.Solucion1_2.setVisible(false);
+        Solucion1_2.setEnabled(false);
+        this.Solucion1_3.setVisible(false);
+        Solucion1_3.setEnabled(false);
+        this.Solucion1_4.setVisible(false);
+        Solucion1_4.setEnabled(false);
+        this.Solucion1_5.setVisible(false);
+        Solucion1_5.setEnabled(false);
+        this.Solucion1_6.setVisible(false);
+        Solucion1_6.setEnabled(false);
         this.Solucion2.setVisible(true);
         Solucion2.setEnabled(true);
         this.Solucion3.setVisible(false);
@@ -523,8 +668,18 @@ public class Principal extends javax.swing.JFrame {
         content.add(p1, BorderLayout.CENTER);
         content.revalidate();
         content.repaint();
-        this.Solucion1.setVisible(false);
-        Solucion1.setEnabled(false);
+        this.Solucion1_1.setVisible(false);
+        Solucion1_1.setEnabled(false);
+        this.Solucion1_2.setVisible(false);
+        Solucion1_2.setEnabled(false);
+        this.Solucion1_3.setVisible(false);
+        Solucion1_3.setEnabled(false);
+        this.Solucion1_4.setVisible(false);
+        Solucion1_4.setEnabled(false);
+        this.Solucion1_5.setVisible(false);
+        Solucion1_5.setEnabled(false);
+        this.Solucion1_6.setVisible(false);
+        Solucion1_6.setEnabled(false);
         this.Solucion2.setVisible(false);
         Solucion2.setEnabled(false);
         this.Solucion3.setVisible(true);
@@ -545,8 +700,18 @@ public class Principal extends javax.swing.JFrame {
         content.add(p1, BorderLayout.CENTER);
         content.revalidate();
         content.repaint();
-        this.Solucion1.setVisible(false);
-        Solucion1.setEnabled(false);
+        this.Solucion1_1.setVisible(false);
+        Solucion1_1.setEnabled(false);
+        this.Solucion1_2.setVisible(false);
+        Solucion1_2.setEnabled(false);
+        this.Solucion1_3.setVisible(false);
+        Solucion1_3.setEnabled(false);
+        this.Solucion1_4.setVisible(false);
+        Solucion1_4.setEnabled(false);
+        this.Solucion1_5.setVisible(false);
+        Solucion1_5.setEnabled(false);
+        this.Solucion1_6.setVisible(false);
+        Solucion1_6.setEnabled(false);
         this.Solucion2.setVisible(false);
         Solucion2.setEnabled(false);
         this.Solucion3.setVisible(false);
@@ -567,8 +732,18 @@ public class Principal extends javax.swing.JFrame {
         content.add(p1, BorderLayout.CENTER);
         content.revalidate();
         content.repaint();
-        this.Solucion1.setVisible(false);
-        Solucion1.setEnabled(false);
+        this.Solucion1_1.setVisible(false);
+        Solucion1_1.setEnabled(false);
+        this.Solucion1_2.setVisible(false);
+        Solucion1_2.setEnabled(false);
+        this.Solucion1_3.setVisible(false);
+        Solucion1_3.setEnabled(false);
+        this.Solucion1_4.setVisible(false);
+        Solucion1_4.setEnabled(false);
+        this.Solucion1_5.setVisible(false);
+        Solucion1_5.setEnabled(false);
+        this.Solucion1_6.setVisible(false);
+        Solucion1_6.setEnabled(false);
         this.Solucion2.setVisible(false);
         Solucion2.setEnabled(false);
         this.Solucion3.setVisible(false);
@@ -586,10 +761,10 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_Lab6MousePressed
     //</editor-fold>
     // <editor-fold defaultstate="collapsed" desc="Botones de Solucion de Lab">
-    private void Solucion1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Solucion1MousePressed
+    private void Solucion1_6MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Solucion1_6MousePressed
         dispose();
-        new Menu_de_Ejercicios().setVisible(true);
-    }//GEN-LAST:event_Solucion1MousePressed
+        new MarcoEj6().setVisible(true);
+    }//GEN-LAST:event_Solucion1_6MousePressed
 
     private void Solucion2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Solucion2MousePressed
         dispose();
@@ -623,8 +798,18 @@ public class Principal extends javax.swing.JFrame {
         content.add(p1, BorderLayout.CENTER);
         content.revalidate();
         content.repaint();
-        this.Solucion1.setVisible(false);
-        Solucion1.setEnabled(false);
+        this.Solucion1_1.setVisible(false);
+        Solucion1_1.setEnabled(false);
+        this.Solucion1_2.setVisible(false);
+        Solucion1_2.setEnabled(false);
+        this.Solucion1_3.setVisible(false);
+        Solucion1_3.setEnabled(false);
+        this.Solucion1_4.setVisible(false);
+        Solucion1_4.setEnabled(false);
+        this.Solucion1_5.setVisible(false);
+        Solucion1_5.setEnabled(false);
+        this.Solucion1_6.setVisible(false);
+        Solucion1_6.setEnabled(false);
         this.Solucion2.setVisible(false);
         Solucion2.setEnabled(false);
         this.Solucion3.setVisible(false);
@@ -646,13 +831,13 @@ public class Principal extends javax.swing.JFrame {
         Presentacionl.setBackground(new Color(51,51,51));
     }//GEN-LAST:event_PresentacionlMouseExited
 
-    private void Solucion1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Solucion1MouseEntered
-        Solucion1.setBackground(new Color(0,51,0));
-    }//GEN-LAST:event_Solucion1MouseEntered
+    private void Solucion1_6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Solucion1_6MouseEntered
+        Solucion1_6.setBackground(new Color(0,51,0));
+    }//GEN-LAST:event_Solucion1_6MouseEntered
 
-    private void Solucion1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Solucion1MouseExited
-        Solucion1.setBackground(new Color(0,75,50));
-    }//GEN-LAST:event_Solucion1MouseExited
+    private void Solucion1_6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Solucion1_6MouseExited
+        Solucion1_6.setBackground(new Color(0,75,50));
+    }//GEN-LAST:event_Solucion1_6MouseExited
 
     private void Solucion2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Solucion2MouseEntered
         Solucion2.setBackground(new Color(0,51,0));
@@ -765,6 +950,71 @@ public class Principal extends javax.swing.JFrame {
     private void jPanel4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseExited
         jPanel4.setBackground(new Color(0,75,50));
     }//GEN-LAST:event_jPanel4MouseExited
+
+    private void Solucion1_3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Solucion1_3MouseEntered
+        Solucion1_3.setBackground(new Color(0,51,0));
+    }//GEN-LAST:event_Solucion1_3MouseEntered
+
+    private void Solucion1_3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Solucion1_3MouseExited
+        Solucion1_3.setBackground(new Color(0,75,50));
+    }//GEN-LAST:event_Solucion1_3MouseExited
+
+    private void Solucion1_3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Solucion1_3MousePressed
+        dispose();
+        new MarcoEj3().setVisible(true);
+    }//GEN-LAST:event_Solucion1_3MousePressed
+
+    private void Solucion1_1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Solucion1_1MouseEntered
+        Solucion1_1.setBackground(new Color(0,51,0));
+    }//GEN-LAST:event_Solucion1_1MouseEntered
+
+    private void Solucion1_1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Solucion1_1MouseExited
+        Solucion1_1.setBackground(new Color(0,75,50));
+    }//GEN-LAST:event_Solucion1_1MouseExited
+
+    private void Solucion1_1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Solucion1_1MousePressed
+        dispose();
+        new MarcoEj1().setVisible(true);
+    }//GEN-LAST:event_Solucion1_1MousePressed
+
+    private void Solucion1_2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Solucion1_2MouseEntered
+        Solucion1_2.setBackground(new Color(0,51,0));
+    }//GEN-LAST:event_Solucion1_2MouseEntered
+
+    private void Solucion1_2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Solucion1_2MouseExited
+        Solucion1_2.setBackground(new Color(0,75,50));
+    }//GEN-LAST:event_Solucion1_2MouseExited
+
+    private void Solucion1_2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Solucion1_2MousePressed
+        dispose();
+        new MarcoEj2().setVisible(true);
+    }//GEN-LAST:event_Solucion1_2MousePressed
+
+    private void Solucion1_4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Solucion1_4MouseEntered
+        Solucion1_4.setBackground(new Color(0,51,0));
+    }//GEN-LAST:event_Solucion1_4MouseEntered
+
+    private void Solucion1_4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Solucion1_4MouseExited
+        Solucion1_4.setBackground(new Color(0,75,50));
+    }//GEN-LAST:event_Solucion1_4MouseExited
+
+    private void Solucion1_4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Solucion1_4MousePressed
+        dispose();
+        new MarcoEj4().setVisible(true);
+    }//GEN-LAST:event_Solucion1_4MousePressed
+
+    private void Solucion1_5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Solucion1_5MouseEntered
+        Solucion1_5.setBackground(new Color(0,51,0));
+    }//GEN-LAST:event_Solucion1_5MouseEntered
+
+    private void Solucion1_5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Solucion1_5MouseExited
+        Solucion1_5.setBackground(new Color(0,75,50));
+    }//GEN-LAST:event_Solucion1_5MouseExited
+
+    private void Solucion1_5MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Solucion1_5MousePressed
+        dispose();
+        new MarcoEj5().setVisible(true);
+    }//GEN-LAST:event_Solucion1_5MousePressed
     //</editor-fold>
     
     /**
@@ -811,7 +1061,12 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPanel Lab5;
     private javax.swing.JPanel Lab6;
     private javax.swing.JPanel Presentacionl;
-    private javax.swing.JPanel Solucion1;
+    private javax.swing.JPanel Solucion1_1;
+    private javax.swing.JPanel Solucion1_2;
+    private javax.swing.JPanel Solucion1_3;
+    private javax.swing.JPanel Solucion1_4;
+    private javax.swing.JPanel Solucion1_5;
+    private javax.swing.JPanel Solucion1_6;
     private javax.swing.JPanel Solucion2;
     private javax.swing.JPanel Solucion3;
     private javax.swing.JPanel Solucion4;
@@ -827,6 +1082,11 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
