@@ -66,8 +66,8 @@ public class Dashboard extends javax.swing.JFrame {
     int anchoBoton = 50;
     int ejeX = 0;//---->
     int ejeY = 0;//Abajo
-    Color colorReSet = new Color(18,90,173);//Color predefinido
-    Color colorSet = new Color(21,101,192);//Color seleccionado
+    Color colorReSet = new Color(51,51,51);//Color predefinido
+    Color colorSet = new Color(0,51,0);//Cambio de color
     public JPanel [][] JPaneles = new JPanel [filas][colum];//Tipo de boton
     boolean [] boton = new boolean [filas];//Boton seleccionado
     public JLabel [][] TitulosBtn = new JLabel [filas][colum+1];//El mas 1 es para las imagenes

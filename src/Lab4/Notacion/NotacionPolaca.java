@@ -94,13 +94,13 @@ public class NotacionPolaca extends javax.swing.JPanel {
             conversor.convertir(infija.getText(), mostrarPrefija,mostrarInfija);
         }
     }//GEN-LAST:event_button_AñadirMousePressed
-//Colores
-void setColor(JPanel panel){
-    panel.setBackground(new Color(21,101,192));
-}
-void resetColor(JPanel panel){
-    panel.setBackground(new Color(18,90,173));
-}
+    //colores
+    void setColor(JPanel panel){
+        panel.setBackground(new Color(0,51,0));
+    }
+    void resetColor(JPanel panel){
+        panel.setBackground(new Color(0,75,50));
+    }
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
