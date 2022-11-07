@@ -83,8 +83,8 @@ public class Dashboard extends javax.swing.JFrame {
     int ejeY = 0;//Abajo
     Font Estilo = new Font("Segoe UI", Font.BOLD, 14);
     Color color_texto = new Color(255,255,255);
-    Color colorReSet = new Color(18,90,173);//Color predefinido
-    Color colorSet = new Color(21,101,192);//Cambio de color
+    Color colorReSet = new Color(51,51,51);//Color predefinido
+    Color colorSet = new Color(0,51,0);//Cambio de color
     //</editor-fold>
     
     // <editor-fold defaultstate="collapsed" desc="Metodo para cargar los titulos de los botones">
@@ -382,8 +382,7 @@ public class Dashboard extends javax.swing.JFrame {
         Header.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Arraylis y Pilas");
 
         fecha.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -425,7 +424,7 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
 
-        red_squr.setBackground(new java.awt.Color(255, 255, 255));
+        red_squr.setBackground(new java.awt.Color(0, 75, 50));
         red_squr.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         red_squr.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -440,7 +439,7 @@ public class Dashboard extends javax.swing.JFrame {
         });
 
         exit.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        exit.setForeground(new java.awt.Color(102, 102, 102));
+        exit.setForeground(new java.awt.Color(255, 255, 255));
         exit.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         exit.setText("X");
         exit.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -550,8 +549,8 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_red_squrMouseEntered
 
     private void red_squrMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_red_squrMouseExited
-        red_squr.setBackground(new Color(255,255,255));
-        exit.setForeground(new Color(102,102,102));
+        red_squr.setBackground(new Color(0,75,50));
+        exit.setForeground(Color.white);
     }//GEN-LAST:event_red_squrMouseExited
 
     private void exitMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMouseEntered
@@ -560,8 +559,8 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_exitMouseEntered
 
     private void exitMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMouseExited
-        red_squr.setBackground(new Color(255,255,255));
-        exit.setForeground(new Color(102,102,102));
+        red_squr.setBackground(new Color(0,75,50));
+        exit.setForeground(Color.white);
     }//GEN-LAST:event_exitMouseExited
 
     private void Activar_color(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Activar_color
@@ -569,11 +568,11 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_Activar_color
     //Animacion de color regresar
     private void btn_RegresarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_RegresarMouseEntered
-        btn_Regresar.setBackground(new Color(21,101,192));
+        btn_Regresar.setBackground(colorSet);
     }//GEN-LAST:event_btn_RegresarMouseEntered
     
     private void btn_RegresarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_RegresarMouseExited
-        btn_Regresar.setBackground(new Color(13,71,161));
+        btn_Regresar.setBackground(colorReSet);
     }//GEN-LAST:event_btn_RegresarMouseExited
     //Accion de el boton regresar
     private void btn_RegresarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_RegresarMousePressed
