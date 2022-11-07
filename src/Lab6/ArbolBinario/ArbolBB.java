@@ -9,10 +9,6 @@ import java.util.LinkedList;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-/**
- *
- * @author Toloza XD
- */
 
 public class ArbolBB {
 
@@ -63,7 +59,6 @@ public class ArbolBB {
             pivote.setDer(nuevo);
             insertar(pivote.getDer());
         }
-
     }
     
     public Nodo getRaiz() {

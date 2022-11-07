@@ -1,14 +1,10 @@
 
 package Lab6.ArbolBinario;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import javax.swing.JPanel;
 
-/**
- *
- * @author Toloza XD
- */
+
 public class SimuladorArbolBinario {
 
     ArbolBB miArbol = new ArbolBB();
