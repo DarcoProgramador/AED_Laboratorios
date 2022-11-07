@@ -42,19 +42,16 @@ public class JPanelArray {
         IconPanel = new JLabel [filas];
         button_active = new boolean [filas];
         
-        int x = 0;
-        int y = 0;
-        
         for(int i = 0 ; i < filas ; i++)//inicializando botones
         {
             JPaneles[i] = new JPanel();
             Panel.add(JPaneles[i]);
-            Set_PanelText(i);
+            setPanelText(i);
             button_active[i] = false;
         }
     }
     
-    private void Set_PanelText(int NumButton)
+    private void setPanelText(int NumButton)
     {
         JPaneles[NumButton].setLayout(null);
         TitulosPanel[NumButton] = new JLabel("");
@@ -63,7 +60,7 @@ public class JPanelArray {
         JPaneles[NumButton].add(IconPanel[NumButton]);
     }
     
-    public void Panel_Separacion(int separacion)
+    public void panelSeparacion(int separacion)
     {
         this.separacion = separacion;
         int espacio = this.ejeY;
@@ -74,7 +71,7 @@ public class JPanelArray {
         }
     }
     
-    public void Panel_Bounds(int x, int y, int ancho, int alto)
+    public void panelBounds(int x, int y, int ancho, int alto)
     {
         this.ejeX = x;
         this.ejeY = y;
@@ -89,12 +86,12 @@ public class JPanelArray {
         }
     }
     
-    public void Panel_text(String text, int NumButton)
+    public void panelText(String text, int NumButton)
     {
         TitulosPanel[NumButton].setText(text);
     }
     
-    public void Panel_text_bounds(int x, int y, int ancho, int alto)
+    public void panelTextBounds(int x, int y, int ancho, int alto)
     {
         for(int i = 0 ; i < filas ; i++)//SetBounds Text
         {
@@ -102,12 +99,12 @@ public class JPanelArray {
         }
     }
     
-    public void Panel_icon(ImageIcon icono, int NumButton)
+    public void panelIcon(ImageIcon icono, int NumButton)
     {
         IconPanel[NumButton].setIcon(icono);
     }
     
-    public void Panel_icon_bounds(int x, int y, int ancho, int alto)
+    public void panelIconBounds(int x, int y, int ancho, int alto)
     {
         for(int i = 0 ; i < filas ; i++)//SetBounds Text
         {
@@ -115,7 +112,7 @@ public class JPanelArray {
         }
     }
     
-    public void Panel_set_colors(Color color_fondo)
+    public void panelSetColors(Color color_fondo)
     {
         this.color_background = color_fondo;
         for(int i = 0 ; i < filas ; i++)//SetColor Background
@@ -124,7 +121,7 @@ public class JPanelArray {
         }
     }
     
-    public void Panel_set_text_colors(Color color_fondo)
+    public void panelSetTextColors(Color color_fondo)
     {
         for(int i = 0 ; i < filas ; i++)//Color Text
         {
@@ -132,7 +129,7 @@ public class JPanelArray {
         }
     }
     
-    public void Panel_set_text_fonts(Font tipo_letra)
+    public void panelSetTextFonts(Font tipo_letra)
     {
         for(int i = 0 ; i < filas ; i++)//Color Text
         {
