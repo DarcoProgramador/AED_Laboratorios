@@ -80,12 +80,9 @@ public class Principal5 extends javax.swing.JPanel {
         add(Image, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 80, 370, 250));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-<<<<<<< HEAD
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setText("• Pilas y Colas");
-=======
+
         jLabel5.setText("• Pilas");
->>>>>>> 0482cc8 (Creado el DashBoard del Lab6)
+
         add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 170, -1));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N

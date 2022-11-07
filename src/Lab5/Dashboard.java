@@ -382,13 +382,9 @@ public class Dashboard extends javax.swing.JFrame {
         Header.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-<<<<<<< HEAD
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("Pilas y Colas");
-=======
+
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Arraylis y Pilas");
->>>>>>> 0482cc8 (Creado el DashBoard del Lab6)
 
         fecha.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         fecha.setForeground(new java.awt.Color(0, 0, 0));
