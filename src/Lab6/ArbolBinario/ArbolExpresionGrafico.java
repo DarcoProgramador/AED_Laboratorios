@@ -9,7 +9,7 @@ import javax.swing.*;
 
 public class ArbolExpresionGrafico extends JPanel 
 {
-    private final ArbolBB miArbol;
+    private final ArbolB miArbol;
     private HashMap posicionNodos = null;
     private HashMap subtreeSizes = null;
     private boolean dirty = true;
@@ -24,7 +24,7 @@ public class ArbolExpresionGrafico extends JPanel
      *  y llama al método repaint(), que es el encargado de pintar el Arbol.
      * @param miArbol: es el arbol que se va a pintar en el JPanel y se va a devolver
      */
-    public ArbolExpresionGrafico(ArbolBB miArbol) 
+    public ArbolExpresionGrafico(ArbolB miArbol) 
     {
           this.miArbol = miArbol;
           this.setBackground(Color.WHITE);

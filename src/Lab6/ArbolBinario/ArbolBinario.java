@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 
 public class ArbolBinario extends javax.swing.JPanel {
     
-    private SimuladorArbolBinario simulador = new SimuladorArbolBinario();
+    private AlmacenArbolBinario simulador = new AlmacenArbolBinario();
     
     public ArbolBinario() {
         initComponents();
@@ -31,6 +31,8 @@ public class ArbolBinario extends javax.swing.JPanel {
         textDato = new javax.swing.JTextField();
         Title1 = new javax.swing.JLabel();
         jPGrafico = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tableOrdenes = new javax.swing.JTable();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(750, 430));
@@ -43,7 +45,7 @@ public class ArbolBinario extends javax.swing.JPanel {
 
         jSeparator1.setForeground(new java.awt.Color(0, 153, 255));
         jSeparator1.setPreferredSize(new java.awt.Dimension(200, 10));
-        add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 730, 10));
+        add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 730, 10));
 
         button_Añadir.setBackground(new java.awt.Color(18, 90, 173));
         button_Añadir.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -66,7 +68,7 @@ public class ArbolBinario extends javax.swing.JPanel {
         Lb_TextAñadir.setText("Añadir");
         button_Añadir.add(Lb_TextAñadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, -1));
 
-        add(button_Añadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 10, 80, 24));
+        add(button_Añadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, 80, 24));
 
         textDato.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         textDato.setBorder(null);
@@ -78,14 +80,36 @@ public class ArbolBinario extends javax.swing.JPanel {
                 keyTypedValidar(evt);
             }
         });
-        add(textDato, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 10, 80, -1));
+        add(textDato, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 30, 80, -1));
 
         Title1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         Title1.setText("Añadir al Arbol:");
-        add(Title1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 10, 130, -1));
+        add(Title1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 130, -1));
 
         jPGrafico.setBackground(new java.awt.Color(255, 255, 255));
-        add(jPGrafico, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 750, 380));
+        add(jPGrafico, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 750, 350));
+
+        tableOrdenes.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"Preorden", null},
+                {"Inorden", null},
+                {"Posorden", null}
+            },
+            new String [] {
+                "Orden", ""
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(tableOrdenes);
+
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 0, 340, 70));
     }// </editor-fold>//GEN-END:initComponents
 
     private void button_AñadirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_AñadirMouseEntered
@@ -127,7 +151,7 @@ public class ArbolBinario extends javax.swing.JPanel {
             String subChar = textDato.getText();
             char dato = subChar.charAt(0);
             
-            if (this.simulador.insertar(dato)) {
+            if (this.simulador.insertar(dato, this.jPGrafico)) {
                 textDato.setText("");
                 JOptionPane.showMessageDialog(null, "El dato fue insertado correctamente", " ...", 1);
                 complementos();
@@ -164,7 +188,9 @@ public class ArbolBinario extends javax.swing.JPanel {
     private javax.swing.JPanel body;
     private javax.swing.JPanel button_Añadir;
     private javax.swing.JPanel jPGrafico;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JTable tableOrdenes;
     private javax.swing.JTextField textDato;
     // End of variables declaration//GEN-END:variables
 }

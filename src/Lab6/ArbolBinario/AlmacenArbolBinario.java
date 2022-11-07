@@ -5,15 +5,15 @@ import java.util.LinkedList;
 import javax.swing.JPanel;
 
 
-public class SimuladorArbolBinario {
+public class AlmacenArbolBinario {
 
-    ArbolBB miArbol = new ArbolBB();
+    ArbolB miArbol = new ArbolB();
 
-    public SimuladorArbolBinario() {
+    public AlmacenArbolBinario() {
     }
 
-    public boolean insertar(Character dato) {
-        return (this.miArbol.agregar(dato));
+    public boolean insertar(Character dato, JPanel Grafico) {
+        return (this.miArbol.agregar(dato, Grafico));
     }
     //metodo para mostrar los recorridos del arbol
     public String preOrden() {
@@ -39,15 +39,6 @@ public class SimuladorArbolBinario {
             r += "\t" + it.get(i).toString() + "";
             i++;
         }
-        return (r);
-    }
-    
-    
-    //Metodo para buscar dato en el nodo
-    public String buscar(Character dato) {
-        boolean siEsta = this.miArbol.existe(dato);
-        String r = "El dato:" + dato.toString() + "\n";
-        r += siEsta ? "Si se encuentra en el arbol" : "No se encuentra en el arbol";
         return (r);
     }
 

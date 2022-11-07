@@ -10,54 +10,55 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 
-public class ArbolBB {
+public class ArbolB {
 
     private Nodo raiz;
-    int num_nodos;
-    int alt;
 
-    public ArbolBB() {
+    public ArbolB() {
         raiz = null;
     }
     
-    public boolean agregar(char dato) {
+    public boolean agregar(char dato, JPanel Grafico) {
         if (raiz != null)
         {
             return false;
         }
         Nodo pivote = new Nodo(dato, null, null);
         raiz = pivote;
-        insertar(pivote);
+        insertar(pivote, Grafico);
         return true;
     }
     
     //Metodo para insertar datos en el arbol
-    public void insertar(Nodo pivote) {
+    public void insertar(Nodo pivote, JPanel Grafico) {
+        String[] opc = {"Sí", "No"};
+        
         if(pivote == null)
         {
             return;
         }
+        repintarArbol(Grafico);
         Nodo nuevo;
-        int seleccion = JOptionPane.showConfirmDialog(null, "Quiere añadir un hijo a la izquierda de "+ pivote.getDato() +"?",
-                "YES_NO_OPTION", JOptionPane.YES_NO_OPTION,
-                JOptionPane.INFORMATION_MESSAGE);
+        int seleccion = JOptionPane.showOptionDialog(null, "¿Quiere añadir un hijo a la izquierda de "+ pivote.getDato() +"?",
+                "Añadir a la izquierda", JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE, null, opc, opc[0]);
         if(seleccion == 0)
         {
             String nuevoDato = JOptionPane.showInputDialog("Ingrese el nuevo hijo de "+ pivote.getDato() +":");
             nuevo = new Nodo(nuevoDato.charAt(0), null, null);
             pivote.setIzq(nuevo);
-            insertar(pivote.getIzq());
+            insertar(pivote.getIzq(), Grafico);
         }
         
-        seleccion = JOptionPane.showConfirmDialog(null, "Quiere añadir un hijo a la derecha de "+ pivote.getDato() +"?",
-                "YES_NO_OPTION", JOptionPane.YES_NO_OPTION,
-                JOptionPane.INFORMATION_MESSAGE);
+        seleccion = JOptionPane.showOptionDialog(null, "¿Quiere añadir un hijo a la derecha de "+ pivote.getDato() +"?",
+                "Añadir a la derecha", JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE, null, opc, opc[0]);
         if(seleccion == 0)
         {
             String nuevoDato = JOptionPane.showInputDialog("Ingrese el nuevo hijo de "+ pivote.getDato() +":");
             nuevo = new Nodo(nuevoDato.charAt(0), null, null);
             pivote.setDer(nuevo);
-            insertar(pivote.getDer());
+            insertar(pivote.getDer(), Grafico);
         }
     }
     
@@ -112,36 +113,17 @@ public class ArbolBB {
             recorrido.add(aux.getDato());
         }
     }
-
-    //Metodo para verificar si hay un nodo en el arbol
-    public boolean existe(char dato) {
-        Nodo aux = raiz;
-        while (aux != null) {
-            if (dato == aux.getDato()) {
-                return true;
-            } else if (dato > aux.getDato()) {
-                aux = aux.getDer();
-            } else {
-                aux = aux.getIzq();
-            }
-        }
-        return false;
-    }
-
-    private void altura(Nodo aux, int nivel) {
-        if (aux != null) {
-            altura(aux.getIzq(), nivel + 1);
-            alt = nivel;
-            altura(aux.getDer(), nivel + 1);
-        }
-    }
-
-    //Devuleve la altura del arbol
-    public int getAltura() {
-        altura(raiz, 1);
-        return alt;
-    }
     
+    private void repintarArbol(JPanel jPGrafico) {
+        jPGrafico.removeAll();
+        jPGrafico.setLayout(null);
+        JPanel Grafico = this.getdibujo();
+        Grafico.setBounds(0, 0, 750, 380);
+        jPGrafico.add(Grafico);
+        jPGrafico.revalidate();
+        jPGrafico.repaint();
+    }
+
      public JPanel getdibujo() {
         return new ArbolExpresionGrafico(this);
     }
