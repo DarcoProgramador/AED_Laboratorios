@@ -33,6 +33,7 @@ public class ArbolBinario extends javax.swing.JPanel {
         jPGrafico = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableOrdenes = new javax.swing.JTable();
+        jSeparator2 = new javax.swing.JSeparator();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(750, 430));
@@ -45,7 +46,7 @@ public class ArbolBinario extends javax.swing.JPanel {
 
         jSeparator1.setForeground(new java.awt.Color(0, 153, 255));
         jSeparator1.setPreferredSize(new java.awt.Dimension(200, 10));
-        add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 730, 10));
+        add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(165, 57, 90, 10));
 
         button_Añadir.setBackground(new java.awt.Color(18, 90, 173));
         button_Añadir.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -110,6 +111,10 @@ public class ArbolBinario extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tableOrdenes);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 0, 340, 70));
+
+        jSeparator2.setForeground(new java.awt.Color(0, 153, 255));
+        jSeparator2.setPreferredSize(new java.awt.Dimension(200, 10));
+        add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 730, 10));
     }// </editor-fold>//GEN-END:initComponents
 
     private void button_AñadirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_AñadirMouseEntered
@@ -160,8 +165,10 @@ public class ArbolBinario extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "No se pudo insertar el dato", "Intenta de nuevo...", 0);
         }
     }
+    
     public void complementos(){
         this.repintarArbol();
+        this.imprimirRecorridos();
     }
     private void repintarArbol() {
         this.jPGrafico.removeAll();
@@ -171,6 +178,18 @@ public class ArbolBinario extends javax.swing.JPanel {
         jPGrafico.add(Grafico);
         jPGrafico.revalidate();
         jPGrafico.repaint();
+    }
+    private void imprimirRecorridos(){
+        String recorrido = null;
+        
+        recorrido = this.simulador.preOrden();
+        tableOrdenes.setValueAt(recorrido, 0, 1);
+        
+        recorrido = this.simulador.inOrden();
+        tableOrdenes.setValueAt(recorrido, 1, 1);
+        
+        recorrido = this.simulador.postOrden();
+        tableOrdenes.setValueAt(recorrido, 2, 1);
     }
     
 
@@ -190,6 +209,7 @@ public class ArbolBinario extends javax.swing.JPanel {
     private javax.swing.JPanel jPGrafico;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JTable tableOrdenes;
     private javax.swing.JTextField textDato;
     // End of variables declaration//GEN-END:variables

@@ -18,17 +18,17 @@ public class AlmacenArbolBinario {
     //metodo para mostrar los recorridos del arbol
     public String preOrden() {
         LinkedList it = this.miArbol.preOrden();
-        return (recorrido(it, "Recorrido PreOrden"));
+        return (recorrido(it, ""));
     }
 
     public String inOrden() {
         LinkedList it = this.miArbol.inOrden();
-        return (recorrido(it, "Recorrido InOrden"));
+        return (recorrido(it, ""));
     }
 
     public String postOrden() {
         LinkedList it = this.miArbol.postOrden();
-        return (recorrido(it, "Recorrido PosOrden"));
+        return (recorrido(it, ""));
     }
     
     //metodo para poder mostrar los tipos de recorrido
