@@ -4,9 +4,9 @@
  */
 package lab1grafico;
 
+import Principal.Principal;
 import java.awt.Color;
 import javax.swing.JOptionPane;
-import lab1grafico.Menu_de_Ejercicios;
 
 /**
  *
@@ -179,7 +179,7 @@ public class MarcoEj6 extends javax.swing.JFrame {
 
     private void MostrarAlumno2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MostrarAlumno2MousePressed
         dispose();
-        new Menu_de_Ejercicios().setVisible(true);
+        new Principal().setVisible(true);
     }//GEN-LAST:event_MostrarAlumno2MousePressed
 
     /**
