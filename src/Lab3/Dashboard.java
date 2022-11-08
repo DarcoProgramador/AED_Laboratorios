@@ -4,7 +4,7 @@ import java.awt.Color;
 import java.time.LocalDate;
 import javax.swing.JPanel;
 import Principal.Principal;
-public class Dashboard3 extends javax.swing.JFrame {
+public class Dashboard extends javax.swing.JFrame {
     //Creando variables de control
     //Ubicacion de la ventana
     int xMouse;
@@ -16,7 +16,7 @@ public class Dashboard3 extends javax.swing.JFrame {
     //Iniciando componentes y cargando el menu principal
     
     
-    public Dashboard3() {
+    public Dashboard() {
         initComponents();
         setLocationRelativeTo(null);
         
@@ -792,10 +792,10 @@ public class Dashboard3 extends javax.swing.JFrame {
 
 //Funciones para volver a Poner y quitar el color de los botones
     void setColor(JPanel panel){
-        panel.setBackground(new Color(21,101,192));
+        panel.setBackground(new Color(0,51,0));
     }
     void resetColor(JPanel panel){
-        panel.setBackground(new Color(18,90,173));
+        panel.setBackground(new Color(51,51,51));
     }
     /**
      * @param args the command line arguments
