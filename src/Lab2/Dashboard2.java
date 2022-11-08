@@ -14,6 +14,9 @@ public class Dashboard2 extends javax.swing.JFrame {
     int xMouse;
     int yMouse;
     int unico = 0;
+    Color set= new Color(0,51,0);
+    Color reset= new Color(51,51,51);
+    Color deactivate = new Color(204,204,204);
     /**
      * Creates new form Dashboard
      */
@@ -105,7 +108,7 @@ public class Dashboard2 extends javax.swing.JFrame {
         Menu.setBackground(new java.awt.Color(51, 51, 51));
         Menu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btn_prin.setBackground(new java.awt.Color(51, 51, 51));
+        btn_prin.setBackground(new java.awt.Color(0, 51, 0));
         btn_prin.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btn_prin.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -131,7 +134,7 @@ public class Dashboard2 extends javax.swing.JFrame {
 
         Menu.add(btn_prin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 270, 50));
 
-        btn_Burbuja.setBackground(new java.awt.Color(51, 51, 51));
+        btn_Burbuja.setBackground(new java.awt.Color(204, 204, 204));
         btn_Burbuja.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btn_Burbuja.setPreferredSize(new java.awt.Dimension(270, 51));
         btn_Burbuja.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -158,7 +161,7 @@ public class Dashboard2 extends javax.swing.JFrame {
 
         Menu.add(btn_Burbuja, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, -1, -1));
 
-        btn_Baraja.setBackground(new java.awt.Color(51, 51, 51));
+        btn_Baraja.setBackground(new java.awt.Color(204, 204, 204));
         btn_Baraja.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btn_Baraja.setPreferredSize(new java.awt.Dimension(270, 51));
         btn_Baraja.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -185,7 +188,7 @@ public class Dashboard2 extends javax.swing.JFrame {
 
         Menu.add(btn_Baraja, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, -1, -1));
 
-        btn_Directa.setBackground(new java.awt.Color(51, 51, 51));
+        btn_Directa.setBackground(new java.awt.Color(204, 204, 204));
         btn_Directa.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btn_Directa.setPreferredSize(new java.awt.Dimension(270, 51));
         btn_Directa.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -239,7 +242,7 @@ public class Dashboard2 extends javax.swing.JFrame {
 
         Menu.add(btn_Arreglo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, -1, -1));
 
-        btn_Sacudida.setBackground(new java.awt.Color(51, 51, 51));
+        btn_Sacudida.setBackground(new java.awt.Color(204, 204, 204));
         btn_Sacudida.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btn_Sacudida.setPreferredSize(new java.awt.Dimension(270, 51));
         btn_Sacudida.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -266,7 +269,7 @@ public class Dashboard2 extends javax.swing.JFrame {
 
         Menu.add(btn_Sacudida, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 380, -1, -1));
 
-        btn_Shell.setBackground(new java.awt.Color(51, 51, 51));
+        btn_Shell.setBackground(new java.awt.Color(204, 204, 204));
         btn_Shell.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btn_Shell.setPreferredSize(new java.awt.Dimension(270, 51));
         btn_Shell.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -608,75 +611,75 @@ public class Dashboard2 extends javax.swing.JFrame {
 
 //Aniamcion de Botones para estilizarlos
     private void btn_ArregloMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ArregloMouseEntered
-        if(btn_Arreglo.getBackground().getRGB() == -15574355)
+        if(btn_Arreglo.getBackground().getRGB() == reset.getRGB())
             setColor(btn_Arreglo);
     }//GEN-LAST:event_btn_ArregloMouseEntered
 
     private void btn_ArregloMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ArregloMouseExited
-        if(btn_prin.getBackground().getRGB() == -15374912 || 
-           btn_Burbuja.getBackground().getRGB() == -15374912 || btn_Baraja.getBackground().getRGB() == -15374912
-           || btn_Directa.getBackground().getRGB() == -15374912 || btn_Sacudida.getBackground().getRGB() == -15374912
-           || btn_Shell.getBackground().getRGB() == -15374912 )
+        if(btn_prin.getBackground().getRGB() == set.getRGB() || 
+           btn_Burbuja.getBackground().getRGB() == set.getRGB() || btn_Baraja.getBackground().getRGB() == set.getRGB()
+           || btn_Directa.getBackground().getRGB() == set.getRGB() || btn_Sacudida.getBackground().getRGB() == set.getRGB()
+           || btn_Shell.getBackground().getRGB() == set.getRGB() )
             {
                 resetColor(btn_Arreglo);
             }
     }//GEN-LAST:event_btn_ArregloMouseExited
 
     private void btn_prinMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_prinMouseEntered
-        if(btn_prin.getBackground().getRGB() == -15574355)
+        if(btn_prin.getBackground().getRGB() == reset.getRGB())
             setColor(btn_prin);
     }//GEN-LAST:event_btn_prinMouseEntered
 
     private void btn_prinMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_prinMouseExited
-        if(btn_Arreglo.getBackground().getRGB() == -15374912
-           || btn_Burbuja.getBackground().getRGB() == -15374912 || btn_Baraja.getBackground().getRGB() == -15374912
-           || btn_Directa.getBackground().getRGB() == -15374912 || btn_Sacudida.getBackground().getRGB() == -15374912
-           || btn_Shell.getBackground().getRGB() == -15374912)
+        if(btn_Arreglo.getBackground().getRGB() == set.getRGB()
+           || btn_Burbuja.getBackground().getRGB() == set.getRGB() || btn_Baraja.getBackground().getRGB() == set.getRGB()
+           || btn_Directa.getBackground().getRGB() == set.getRGB() || btn_Sacudida.getBackground().getRGB() == set.getRGB()
+           || btn_Shell.getBackground().getRGB() == set.getRGB())
             {
                 resetColor(btn_prin);
             }
     }//GEN-LAST:event_btn_prinMouseExited
 
     private void btn_BurbujaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_BurbujaMouseEntered
-        if(btn_Burbuja.getBackground().getRGB() == -15574355)
+        if(btn_Burbuja.getBackground().getRGB() == reset.getRGB())
             setColor(btn_Burbuja);
     }//GEN-LAST:event_btn_BurbujaMouseEntered
 
     private void btn_BurbujaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_BurbujaMouseExited
-        if((btn_prin.getBackground().getRGB() == -15374912 || btn_Arreglo.getBackground().getRGB() == -15374912
-           || btn_Baraja.getBackground().getRGB() == -15374912
-           || btn_Directa.getBackground().getRGB() == -15374912 || btn_Sacudida.getBackground().getRGB() == -15374912
-           || btn_Shell.getBackground().getRGB() == -15374912) && btn_Burbuja.getBackground().getRGB() != -6710887)
+        if((btn_prin.getBackground().getRGB() == set.getRGB() || btn_Arreglo.getBackground().getRGB() == set.getRGB()
+           || btn_Baraja.getBackground().getRGB() == set.getRGB()
+           || btn_Directa.getBackground().getRGB() == set.getRGB() || btn_Sacudida.getBackground().getRGB() == set.getRGB()
+           || btn_Shell.getBackground().getRGB() == set.getRGB()) && btn_Burbuja.getBackground().getRGB() != deactivate.getRGB())
             {
                 resetColor(btn_Burbuja);
             }
     }//GEN-LAST:event_btn_BurbujaMouseExited
 
     private void btn_BarajaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_BarajaMouseEntered
-        if(btn_Baraja.getBackground().getRGB() == -15574355)
+        if(btn_Baraja.getBackground().getRGB() == reset.getRGB())
             setColor(btn_Baraja);
     }//GEN-LAST:event_btn_BarajaMouseEntered
 
     private void btn_BarajaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_BarajaMouseExited
-        if((btn_prin.getBackground().getRGB() == -15374912 || btn_Arreglo.getBackground().getRGB() == -15374912
-           || btn_Burbuja.getBackground().getRGB() == -15374912
-           || btn_Directa.getBackground().getRGB() == -15374912 || btn_Sacudida.getBackground().getRGB() == -15374912
-           || btn_Shell.getBackground().getRGB() == -15374912) && btn_Burbuja.getBackground().getRGB() != -6710887)
+        if((btn_prin.getBackground().getRGB() == -set.getRGB() || btn_Arreglo.getBackground().getRGB() == set.getRGB()
+           || btn_Burbuja.getBackground().getRGB() == set.getRGB()
+           || btn_Directa.getBackground().getRGB() == set.getRGB() || btn_Sacudida.getBackground().getRGB() == set.getRGB()
+           || btn_Shell.getBackground().getRGB() == set.getRGB()) && btn_Burbuja.getBackground().getRGB() != deactivate.getRGB())
            {
             resetColor(btn_Baraja);
            }
     }//GEN-LAST:event_btn_BarajaMouseExited
 
     private void btn_DirectaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_DirectaMouseEntered
-        if(btn_Directa.getBackground().getRGB() == -15574355)
+        if(btn_Directa.getBackground().getRGB() == reset.getRGB())
             setColor(btn_Directa);
     }//GEN-LAST:event_btn_DirectaMouseEntered
 
     private void btn_DirectaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_DirectaMouseExited
-        if((btn_prin.getBackground().getRGB() == -15374912 || btn_Arreglo.getBackground().getRGB() == -15374912
-           || btn_Burbuja.getBackground().getRGB() == -15374912 || btn_Baraja.getBackground().getRGB() == -15374912
-           || btn_Sacudida.getBackground().getRGB() == -15374912
-           || btn_Shell.getBackground().getRGB() == -15374912) && btn_Burbuja.getBackground().getRGB() != -6710887)
+        if((btn_prin.getBackground().getRGB() == set.getRGB() || btn_Arreglo.getBackground().getRGB() == set.getRGB()
+           || btn_Burbuja.getBackground().getRGB() == set.getRGB() || btn_Baraja.getBackground().getRGB() == set.getRGB()
+           || btn_Sacudida.getBackground().getRGB() == set.getRGB()
+           || btn_Shell.getBackground().getRGB() == set.getRGB()) && btn_Burbuja.getBackground().getRGB() != deactivate.getRGB())
            {
             resetColor(btn_Directa);
            }
@@ -693,15 +696,15 @@ public class Dashboard2 extends javax.swing.JFrame {
     }//GEN-LAST:event_red_squrMouseExited
 
     private void btn_SacudidaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_SacudidaMouseEntered
-        if(btn_Sacudida.getBackground().getRGB() == -15574355)
+        if(btn_Sacudida.getBackground().getRGB() == reset.getRGB())
             setColor(btn_Sacudida);
     }//GEN-LAST:event_btn_SacudidaMouseEntered
 
     private void btn_SacudidaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_SacudidaMouseExited
-        if((btn_prin.getBackground().getRGB() == -15374912 || btn_Arreglo.getBackground().getRGB() == -15374912
-           || btn_Burbuja.getBackground().getRGB() == -15374912 || btn_Baraja.getBackground().getRGB() == -15374912
-           || btn_Directa.getBackground().getRGB() == -15374912 
-           || btn_Shell.getBackground().getRGB() == -15374912) && btn_Burbuja.getBackground().getRGB() != -6710887)
+        if((btn_prin.getBackground().getRGB() == set.getRGB() || btn_Arreglo.getBackground().getRGB() == set.getRGB()
+           || btn_Burbuja.getBackground().getRGB() == set.getRGB() || btn_Baraja.getBackground().getRGB() == set.getRGB()
+           || btn_Directa.getBackground().getRGB() == set.getRGB()
+           || btn_Shell.getBackground().getRGB() == set.getRGB()) && btn_Burbuja.getBackground().getRGB() != deactivate.getRGB())
            {
                 resetColor(btn_Sacudida);
            }
@@ -732,15 +735,15 @@ public class Dashboard2 extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_SacudidaMousePressed
 
     private void btn_ShellMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ShellMouseEntered
-        if(btn_Shell.getBackground().getRGB() == -15574355)
+        if(btn_Shell.getBackground().getRGB() == reset.getRGB())
             setColor(btn_Shell);
     }//GEN-LAST:event_btn_ShellMouseEntered
 
     private void btn_ShellMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ShellMouseExited
-        if((btn_prin.getBackground().getRGB() == -15374912 || btn_Arreglo.getBackground().getRGB() == -15374912
-           || btn_Burbuja.getBackground().getRGB() == -15374912 || btn_Baraja.getBackground().getRGB() == -15374912
-           || btn_Directa.getBackground().getRGB() == -15374912 || btn_Sacudida.getBackground().getRGB() == -15374912)
-           && btn_Burbuja.getBackground().getRGB() != -6710887)
+        if((btn_prin.getBackground().getRGB() == set.getRGB() || btn_Arreglo.getBackground().getRGB() == set.getRGB()
+           || btn_Burbuja.getBackground().getRGB() == set.getRGB() || btn_Baraja.getBackground().getRGB() == set.getRGB()
+           || btn_Directa.getBackground().getRGB() == set.getRGB() || btn_Sacudida.getBackground().getRGB() == set.getRGB())
+           && btn_Burbuja.getBackground().getRGB() != deactivate.getRGB())
         {
             resetColor(btn_Shell);
         }
@@ -812,11 +815,12 @@ public class Dashboard2 extends javax.swing.JFrame {
     }//GEN-LAST:event_exitMouseEntered
 
 //Funciones para volver a Poner y quitar el color de los botones
+    //Funciones para volver a Poner y quitar el color de los botones
     void setColor(JPanel panel){
-        panel.setBackground(new Color(21,101,192));
+        panel.setBackground(set);
     }
     void resetColor(JPanel panel){
-        panel.setBackground(new Color(18,90,173));
+        panel.setBackground(reset);
     }
 
 
