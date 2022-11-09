@@ -832,12 +832,12 @@ DefaultTableModel modelo2 = new DefaultTableModel();
                         Años[i]= Años[i-1];
                     }
 				
-                    nombre[n] = NombreAñadir.getText();
-                    Apellido[n] = ApellidoAñadir.getText();
-                    direccion[n] = DireccionAñadir.getText();
-                    Edad[n]= Integer.parseInt(EdadAñadir.getText());
-                    Sexo[n]= String.valueOf(Sexo1.getSelectedItem());
-                    Años[n]= Integer.parseInt(AñosAñadir.getText());
+                    nombre[pos] = NombreAñadir.getText();
+                    Apellido[pos] = ApellidoAñadir.getText();
+                    direccion[pos] = DireccionAñadir.getText();
+                    Edad[pos]= Integer.parseInt(EdadAñadir.getText());
+                    Sexo[pos]= String.valueOf(Sexo1.getSelectedItem());
+                    Años[pos]= Integer.parseInt(AñosAñadir.getText());
                     JOptionPane.showMessageDialog(null, "Insercion realizada.");
                 }
             }
@@ -845,7 +845,7 @@ DefaultTableModel modelo2 = new DefaultTableModel();
             {
                 JOptionPane.showMessageDialog(null, "No hay espacio disponible");
             }
-	Arrays.sort(nombre, String.CASE_INSENSITIVE_ORDER);
+        //Arrays.sort(nombre, String.CASE_INSENSITIVE_ORDER);
         }
     }//GEN-LAST:event_AñadirBotonMousePressed
 
@@ -856,31 +856,25 @@ DefaultTableModel modelo2 = new DefaultTableModel();
        }
        else
        {
-           if(n>-1){
-			String nomB= NombreEliminar.getText();
-			int pos = Busca(nombre,nomB,n);
-			JOptionPane.showMessageDialog(null, "Pos ="+pos);
-			
-			if ((pos < 0) || (!nomB.equalsIgnoreCase(nombre[0])))
-				JOptionPane.showMessageDialog(null,nomB + " no existe.");
-			else
-			{
-				n=n-1;
-				
-				for(int i=pos; i<= n; i++){
-					nombre[i]= nombre[i-1];
-					Apellido[i]= Apellido[i-1];
-					direccion[i]= direccion[i-1];
-					Edad[i]= Edad[i-1];
-					Sexo[i]= Sexo[i-1];
-                                        Años[i]= Años[i-1];
-				}
-				
-				JOptionPane.showMessageDialog(null, "Eliminacion realizada.");
-			}
-		}
-		else
-			JOptionPane.showMessageDialog(null, "Arreglo vacio.");
+        String nombreB = NombreEliminar.getText();
+        int i=0;
+        for(i = 0; i<=n && !(nombreB.equalsIgnoreCase(nombre[i])); i++);
+
+        if(i>n)
+            JOptionPane.showMessageDialog(null,nombreB+" No se encuentra");
+        else{
+            for(int k=i;k<=n;k++){
+                nombre[k]=nombre[k+1];
+                Apellido[k]=Apellido[k+1];
+                Edad[k]=Edad[k+1];
+                Sexo[k]=Sexo[k+1];
+                direccion[k]=direccion[k+1];
+                Años[k]=Años[k+1];
+            }
+            JOptionPane.showMessageDialog(null, "Eliminación realizada");
+            n--;
+        }
+        //Arrays.sort(nombre, String.CASE_INSENSITIVE_ORDER);
        }
         
     }//GEN-LAST:event_EliminarButonMousePressed
