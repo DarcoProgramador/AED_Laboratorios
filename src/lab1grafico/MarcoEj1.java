@@ -98,32 +98,6 @@ DefaultTableModel modelo2 = new DefaultTableModel();
         red_squr = new javax.swing.JPanel();
         exit = new javax.swing.JLabel();
         content = new javax.swing.JPanel();
-        MostrarEs1 = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        Alumno1 = new javax.swing.JTable();
-        MostrarEs = new javax.swing.JPanel();
-        jLabel18 = new javax.swing.JLabel();
-        NAM = new javax.swing.JTextField();
-        MostrarEstudiante = new javax.swing.JPanel();
-        jLabel20 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        Alumno = new javax.swing.JTable();
-        Cambiar = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
-        Buscar = new javax.swing.JPanel();
-        jLabel22 = new javax.swing.JLabel();
-        NAC = new javax.swing.JTextField();
-        Smc = new javax.swing.JLabel();
-        SAC = new javax.swing.JTextField();
-        MModificar = new javax.swing.JPanel();
-        jLabel21 = new javax.swing.JLabel();
-        PAC = new javax.swing.JTextField();
-        Prc = new javax.swing.JLabel();
-        EA = new javax.swing.JPanel();
-        jLabel12 = new javax.swing.JLabel();
-        NEliminar = new javax.swing.JTextField();
-        Eliminar = new javax.swing.JPanel();
-        jLabel19 = new javax.swing.JLabel();
         INA = new javax.swing.JPanel();
         Promedio = new javax.swing.JTextField();
         Añadir = new javax.swing.JPanel();
@@ -135,6 +109,32 @@ DefaultTableModel modelo2 = new DefaultTableModel();
         jLabel16 = new javax.swing.JLabel();
         apellido = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
+        Cambiar = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        Buscar = new javax.swing.JPanel();
+        jLabel22 = new javax.swing.JLabel();
+        NAC = new javax.swing.JTextField();
+        Smc = new javax.swing.JLabel();
+        SAC = new javax.swing.JTextField();
+        MModificar = new javax.swing.JPanel();
+        jLabel21 = new javax.swing.JLabel();
+        PAC = new javax.swing.JTextField();
+        Prc = new javax.swing.JLabel();
+        MostrarEs1 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        Alumno1 = new javax.swing.JTable();
+        MostrarEs = new javax.swing.JPanel();
+        jLabel18 = new javax.swing.JLabel();
+        NAM = new javax.swing.JTextField();
+        MostrarEstudiante = new javax.swing.JPanel();
+        jLabel20 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        Alumno = new javax.swing.JTable();
+        EA = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
+        NEliminar = new javax.swing.JTextField();
+        Eliminar = new javax.swing.JPanel();
+        jLabel19 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -369,6 +369,161 @@ DefaultTableModel modelo2 = new DefaultTableModel();
         content.setForeground(new java.awt.Color(255, 255, 255));
         content.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        INA.setBackground(new java.awt.Color(255, 255, 255));
+        INA.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Promedio.setBackground(new java.awt.Color(51, 51, 51));
+        Promedio.setForeground(new java.awt.Color(255, 255, 255));
+        Promedio.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                PromedioKeyTyped(evt);
+            }
+        });
+        INA.add(Promedio, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 200, 180, 30));
+
+        Añadir.setBackground(new java.awt.Color(0, 51, 0));
+        Añadir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                AñadirMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                AñadirMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                AñadirMousePressed(evt);
+            }
+        });
+        Añadir.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setText("Añadir");
+        Añadir.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, -1, -1));
+
+        INA.add(Añadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 280, 110, 30));
+
+        Semestre.setBackground(new java.awt.Color(51, 51, 51));
+        Semestre.setForeground(new java.awt.Color(255, 255, 255));
+        Semestre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                SemestreKeyTyped(evt);
+            }
+        });
+        INA.add(Semestre, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 180, 30));
+
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel14.setText("Semestres Cursados");
+        INA.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, -1, -1));
+
+        Nombre.setBackground(new java.awt.Color(51, 51, 51));
+        Nombre.setForeground(new java.awt.Color(255, 255, 255));
+        INA.add(Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 180, 30));
+
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel15.setText("Nombre");
+        INA.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, -1, -1));
+
+        jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel16.setText("Apellido");
+        INA.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 50, -1, -1));
+
+        apellido.setBackground(new java.awt.Color(51, 51, 51));
+        apellido.setForeground(new java.awt.Color(255, 255, 255));
+        INA.add(apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 80, 180, 30));
+
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel17.setText("Promedio Final");
+        INA.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 170, -1, -1));
+
+        content.add(INA, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 540, 320));
+
+        Cambiar.setBackground(new java.awt.Color(255, 255, 255));
+        Cambiar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel11.setText("Nombre del Alumno a Modificar");
+        Cambiar.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, -1, -1));
+
+        Buscar.setBackground(new java.awt.Color(0, 51, 0));
+        Buscar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                BuscarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                BuscarMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                BuscarMousePressed(evt);
+            }
+        });
+        Buscar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel22.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel22.setText("Buscar");
+        Buscar.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, -1));
+
+        Cambiar.add(Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, 150, 40));
+
+        NAC.setBackground(new java.awt.Color(51, 51, 51));
+        NAC.setForeground(new java.awt.Color(255, 255, 255));
+        Cambiar.add(NAC, new org.netbeans.lib.awtextra.AbsoluteConstraints(184, 50, 110, -1));
+
+        Smc.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Smc.setForeground(new java.awt.Color(0, 0, 0));
+        Smc.setText("Semestre");
+        Cambiar.add(Smc, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, -1, -1));
+
+        SAC.setBackground(new java.awt.Color(51, 51, 51));
+        SAC.setForeground(new java.awt.Color(0, 0, 0));
+        SAC.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                SACKeyTyped(evt);
+            }
+        });
+        Cambiar.add(SAC, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, 100, -1));
+
+        MModificar.setBackground(new java.awt.Color(0, 51, 0));
+        MModificar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                MModificarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                MModificarMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                MModificarMousePressed(evt);
+            }
+        });
+        MModificar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel21.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel21.setText("Modificar");
+        MModificar.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, -1, -1));
+
+        Cambiar.add(MModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 150, 40));
+
+        PAC.setForeground(new java.awt.Color(0, 0, 0));
+        PAC.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                PACKeyTyped(evt);
+            }
+        });
+        Cambiar.add(PAC, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 210, 90, -1));
+
+        Prc.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Prc.setForeground(new java.awt.Color(0, 0, 0));
+        Prc.setText("Promedio");
+        Cambiar.add(Prc, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 170, -1, -1));
+
+        content.add(Cambiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 480, 330));
+
         MostrarEs1.setBackground(new java.awt.Color(255, 255, 255));
         MostrarEs1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -439,79 +594,6 @@ DefaultTableModel modelo2 = new DefaultTableModel();
 
         content.add(MostrarEs, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, -20, 560, 400));
 
-        Cambiar.setBackground(new java.awt.Color(255, 255, 255));
-        Cambiar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel11.setText("Nombre del Alumno a Modificar");
-        Cambiar.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, -1, -1));
-
-        Buscar.setBackground(new java.awt.Color(0, 51, 0));
-        Buscar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                BuscarMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                BuscarMouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                BuscarMousePressed(evt);
-            }
-        });
-        Buscar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel22.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel22.setText("Buscar");
-        Buscar.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, -1));
-
-        Cambiar.add(Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, 150, 40));
-
-        NAC.setBackground(new java.awt.Color(51, 51, 51));
-        NAC.setForeground(new java.awt.Color(255, 255, 255));
-        Cambiar.add(NAC, new org.netbeans.lib.awtextra.AbsoluteConstraints(184, 50, 110, -1));
-
-        Smc.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        Smc.setForeground(new java.awt.Color(0, 0, 0));
-        Smc.setText("Semestre");
-        Cambiar.add(Smc, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, -1, -1));
-
-        SAC.setBackground(new java.awt.Color(51, 51, 51));
-        SAC.setForeground(new java.awt.Color(0, 0, 0));
-        Cambiar.add(SAC, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, 100, -1));
-
-        MModificar.setBackground(new java.awt.Color(0, 51, 0));
-        MModificar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                MModificarMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                MModificarMouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                MModificarMousePressed(evt);
-            }
-        });
-        MModificar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel21.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel21.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel21.setText("Modificar");
-        MModificar.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, -1, -1));
-
-        Cambiar.add(MModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 150, 40));
-
-        PAC.setForeground(new java.awt.Color(0, 0, 0));
-        Cambiar.add(PAC, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 210, 90, -1));
-
-        Prc.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        Prc.setForeground(new java.awt.Color(0, 0, 0));
-        Prc.setText("Promedio");
-        Cambiar.add(Prc, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 170, -1, -1));
-
-        content.add(Cambiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 480, 330));
-
         EA.setBackground(new java.awt.Color(255, 255, 255));
         EA.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -546,73 +628,6 @@ DefaultTableModel modelo2 = new DefaultTableModel();
         EA.add(Eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 190, 160, 40));
 
         content.add(EA, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 540, 330));
-
-        INA.setBackground(new java.awt.Color(255, 255, 255));
-        INA.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        Promedio.setBackground(new java.awt.Color(51, 51, 51));
-        Promedio.setForeground(new java.awt.Color(255, 255, 255));
-        INA.add(Promedio, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 200, 180, 30));
-
-        Añadir.setBackground(new java.awt.Color(0, 51, 0));
-        Añadir.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                AñadirMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                AñadirMouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                AñadirMousePressed(evt);
-            }
-        });
-        Añadir.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel13.setText("Añadir");
-        Añadir.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, -1, -1));
-
-        INA.add(Añadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 280, 110, 30));
-
-        Semestre.setBackground(new java.awt.Color(51, 51, 51));
-        Semestre.setForeground(new java.awt.Color(255, 255, 255));
-        Semestre.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                SemestreKeyTyped(evt);
-            }
-        });
-        INA.add(Semestre, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 180, 30));
-
-        jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel14.setText("Semestres Cursados");
-        INA.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, -1, -1));
-
-        Nombre.setBackground(new java.awt.Color(51, 51, 51));
-        Nombre.setForeground(new java.awt.Color(255, 255, 255));
-        INA.add(Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 180, 30));
-
-        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel15.setText("Nombre");
-        INA.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, -1, -1));
-
-        jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel16.setText("Apellido");
-        INA.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 50, -1, -1));
-
-        apellido.setBackground(new java.awt.Color(51, 51, 51));
-        apellido.setForeground(new java.awt.Color(255, 255, 255));
-        INA.add(apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 80, 180, 30));
-
-        jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel17.setText("Promedio Final");
-        INA.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 170, -1, -1));
-
-        content.add(INA, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 540, 320));
 
         jPanel1.add(content, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 580, 400));
 
@@ -673,6 +688,11 @@ DefaultTableModel modelo2 = new DefaultTableModel();
         SAC.setVisible(false);
         PAC.setVisible(false);
         MModificar.setVisible(false);
+        for (int i = 0; i < Alumno.getRowCount(); i++) 
+        {
+        modelo.removeRow(i);
+        i-=1;
+        }
     }//GEN-LAST:event_MostrarAlumnoMousePressed
 
     private void MostrarTodoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MostrarTodoMousePressed
@@ -686,6 +706,11 @@ DefaultTableModel modelo2 = new DefaultTableModel();
         SAC.setVisible(false);
         PAC.setVisible(false);
         MModificar.setVisible(false);
+        for (int i = 0; i < Alumno1.getRowCount(); i++) 
+        {
+        modelo2.removeRow(i);
+        i-=1;
+        }
         int i;
         for(i = 0; i < tam; i++)
         {
@@ -965,6 +990,51 @@ DefaultTableModel modelo2 = new DefaultTableModel();
     private void AñadirMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AñadirMouseExited
         Añadir.setBackground(new Color(0,51,0));
     }//GEN-LAST:event_AñadirMouseExited
+
+    private void SACKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_SACKeyTyped
+        int key = evt.getKeyChar();
+
+    boolean numeros = key >= 48 && key <= 57;
+        
+    if (!numeros)
+    {
+        evt.consume();
+    }
+
+    if (SAC.getText().trim().length() == 10) {
+        evt.consume();
+    }
+    }//GEN-LAST:event_SACKeyTyped
+
+    private void PACKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_PACKeyTyped
+        int key = evt.getKeyChar();
+
+    boolean numeros = key >= 48 && key <= 57;
+        
+    if (!numeros)
+    {
+        evt.consume();
+    }
+
+    if (PAC.getText().trim().length() == 10) {
+        evt.consume();
+    }
+    }//GEN-LAST:event_PACKeyTyped
+
+    private void PromedioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_PromedioKeyTyped
+        int key = evt.getKeyChar();
+
+    boolean numeros = key >= 48 && key <= 57;
+        
+    if (!numeros)
+    {
+        evt.consume();
+    }
+
+    if (Promedio.getText().trim().length() == 10) {
+        evt.consume();
+    }
+    }//GEN-LAST:event_PromedioKeyTyped
     
     /**
      * @param args the command line arguments

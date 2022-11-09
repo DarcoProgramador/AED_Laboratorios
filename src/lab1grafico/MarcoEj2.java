@@ -91,6 +91,15 @@ DefaultTableModel modelo2 = new DefaultTableModel();
         MostrarClientes = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         Content = new javax.swing.JPanel();
+        Cambiar = new javax.swing.JPanel();
+        Desabilitado1 = new javax.swing.JLabel();
+        NombreModificar = new javax.swing.JTextField();
+        Actualizar = new javax.swing.JPanel();
+        jLabel20 = new javax.swing.JLabel();
+        Moroso2 = new javax.swing.JComboBox<>();
+        jLabel21 = new javax.swing.JLabel();
+        BuscarModificarButon1 = new javax.swing.JPanel();
+        jLabel22 = new javax.swing.JLabel();
         NuevoCliente = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
@@ -113,15 +122,6 @@ DefaultTableModel modelo2 = new DefaultTableModel();
         jLabel23 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         Tabla1 = new javax.swing.JTable();
-        Cambiar = new javax.swing.JPanel();
-        Desabilitado1 = new javax.swing.JLabel();
-        NombreModificar = new javax.swing.JTextField();
-        Actualizar = new javax.swing.JPanel();
-        jLabel20 = new javax.swing.JLabel();
-        Moroso2 = new javax.swing.JComboBox<>();
-        jLabel21 = new javax.swing.JLabel();
-        BuscarModificarButon1 = new javax.swing.JPanel();
-        jLabel22 = new javax.swing.JLabel();
         Eliminar = new javax.swing.JPanel();
         jLabel17 = new javax.swing.JLabel();
         NombreEliminar = new javax.swing.JTextField();
@@ -360,6 +360,72 @@ DefaultTableModel modelo2 = new DefaultTableModel();
         Content.setBackground(new java.awt.Color(255, 255, 255));
         Content.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        Cambiar.setBackground(new java.awt.Color(255, 255, 255));
+        Cambiar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Desabilitado1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Desabilitado1.setForeground(new java.awt.Color(0, 0, 0));
+        Desabilitado1.setText("Estado de Moroso");
+        Cambiar.add(Desabilitado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 160, -1, -1));
+
+        NombreModificar.setBackground(new java.awt.Color(51, 51, 51));
+        NombreModificar.setForeground(new java.awt.Color(255, 255, 255));
+        Cambiar.add(NombreModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 50, 130, -1));
+
+        Actualizar.setBackground(new java.awt.Color(0, 51, 0));
+        Actualizar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                ActualizarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                ActualizarMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                ActualizarMousePressed(evt);
+            }
+        });
+        Actualizar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel20.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel20.setText("Actualizar");
+        Actualizar.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, -1));
+
+        Cambiar.add(Actualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 250, 110, 30));
+
+        Moroso2.setBackground(new java.awt.Color(51, 51, 51));
+        Moroso2.setForeground(new java.awt.Color(255, 255, 255));
+        Moroso2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Verdadero", "Falso" }));
+        Cambiar.add(Moroso2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, -1, -1));
+
+        jLabel21.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel21.setText("Nombre del Cliente a Modificar");
+        Cambiar.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, -1, -1));
+
+        BuscarModificarButon1.setBackground(new java.awt.Color(0, 51, 0));
+        BuscarModificarButon1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                BuscarModificarButon1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                BuscarModificarButon1MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                BuscarModificarButon1MousePressed(evt);
+            }
+        });
+        BuscarModificarButon1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel22.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel22.setText("Buscar");
+        BuscarModificarButon1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, -1, -1));
+
+        Cambiar.add(BuscarModificarButon1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 90, 110, 30));
+
+        Content.add(Cambiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 500, 310));
+
         NuevoCliente.setBackground(new java.awt.Color(255, 255, 255));
         NuevoCliente.setForeground(new java.awt.Color(0, 0, 0));
         NuevoCliente.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -399,6 +465,11 @@ DefaultTableModel modelo2 = new DefaultTableModel();
 
         TelefonoAñadir.setBackground(new java.awt.Color(51, 51, 51));
         TelefonoAñadir.setForeground(new java.awt.Color(255, 255, 255));
+        TelefonoAñadir.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                TelefonoAñadirKeyTyped(evt);
+            }
+        });
         NuevoCliente.add(TelefonoAñadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 90, -1));
 
         Moroso1.setBackground(new java.awt.Color(51, 51, 51));
@@ -408,6 +479,12 @@ DefaultTableModel modelo2 = new DefaultTableModel();
 
         AñadirBoton.setBackground(new java.awt.Color(0, 51, 0));
         AñadirBoton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                AñadirBotonMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                AñadirBotonMouseExited(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 AñadirBotonMousePressed(evt);
             }
@@ -457,6 +534,12 @@ DefaultTableModel modelo2 = new DefaultTableModel();
 
         MostrarInfo.setBackground(new java.awt.Color(0, 51, 0));
         MostrarInfo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                MostrarInfoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                MostrarInfoMouseExited(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 MostrarInfoMousePressed(evt);
             }
@@ -487,60 +570,6 @@ DefaultTableModel modelo2 = new DefaultTableModel();
 
         Content.add(Mostrar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 530, 350));
 
-        Cambiar.setBackground(new java.awt.Color(255, 255, 255));
-        Cambiar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        Desabilitado1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        Desabilitado1.setForeground(new java.awt.Color(255, 255, 255));
-        Desabilitado1.setText("Estado de Moroso");
-        Cambiar.add(Desabilitado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 160, -1, -1));
-
-        NombreModificar.setBackground(new java.awt.Color(51, 51, 51));
-        NombreModificar.setForeground(new java.awt.Color(255, 255, 255));
-        Cambiar.add(NombreModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 50, 130, -1));
-
-        Actualizar.setBackground(new java.awt.Color(0, 51, 0));
-        Actualizar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                ActualizarMousePressed(evt);
-            }
-        });
-        Actualizar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel20.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel20.setText("Actualizar");
-        Actualizar.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, -1));
-
-        Cambiar.add(Actualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 250, 110, 30));
-
-        Moroso2.setBackground(new java.awt.Color(51, 51, 51));
-        Moroso2.setForeground(new java.awt.Color(255, 255, 255));
-        Moroso2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Verdadero", "Falso" }));
-        Cambiar.add(Moroso2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, -1, -1));
-
-        jLabel21.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel21.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel21.setText("Nombre del Cliente a Modificar");
-        Cambiar.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, -1, -1));
-
-        BuscarModificarButon1.setBackground(new java.awt.Color(0, 51, 0));
-        BuscarModificarButon1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                BuscarModificarButon1MousePressed(evt);
-            }
-        });
-        BuscarModificarButon1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel22.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel22.setText("Buscar");
-        BuscarModificarButon1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, -1, -1));
-
-        Cambiar.add(BuscarModificarButon1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 90, 110, 30));
-
-        Content.add(Cambiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 500, 310));
-
         Eliminar.setBackground(new java.awt.Color(255, 255, 255));
         Eliminar.setForeground(new java.awt.Color(0, 0, 0));
         Eliminar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -556,6 +585,12 @@ DefaultTableModel modelo2 = new DefaultTableModel();
 
         EliminarButon.setBackground(new java.awt.Color(0, 51, 0));
         EliminarButon.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                EliminarButonMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                EliminarButonMouseExited(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 EliminarButonMousePressed(evt);
             }
@@ -696,6 +731,11 @@ DefaultTableModel modelo2 = new DefaultTableModel();
         Desabilitado1.setVisible(false);
         Moroso2.setVisible(false);
         Actualizar.setVisible(false);
+        for (int i = 0; i < Tabla1.getRowCount(); i++) 
+        {
+        modelo.removeRow(i);
+        i-=1;
+        }
     }//GEN-LAST:event_MostrarClienteMousePressed
 
     private void MostrarClientesMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MostrarClientesMousePressed
@@ -707,6 +747,11 @@ DefaultTableModel modelo2 = new DefaultTableModel();
         Desabilitado1.setVisible(false);
         Moroso2.setVisible(false);
         Actualizar.setVisible(false);
+        for (int i = 0; i < Tabla2.getRowCount(); i++) 
+        {
+        modelo2.removeRow(i);
+        i-=1;
+        }
         int i;
         for(i = 0; i < tam; i++)
         {
@@ -842,6 +887,61 @@ DefaultTableModel modelo2 = new DefaultTableModel();
             }
         }
     }//GEN-LAST:event_MostrarInfoMousePressed
+
+    private void TelefonoAñadirKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TelefonoAñadirKeyTyped
+        int key = evt.getKeyChar();
+
+    boolean numeros = key >= 48 && key <= 57;
+        
+    if (!numeros)
+    {
+        evt.consume();
+    }
+
+    if (TelefonoAñadir.getText().trim().length() == 10) {
+        evt.consume();
+    }
+    }//GEN-LAST:event_TelefonoAñadirKeyTyped
+
+    private void ActualizarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ActualizarMouseEntered
+        Actualizar.setBackground(new Color(0,75,50));
+    }//GEN-LAST:event_ActualizarMouseEntered
+
+    private void ActualizarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ActualizarMouseExited
+        Actualizar.setBackground(new Color(0,51,0));
+    }//GEN-LAST:event_ActualizarMouseExited
+
+    private void BuscarModificarButon1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BuscarModificarButon1MouseEntered
+        BuscarModificarButon1.setBackground(new Color(0,75,50));
+    }//GEN-LAST:event_BuscarModificarButon1MouseEntered
+
+    private void BuscarModificarButon1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BuscarModificarButon1MouseExited
+        BuscarModificarButon1.setBackground(new Color(0,51,0));
+    }//GEN-LAST:event_BuscarModificarButon1MouseExited
+
+    private void AñadirBotonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AñadirBotonMouseEntered
+        AñadirBoton.setBackground(new Color(0,75,50));
+    }//GEN-LAST:event_AñadirBotonMouseEntered
+
+    private void AñadirBotonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AñadirBotonMouseExited
+        AñadirBoton.setBackground(new Color(0,51,0));
+    }//GEN-LAST:event_AñadirBotonMouseExited
+
+    private void MostrarInfoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MostrarInfoMouseEntered
+        MostrarInfo.setBackground(new Color(0,75,50));
+    }//GEN-LAST:event_MostrarInfoMouseEntered
+
+    private void MostrarInfoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MostrarInfoMouseExited
+        MostrarInfo.setBackground(new Color(0,51,0));
+    }//GEN-LAST:event_MostrarInfoMouseExited
+
+    private void EliminarButonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EliminarButonMouseEntered
+        EliminarButon.setBackground(new Color(0,75,50));
+    }//GEN-LAST:event_EliminarButonMouseEntered
+
+    private void EliminarButonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EliminarButonMouseExited
+        EliminarButon.setBackground(new Color(0,51,0));
+    }//GEN-LAST:event_EliminarButonMouseExited
 
     /**
      * @param args the command line arguments
