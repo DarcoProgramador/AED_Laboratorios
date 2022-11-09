@@ -223,10 +223,10 @@ public class Numeros extends javax.swing.JPanel {
     
     //colores
     void setColor(JPanel panel){
-        panel.setBackground(new Color(21,101,192));
+        panel.setBackground(new Color(0,51,0));
     }
     void resetColor(JPanel panel){
-        panel.setBackground(new Color(18,90,173));
+        panel.setBackground(new Color(0,75,50));
     }
 
 

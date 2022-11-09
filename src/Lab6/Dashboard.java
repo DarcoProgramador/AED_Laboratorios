@@ -1,32 +1,31 @@
-package Lab4;
-import Lab4.Cola.Cola;
-import Principal.Principal;
+package Lab6;
+import JPanelArrayButton.JPanelArray;
+import Lab6.ArbolBinario.ArbolBinario;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.time.LocalDate;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.ImageIcon;
-import static JPanelArrayButton.JPanelBtn.*;
-import Lab4.Notacion.NotacionPolaca;
 
 public class Dashboard extends javax.swing.JFrame {
     //Creando variables de control
     //Ubicacion de la ventana
     int xMouse;
     int yMouse;
-    /**
-     * Creates new form Dashboard
-     */
+    
+    //PanelArray
+    JPanelArray PanelArray;
+
     //Iniciando componentes y cargando el menu principal
     
     
     public Dashboard() {
         initComponents();
         
+        // <editor-fold defaultstate="collapsed" desc="Cargando la fecha actual">
         LocalDate now = LocalDate.now();
         int year = now.getYear();
         int dia = now.getDayOfMonth();
@@ -34,98 +33,104 @@ public class Dashboard extends javax.swing.JFrame {
         String[] meses = {"Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto"," Septiembre"
             ,"Octubre","Noviembre","Diciemrbre"};
         fecha.setText("Hoy es "+dia+" de "+meses[month - 1]+" de "+year);
+        //</editor-fold>
         
-        Principal4 p1 = new Principal4();
+        // <editor-fold defaultstate="collapsed" desc="Cargando el Panel Principal">
+        Principal p1 = new Principal();
         p1.setSize(750, 430);
         p1.setLocation(0,0);
         content.removeAll();
         content.add(p1, BorderLayout.CENTER);
         content.revalidate();
         content.repaint();
-        
         setLocationRelativeTo(null);
+        //</editor-fold>
+        
+        // <editor-fold defaultstate="collapsed" desc="Cargando Botones">
         //cargando botones----------------------------------------------------------------------------------------------
         //iniciando parametros del boton
-        JpanelArray(Botones, JPaneles,filas,colum, largoBoton, anchoBoton);
-        setBoton(boton, filas);//Arreglo de seleccionados en falso
-        setMouseListener(JPaneles);
-        setColorJPanelArray(JPaneles,filas,colum,colorReSet);
+        PanelArray = new JPanelArray(Botones,filas);//Numero de botones y el panel donde va a estar
+        PanelArray.panelBounds(ejeX , ejeY, anchoBoton, altoBoton);
+        PanelArray.panelSetColors(colorReSet);
         //Iniciando boton seleccionado
-        boton[0] = true;//primer elemento Arreglo de seleccionados en True
-        JPaneles[0][0].setBackground(colorSet);//color del seleccionado
+        PanelArray.button_active[0] = true; 
+        PanelArray.JPaneles[0].setBackground(colorSet);//color del seleccionado
         //Iniciando los Texto, Colores y fuente de Texto
-        Font Estilo = new Font("Segoe UI", Font.BOLD, 14);
-        Color color_texto = new Color(255,255,255);
-        iniciando_titulos(TitulosBtn,Estilo, color_texto);//iniciando los titulos
+        iniciando_titulos();
+        //añadiendo el MouseListener
+        setMouseListener(PanelArray.JPaneles);
+        //</editor-fold>
     }
     
+    // <editor-fold defaultstate="collapsed" desc="Variables de los botones">
     //Variables globales botones
-    int filas = 4;
+    int filas = 2;
     int colum = 1;
-    int largoBoton = 270;
-    int anchoBoton = 50;
+    int separacion = 0;
+    int anchoBoton = 270;
+    int altoBoton = 50;
     int ejeX = 0;//---->
     int ejeY = 0;//Abajo
+    Font Estilo = new Font("Segoe UI", Font.BOLD, 14);
+    Color color_texto = new Color(255,255,255);
     Color colorReSet = new Color(51,51,51);//Color predefinido
     Color colorSet = new Color(0,51,0);//Cambio de color
-    public JPanel [][] JPaneles = new JPanel [filas][colum];//Tipo de boton
-    boolean [] boton = new boolean [filas];//Boton seleccionado
-    public JLabel [][] TitulosBtn = new JLabel [filas][colum+1];//El mas 1 es para las imagenes
+    //</editor-fold>
     
-    
-    private void iniciando_titulos(JLabel[][] Titulos, Font font, Color color)
+    // <editor-fold defaultstate="collapsed" desc="Metodo para cargar los titulos de los botones">
+    private void iniciando_titulos()
     {
+
         //Imagenes De botones
         //*************ImageIcon calendarioPlus = new ImageIcon("src/Lab4/images/calendar-plus.png");*******************
         ImageIcon calendarioMultiple = new ImageIcon("src/Imagenes/calendar-multiple-check.png");
         ImageIcon home = new ImageIcon("src/Imagenes/home-outline.png");
+        
+        //configurando la posicion de los textos e iconos
+        PanelArray.panelTextBounds(55, 10, 100, 30);
+        PanelArray.panelIconBounds(10, 10, 60, 30);
+        
+        // <editor-fold defaultstate="collapsed" desc="Texto de los botones">
         //Texto para cada Label
-        Titulos[0][0] = new JLabel("Principal", JLabel.LEFT);
-        Titulos[1][0] = new JLabel("Ejercicio 1", JLabel.LEFT);
-        Titulos[2][0] = new JLabel("Ejercicio 2", JLabel.LEFT);
-        Titulos[3][0] = new JLabel("Ejercicio 3", JLabel.LEFT);
+        PanelArray.panelText("Principal", 0);
+        PanelArray.panelText("Ejercicio Arbol", 1);
+        //</editor-fold>
+        
         //Iconos en los Jpanel
-        Titulos[0][1] = new JLabel(home);
-        setLabelIconJPanelArray(JPaneles,Titulos[0][1],0,0); 
-        for(int i = 1 ; i < filas ; i++)//Font y Color Text
-        {
-            Titulos[i][1] = new JLabel(calendarioMultiple);//Icono para todos
-            setLabelIconJPanelArray(JPaneles,Titulos[i][1],i,0); 
-        } 
-        //Texto de los Jpanel
-        for(int i = 0 ; i < filas ; i++)//Font y Color Text
-        {
-            for (int j = 0 ; j < colum ; j++)
-            {
-                Titulos[i][j].setFont(font);
-                Titulos[i][j].setForeground(color);
-                setLabelJPanelArray(JPaneles,Titulos[i][j],i,j);
-            }
-        }     
+        PanelArray.panelIcon(home, 0);
+        PanelArray.panelIcon(calendarioMultiple, 1);
+        
+        //Color y Estilo del texto
+        PanelArray.panelSetTextColors(color_texto);
+        PanelArray.panelSetTextFonts(Estilo); 
         
     }
+    //</editor-fold>
     
-    //Botones En falso
-    private void setBoton(boolean [] button, int filas)
+    //Setear botones en falso
+    private void setBoton(boolean [] button)
     {
-        for(int i = 0; i<filas ; i++)
+        for(int i = 0 ; i < filas ; i++)
         {
-            boton[i] = false;
+            button[i] = false;
         }
     }
+    
+    // <editor-fold defaultstate="collapsed" desc="MauseListener para cada Boton">
     //Metiendo un MouseListener a cada boton
-    private void setMouseListener(JPanel [][] Botones)
+    private void setMouseListener(JPanel [] Botones)
     {
         for(int i = 0 ; i < filas ; i++)//inicializando botones
         {
-            for (int j = 0 ; j < colum ; j++)
-            {
-                AccionBotones accion = new AccionBotones();
-                Botones[i][j].addMouseListener(accion);
-            }
+           
+            AccionBotones accion = new AccionBotones();
+            Botones[i].addMouseListener(accion);
+
         }
     }
+    //</editor-fold>
     
+    // <editor-fold defaultstate="collapsed" desc="Acciones del MouseListener">
     //Acciones de los botones
     public class AccionBotones implements MouseListener
     {
@@ -138,20 +143,15 @@ public class Dashboard extends javax.swing.JFrame {
         public void mousePressed(MouseEvent event) {
             for(int i = 0 ; i < filas ; i++)//inicializando botones
             {
-                for (int j = 0 ; j < colum ; j++)
+                if(!event.getComponent().equals(PanelArray.JPaneles[i]))
                 {
-                    if(event.getComponent().equals(JPaneles[i][j]))
-                    {
-                        if(!boton[i])
-                        {
-                            setBoton(boton, filas);//Arreglo de seleccionados en falso
-                            boton[i] = true;//primer elemento Arreglo de seleccionados en True
-                            setColorJPanelArray(JPaneles,filas,colum,colorReSet);//Color general para todos los botones
-                            JPaneles[i][j].setBackground(colorSet);//color del seleccionado
-                            boton_selec_Action(i);
-                        }
-                    }
+                    continue;
                 }
+                setBoton(PanelArray.button_active);//Configurando todos los botones en falso
+                PanelArray.button_active[i] = true;//boton seleccionado en true
+                PanelArray.panelSetColors(colorReSet);//Color normal para todos los botones
+                PanelArray.JPaneles[i].setBackground(colorSet);//Color diferente para el seleccionado
+                boton_selec_Action(i);
             }
         }
         
@@ -164,12 +164,9 @@ public class Dashboard extends javax.swing.JFrame {
         public void mouseEntered(MouseEvent event) {
             for(int i = 0 ; i < filas ; i++)//inicializando botones
             {
-                for (int j = 0 ; j < colum ; j++)
+                if(event.getComponent().equals(PanelArray.JPaneles[i]))
                 {
-                    if(event.getComponent().equals(JPaneles[i][j]))
-                    {
-                       JPaneles[i][j].setBackground(colorSet);
-                    }
+                   PanelArray.JPaneles[i].setBackground(colorSet);
                 }
             }
         }
@@ -178,15 +175,14 @@ public class Dashboard extends javax.swing.JFrame {
         public void mouseExited(MouseEvent event) {
             for(int i = 0 ; i < filas ; i++)//inicializando botones
             {
-                for (int j = 0 ; j < colum ; j++)
+                if(!event.getComponent().equals(PanelArray.JPaneles[i]))
                 {
-                    if(event.getComponent().equals(JPaneles[i][j]))
-                    {
-                        if(!boton[i]){
-                            JPaneles[i][j].setBackground(colorReSet);
-                        }   
-                    }
+                    continue;
                 }
+                if(!PanelArray.button_active[i]){
+                    PanelArray.JPaneles[i].setBackground(colorReSet);
+                }   
+                
             }
         }
     
@@ -197,7 +193,7 @@ public class Dashboard extends javax.swing.JFrame {
         switch(i) {
             case 0 -> {
                 // Abrir sección
-                Principal4 p1 = new Principal4();
+                Principal p1 = new Principal();
                 p1.setSize(750, 430);
                 p1.setLocation(0,0);
 
@@ -208,19 +204,8 @@ public class Dashboard extends javax.swing.JFrame {
             }
             
             case 1 -> {
-                //Arreglo en global;
-                NotacionPolaca arreglo = new NotacionPolaca();
-                arreglo.setSize(750, 430);
-                arreglo.setLocation(0,0);
-                content.removeAll();
-                content.add(arreglo, BorderLayout.CENTER);
-                content.revalidate();
-                content.repaint();
-            }
-            
-            case 2 -> {
-                // Abrir sección
-                Pilas p2 = new Pilas();
+                //Registro en global;
+                ArbolBinario p2 = new ArbolBinario();
                 p2.setSize(750, 430);
                 p2.setLocation(0,0);
 
@@ -229,20 +214,11 @@ public class Dashboard extends javax.swing.JFrame {
                 content.revalidate();
                 content.repaint();
             }
-            
-            case 3 -> {
-                // Abrir sección
-                Cola p3 = new Cola();
-                p3.setSize(750, 430);
-                p3.setLocation(0,0);
 
-                content.removeAll();
-                content.add(p3, BorderLayout.CENTER);
-                content.revalidate();
-                content.repaint();
-            }
+            
         }
     }
+    //</editor-fold>
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -264,11 +240,11 @@ public class Dashboard extends javax.swing.JFrame {
         Background = new javax.swing.JPanel();
         Menu = new javax.swing.JPanel();
         Botones = new javax.swing.JPanel();
+        btn_Regresar = new javax.swing.JPanel();
+        jLabel20 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        app_name = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
-        Regresar = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        app_name1 = new javax.swing.JLabel();
+        jSeparator2 = new javax.swing.JSeparator();
         Header = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         fecha = new javax.swing.JLabel();
@@ -284,11 +260,6 @@ public class Dashboard extends javax.swing.JFrame {
         setLocationByPlatform(true);
         setUndecorated(true);
         setResizable(false);
-        addWindowListener(new java.awt.event.WindowAdapter() {
-            public void windowActivated(java.awt.event.WindowEvent evt) {
-                formWindowActivated(evt);
-            }
-        });
 
         Background.setBackground(new java.awt.Color(0, 75, 50));
         Background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -311,40 +282,42 @@ public class Dashboard extends javax.swing.JFrame {
 
         Menu.add(Botones, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 270, 460));
 
+        btn_Regresar.setBackground(new java.awt.Color(51, 51, 51));
+        btn_Regresar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btn_Regresar.setPreferredSize(new java.awt.Dimension(270, 51));
+        btn_Regresar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_RegresarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_RegresarMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btn_RegresarMousePressed(evt);
+            }
+        });
+        btn_Regresar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel20.setText("Regresar");
+        btn_Regresar.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, -1, 30));
+
+        Menu.add(btn_Regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 590, -1, -1));
+
         jPanel1.setBackground(new java.awt.Color(0, 51, 0));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        app_name.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        app_name.setForeground(new java.awt.Color(255, 255, 255));
-        app_name.setText("LABORATORIO 4");
-        jPanel1.add(app_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, -1, -1));
+        app_name1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        app_name1.setForeground(new java.awt.Color(255, 255, 255));
+        app_name1.setText("LABORATORIO 6");
+        jPanel1.add(app_name1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, -1, 30));
 
-        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
-        jSeparator1.setPreferredSize(new java.awt.Dimension(50, 5));
-        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 190, 20));
+        jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator2.setPreferredSize(new java.awt.Dimension(50, 5));
+        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 190, 10));
 
         Menu.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 60));
-
-        Regresar.setBackground(new java.awt.Color(51, 51, 51));
-        Regresar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                RegresarMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                RegresarMouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                RegresarMousePressed(evt);
-            }
-        });
-        Regresar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Regresar");
-        Regresar.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, -1, -1));
-
-        Menu.add(Regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 590, 270, 50));
 
         Background.add(Menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 640));
 
@@ -352,7 +325,7 @@ public class Dashboard extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("Pilas y Colas");
+        jLabel2.setText("Arbol Binario");
 
         fecha.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         fecha.setForeground(new java.awt.Color(0, 0, 0));
@@ -394,7 +367,6 @@ public class Dashboard extends javax.swing.JFrame {
         });
 
         red_squr.setBackground(new java.awt.Color(0, 75, 50));
-        red_squr.setForeground(new java.awt.Color(0, 75, 50));
         red_squr.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         red_squr.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -408,7 +380,7 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
 
-        exit.setBackground(new java.awt.Color(0, 75, 50));
+        exit.setBackground(new java.awt.Color(255, 255, 255));
         exit.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         exit.setForeground(new java.awt.Color(255, 255, 255));
         exit.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -453,7 +425,6 @@ public class Dashboard extends javax.swing.JFrame {
         Background.add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, -1));
 
         slogan.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        slogan.setForeground(new java.awt.Color(255, 255, 255));
         slogan.setText("Facultad de Electrotecnia y Computación (F.E.C)");
         Background.add(slogan, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 30, 300, 30));
 
@@ -491,9 +462,7 @@ public class Dashboard extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
-        // TODO add your handling code here:
-    }//GEN-LAST:event_formWindowActivated
+// <editor-fold defaultstate="collapsed" desc="Animaciones y Acciones del Menu">
 //Arrastrar ventana
     private void TitleMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TitleMouseDragged
         int x = evt.getXOnScreen();
@@ -505,6 +474,8 @@ public class Dashboard extends javax.swing.JFrame {
         xMouse = evt.getX();
         yMouse = evt.getY();
     }//GEN-LAST:event_TitleMousePressed
+
+
 // Funciones de los Botones
     private void exitMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMousePressed
         System.exit(0);
@@ -520,8 +491,8 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_red_squrMouseEntered
 
     private void red_squrMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_red_squrMouseExited
-        red_squr.setBackground(new Color(0,75,50));
-        exit.setForeground(Color.white);
+        red_squr.setBackground(new Color(255,255,255));
+        exit.setForeground(new Color(102,102,102));
     }//GEN-LAST:event_red_squrMouseExited
 
     private void exitMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMouseEntered
@@ -537,46 +508,36 @@ public class Dashboard extends javax.swing.JFrame {
     private void Activar_color(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Activar_color
 
     }//GEN-LAST:event_Activar_color
-
-    private void RegresarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegresarMousePressed
-        dispose();
-        new Principal().setVisible(true);
-    }//GEN-LAST:event_RegresarMousePressed
-
-    private void RegresarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegresarMouseExited
-        Regresar.setBackground(new Color(51,51,51));
-    }//GEN-LAST:event_RegresarMouseExited
-
-    private void RegresarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegresarMouseEntered
-        Regresar.setBackground(new Color(0,51,0));
-    }//GEN-LAST:event_RegresarMouseEntered
-
-//Funciones para volver a Poner y quitar el color de los botones
-    void setColor(JPanel panel){
-        panel.setBackground(new Color(21,101,192));
-    }
-    void resetColor(JPanel panel){
-        panel.setBackground(new Color(18,90,173));
-    }
-    /**
-     * @param args the command line arguments
-     */
+    //Animacion de color regresar
+    private void btn_RegresarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_RegresarMouseEntered
+        btn_Regresar.setBackground(colorReSet);
+    }//GEN-LAST:event_btn_RegresarMouseEntered
+    
+    private void btn_RegresarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_RegresarMouseExited
+        btn_Regresar.setBackground(colorSet);
+    }//GEN-LAST:event_btn_RegresarMouseExited
+    //Accion de el boton regresar
+    private void btn_RegresarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_RegresarMousePressed
+        
+    }//GEN-LAST:event_btn_RegresarMousePressed
+//</editor-fold>
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Background;
     private javax.swing.JPanel Botones;
     private javax.swing.JPanel Header;
     private javax.swing.JPanel Menu;
-    private javax.swing.JPanel Regresar;
     private javax.swing.JPanel Title;
-    private javax.swing.JLabel app_name;
+    private javax.swing.JLabel app_name1;
+    private javax.swing.JPanel btn_Regresar;
     public static javax.swing.JPanel content;
     private javax.swing.JLabel exit;
     private javax.swing.JLabel fecha;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JPanel red_squr;
     private javax.swing.JLabel slogan;
     // End of variables declaration//GEN-END:variables

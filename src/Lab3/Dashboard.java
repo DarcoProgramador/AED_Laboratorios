@@ -4,19 +4,21 @@ import java.awt.Color;
 import java.time.LocalDate;
 import javax.swing.JPanel;
 import Principal.Principal;
-public class Dashboard3 extends javax.swing.JFrame {
+public class Dashboard extends javax.swing.JFrame {
     //Creando variables de control
     //Ubicacion de la ventana
     int xMouse;
     int yMouse;
     int unico = 0;
+    Color set= new Color(0,51,0);
+    Color reset= new Color(51,51,51);
     /**
      * Creates new form Dashboard
      */
     //Iniciando componentes y cargando el menu principal
     
     
-    public Dashboard3() {
+    public Dashboard() {
         initComponents();
         setLocationRelativeTo(null);
         
@@ -36,6 +38,8 @@ public class Dashboard3 extends javax.swing.JFrame {
         content.add(p1, BorderLayout.CENTER);
         content.revalidate();
         content.repaint();
+        
+        
     }
 
     /**
@@ -102,7 +106,7 @@ public class Dashboard3 extends javax.swing.JFrame {
         Menu.setBackground(new java.awt.Color(51, 51, 51));
         Menu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btn_prin.setBackground(new java.awt.Color(51, 51, 51));
+        btn_prin.setBackground(new java.awt.Color(0, 51, 0));
         btn_prin.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btn_prin.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -604,75 +608,75 @@ public class Dashboard3 extends javax.swing.JFrame {
 
 //Aniamcion de Botones para estilizarlos
     private void btn_Ejercicio1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_Ejercicio1MouseEntered
-        if(btn_Ejercicio1.getBackground().getRGB() == -15574355)
+        if(btn_Ejercicio1.getBackground().getRGB() == reset.getRGB())
             setColor(btn_Ejercicio1);
     }//GEN-LAST:event_btn_Ejercicio1MouseEntered
 
     private void btn_Ejercicio1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_Ejercicio1MouseExited
-        if(btn_prin.getBackground().getRGB() == -15374912 || 
-           btn_Ejercicio2.getBackground().getRGB() == -15374912 || btn_Ejercicio3.getBackground().getRGB() == -15374912
-           || btn_Espacios.getBackground().getRGB() == -15374912 || btn_Ejercicio5.getBackground().getRGB() == -15374912
-           || btn_Ejercicio6.getBackground().getRGB() == -15374912 )
+        if(btn_prin.getBackground().getRGB() == set.getRGB() || 
+           btn_Ejercicio2.getBackground().getRGB() == set.getRGB() || btn_Ejercicio3.getBackground().getRGB() == set.getRGB()
+           || btn_Espacios.getBackground().getRGB() == set.getRGB() || btn_Ejercicio5.getBackground().getRGB() == set.getRGB()
+           || btn_Ejercicio6.getBackground().getRGB() == set.getRGB() )
             {
                 resetColor(btn_Ejercicio1);
             }
     }//GEN-LAST:event_btn_Ejercicio1MouseExited
 
     private void btn_prinMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_prinMouseEntered
-        if(btn_prin.getBackground().getRGB() == -15574355)
+        if(btn_prin.getBackground().getRGB() == reset.getRGB())
             setColor(btn_prin);
     }//GEN-LAST:event_btn_prinMouseEntered
 
     private void btn_prinMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_prinMouseExited
-        if(btn_Ejercicio1.getBackground().getRGB() == -15374912
-           || btn_Ejercicio2.getBackground().getRGB() == -15374912 || btn_Ejercicio3.getBackground().getRGB() == -15374912
-           || btn_Espacios.getBackground().getRGB() == -15374912 || btn_Ejercicio5.getBackground().getRGB() == -15374912
-           || btn_Ejercicio6.getBackground().getRGB() == -15374912)
+        if(btn_Ejercicio1.getBackground().getRGB() == set.getRGB()
+           || btn_Ejercicio2.getBackground().getRGB() == set.getRGB() || btn_Ejercicio3.getBackground().getRGB() == set.getRGB()
+           || btn_Espacios.getBackground().getRGB() == set.getRGB() || btn_Ejercicio5.getBackground().getRGB() == set.getRGB()
+           || btn_Ejercicio6.getBackground().getRGB() == set.getRGB())
             {
                 resetColor(btn_prin);
             }
     }//GEN-LAST:event_btn_prinMouseExited
 
     private void btn_Ejercicio2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_Ejercicio2MouseEntered
-        if(btn_Ejercicio2.getBackground().getRGB() == -15574355)
+        if(btn_Ejercicio2.getBackground().getRGB() == reset.getRGB())
             setColor(btn_Ejercicio2);
     }//GEN-LAST:event_btn_Ejercicio2MouseEntered
 
     private void btn_Ejercicio2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_Ejercicio2MouseExited
-        if((btn_prin.getBackground().getRGB() == -15374912 || btn_Ejercicio1.getBackground().getRGB() == -15374912
-         || btn_Ejercicio3.getBackground().getRGB() == -15374912
-           || btn_Espacios.getBackground().getRGB() == -15374912 || btn_Ejercicio5.getBackground().getRGB() == -15374912
-           || btn_Ejercicio6.getBackground().getRGB() == -15374912) && btn_Ejercicio2.getBackground().getRGB() != -6710887)
+        if(btn_prin.getBackground().getRGB() == set.getRGB() || btn_Ejercicio1.getBackground().getRGB() == set.getRGB()
+         || btn_Ejercicio3.getBackground().getRGB() == set.getRGB()
+           || btn_Espacios.getBackground().getRGB() == set.getRGB() || btn_Ejercicio5.getBackground().getRGB() == set.getRGB()
+           || btn_Ejercicio6.getBackground().getRGB() == set.getRGB())
             {
                 resetColor(btn_Ejercicio2);
             }
     }//GEN-LAST:event_btn_Ejercicio2MouseExited
 
     private void btn_Ejercicio3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_Ejercicio3MouseEntered
-      if(btn_Ejercicio3.getBackground().getRGB() == -15574355)
+      if(btn_Ejercicio3.getBackground().getRGB() == reset.getRGB())
             setColor(btn_Ejercicio3);
     }//GEN-LAST:event_btn_Ejercicio3MouseEntered
 
     private void btn_Ejercicio3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_Ejercicio3MouseExited
-        if((btn_prin.getBackground().getRGB() == -15374912 || btn_Ejercicio1.getBackground().getRGB() == -15374912
-           || btn_Ejercicio2.getBackground().getRGB() == -15374912
-           || btn_Espacios.getBackground().getRGB() == -15374912 || btn_Ejercicio5.getBackground().getRGB() == -15374912
-           || btn_Ejercicio6.getBackground().getRGB() == -15374912) && btn_Ejercicio2.getBackground().getRGB() != -6710887)
+        if(btn_prin.getBackground().getRGB() == set.getRGB() || btn_Ejercicio1.getBackground().getRGB() == set.getRGB()
+           || btn_Ejercicio2.getBackground().getRGB() == set.getRGB()
+           || btn_Espacios.getBackground().getRGB() == set.getRGB() || btn_Ejercicio5.getBackground().getRGB() == set.getRGB()
+           || btn_Ejercicio6.getBackground().getRGB() == set.getRGB())
            {
             resetColor(btn_Ejercicio3);
            }
     }//GEN-LAST:event_btn_Ejercicio3MouseExited
 
     private void btn_EspaciosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_EspaciosMouseEntered
-        if(btn_Espacios.getBackground().getRGB() == -15574355)
+        if(btn_Espacios.getBackground().getRGB() == reset.getRGB())
             setColor(btn_Espacios);
     }//GEN-LAST:event_btn_EspaciosMouseEntered
 
     private void btn_EspaciosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_EspaciosMouseExited
-        if((btn_prin.getBackground().getRGB() == -15374912 || btn_Ejercicio1.getBackground().getRGB() == -15374912
-           || btn_Ejercicio2.getBackground().getRGB() == -15374912 || btn_Ejercicio3.getBackground().getRGB() == -15374912
-           || btn_Ejercicio5.getBackground().getRGB() == -15374912
-           || btn_Ejercicio6.getBackground().getRGB() == -15374912) && btn_Ejercicio2.getBackground().getRGB() != -6710887)
+        if(btn_prin.getBackground().getRGB() == set.getRGB() || btn_Ejercicio1.getBackground().getRGB() == set.getRGB()
+           || btn_Ejercicio2.getBackground().getRGB() == set.getRGB() || btn_Ejercicio3.getBackground().getRGB() == set.getRGB()
+           || btn_Ejercicio5.getBackground().getRGB() == set.getRGB()
+           || btn_Ejercicio6.getBackground().getRGB() == set.getRGB())
            {
             resetColor(btn_Espacios);
            }
@@ -699,15 +703,15 @@ public class Dashboard3 extends javax.swing.JFrame {
     }//GEN-LAST:event_exitMouseExited
 
     private void btn_Ejercicio5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_Ejercicio5MouseEntered
-        if(btn_Ejercicio5.getBackground().getRGB() == -15574355)
+        if(btn_Ejercicio5.getBackground().getRGB() == reset.getRGB())
             setColor(btn_Ejercicio5);
     }//GEN-LAST:event_btn_Ejercicio5MouseEntered
 
     private void btn_Ejercicio5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_Ejercicio5MouseExited
-        if((btn_prin.getBackground().getRGB() == -15374912 || btn_Ejercicio1.getBackground().getRGB() == -15374912
-           || btn_Ejercicio2.getBackground().getRGB() == -15374912 || btn_Ejercicio3.getBackground().getRGB() == -15374912
-           || btn_Espacios.getBackground().getRGB() == -15374912 
-           || btn_Ejercicio6.getBackground().getRGB() == -15374912) && btn_Ejercicio2.getBackground().getRGB() != -6710887)
+        if(btn_prin.getBackground().getRGB() == set.getRGB() || btn_Ejercicio1.getBackground().getRGB() == set.getRGB()
+           || btn_Ejercicio2.getBackground().getRGB() == set.getRGB() || btn_Ejercicio3.getBackground().getRGB() == set.getRGB()
+           || btn_Espacios.getBackground().getRGB() == set.getRGB() 
+           || btn_Ejercicio6.getBackground().getRGB() == set.getRGB())
            {
                 resetColor(btn_Ejercicio5);
            }
@@ -736,15 +740,14 @@ public class Dashboard3 extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_Ejercicio5MousePressed
 
     private void btn_Ejercicio6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_Ejercicio6MouseEntered
-        if(btn_Ejercicio6.getBackground().getRGB() == -15574355)
+        if(btn_Ejercicio6.getBackground().getRGB() == reset.getRGB())
             setColor(btn_Ejercicio6);
     }//GEN-LAST:event_btn_Ejercicio6MouseEntered
 
     private void btn_Ejercicio6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_Ejercicio6MouseExited
-        if((btn_prin.getBackground().getRGB() == -15374912 || btn_Ejercicio1.getBackground().getRGB() == -15374912
-           || btn_Ejercicio2.getBackground().getRGB() == -15374912 || btn_Ejercicio3.getBackground().getRGB() == -15374912
-           || btn_Espacios.getBackground().getRGB() == -15374912 || btn_Ejercicio5.getBackground().getRGB() == -15374912)
-           && btn_Ejercicio2.getBackground().getRGB() != -6710887)
+        if(btn_prin.getBackground().getRGB() == set.getRGB() || btn_Ejercicio1.getBackground().getRGB() == set.getRGB()
+           || btn_Ejercicio2.getBackground().getRGB() == set.getRGB() || btn_Ejercicio3.getBackground().getRGB() == set.getRGB()
+           || btn_Espacios.getBackground().getRGB() == set.getRGB() || btn_Ejercicio5.getBackground().getRGB() == set.getRGB())
         {
             resetColor(btn_Ejercicio6);
         }
@@ -792,10 +795,10 @@ public class Dashboard3 extends javax.swing.JFrame {
 
 //Funciones para volver a Poner y quitar el color de los botones
     void setColor(JPanel panel){
-        panel.setBackground(new Color(21,101,192));
+        panel.setBackground(set);
     }
     void resetColor(JPanel panel){
-        panel.setBackground(new Color(18,90,173));
+        panel.setBackground(reset);
     }
     /**
      * @param args the command line arguments

@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package Lab5.Alumnos;
-import Lab5.Alumnos.MetodoEmpresa;
+import Lab5.Alumnos.MetodoAlumnos;
 import java.awt.Color;
 import java.awt.event.KeyEvent;
 import javax.swing.JPanel;
@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 
 public class RegistroAlumnos extends javax.swing.JPanel{
    
-    MetodoEmpresa Alumno = new MetodoEmpresa();
+    MetodoAlumnos Alumno = new MetodoAlumnos();
     
     public RegistroAlumnos() {
         initComponents();
@@ -41,6 +41,7 @@ public class RegistroAlumnos extends javax.swing.JPanel{
         lbCarnet = new javax.swing.JLabel();
         lbNombre = new javax.swing.JLabel();
         lbCarrera = new javax.swing.JLabel();
+        jCmbCarreras = new javax.swing.JComboBox<>();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(750, 430));
@@ -54,7 +55,7 @@ public class RegistroAlumnos extends javax.swing.JPanel{
         Title.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Title.setForeground(new java.awt.Color(0, 0, 0));
         Title.setText("Registro");
-        add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, -1, -1));
+        add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, -1));
 
         jSeparator1.setForeground(new java.awt.Color(0, 75, 50));
         jSeparator1.setPreferredSize(new java.awt.Dimension(200, 10));
@@ -154,6 +155,15 @@ public class RegistroAlumnos extends javax.swing.JPanel{
         lbCarrera.setForeground(new java.awt.Color(0, 0, 0));
         lbCarrera.setText("Carrera:");
         add(lbCarrera, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, -1, -1));
+
+        jCmbCarreras.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Todos" }));
+        jCmbCarreras.setEnabled(false);
+        jCmbCarreras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCmbCarrerasActionPerformed(evt);
+            }
+        });
+        add(jCmbCarreras, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, 150, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void button_AñadirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_AñadirMouseEntered
@@ -177,6 +187,18 @@ public class RegistroAlumnos extends javax.swing.JPanel{
         }
         Añadir();
     }//GEN-LAST:event_EnterSelect
+
+    private void jCmbCarrerasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCmbCarrerasActionPerformed
+        // Mostrar carreras cada vez que cambia
+        if("Todos".equals((String) jCmbCarreras.getSelectedItem()))//comprueba que el item seleccionado sea todos
+        {
+            Alumno.mostrar(JtableRegistro);
+        }
+        else
+        {
+            Alumno.mostrarFiltrado(JtableRegistro, (String)jCmbCarreras.getSelectedItem());
+        }
+    }//GEN-LAST:event_jCmbCarrerasActionPerformed
     
     //Funcion Añadir
     private void Añadir()
@@ -188,20 +210,45 @@ public class RegistroAlumnos extends javax.swing.JPanel{
         {
             return;
         }
-        Alumno.add(nombre, carrera, carnet);
-        Alumno.mostrar(JtableRegistro);
+        Alumno.add(nombre, carrera.toUpperCase(), carnet);
+        
         textNombre.setText("");
         textCarrera.setText("");
         textCarnet.setText("");
+        jCmbCarreras.setEnabled(true);
+        boolean elements = true;
+        
+        if("Todos".equals((String) jCmbCarreras.getSelectedItem()))//comprueba que el item seleccionado sea todos
+        {
+            Alumno.mostrar(JtableRegistro);
+        }
+        else
+        {
+            Alumno.mostrarFiltrado(JtableRegistro, (String)jCmbCarreras.getSelectedItem());
+        }
+        for(int i = 0; i < jCmbCarreras.getItemCount(); i++)
+        {
+            if(carrera.equalsIgnoreCase(jCmbCarreras.getItemAt(i)))
+            {
+                elements = false;
+                break;
+            }
+            
+        }
+        if(elements)
+        {
+            jCmbCarreras.addItem(carrera.toUpperCase());
+        }
+        
     }
     //</editor-fold>
     
    //colores
     void setColor(JPanel panel){
-        panel.setBackground(new Color(21,101,192));
+        panel.setBackground(new Color(0,51,0));
     }
     void resetColor(JPanel panel){
-        panel.setBackground(new Color(18,90,173));
+        panel.setBackground(new Color(0,75,50));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -211,6 +258,7 @@ public class RegistroAlumnos extends javax.swing.JPanel{
     private javax.swing.JLabel Title1;
     private javax.swing.JPanel body;
     private javax.swing.JPanel button_Añadir;
+    private javax.swing.JComboBox<String> jCmbCarreras;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;

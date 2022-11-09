@@ -7,10 +7,8 @@ import java.awt.Font;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.time.LocalDate;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.ImageIcon;
-import static JPanelArrayButton.JPanelBtn.*;
 import Lab5.Empresa.RegistroEmpresa;
 import Lab5.ListNegativoPositivo.Numeros;
 import Lab5.MayorMenor.MayorMenor;
@@ -62,8 +60,8 @@ public class Dashboard extends javax.swing.JFrame {
         //cargando botones----------------------------------------------------------------------------------------------
         //iniciando parametros del boton
         PanelArray = new JPanelArray(Botones,filas);//Numero de botones y el panel donde va a estar
-        PanelArray.Panel_Bounds(ejeX , ejeY, anchoBoton, altoBoton);
-        PanelArray.Panel_set_colors(colorReSet);
+        PanelArray.panelBounds(ejeX , ejeY, anchoBoton, altoBoton);
+        PanelArray.panelSetColors(colorReSet);
         //Iniciando boton seleccionado
         PanelArray.button_active[0] = true; 
         PanelArray.JPaneles[0].setBackground(colorSet);//color del seleccionado
@@ -85,11 +83,8 @@ public class Dashboard extends javax.swing.JFrame {
     int ejeY = 0;//Abajo
     Font Estilo = new Font("Segoe UI", Font.BOLD, 14);
     Color color_texto = new Color(255,255,255);
-    Color colorReSet = new Color(18,90,173);//Color predefinido
-    Color colorSet = new Color(21,101,192);//Cambio de color
-    public JPanel [][] JPaneles = new JPanel [filas][colum];//Tipo de boton
-    boolean [] boton = new boolean [filas];//Boton seleccionado
-    public JLabel [][] TitulosBtn = new JLabel [filas][colum+1];//El mas 1 es para las imagenes
+    Color colorReSet = new Color(51,51,51);//Color predefinido
+    Color colorSet = new Color(0,51,0);//Cambio de color
     //</editor-fold>
     
     // <editor-fold defaultstate="collapsed" desc="Metodo para cargar los titulos de los botones">
@@ -102,28 +97,28 @@ public class Dashboard extends javax.swing.JFrame {
         ImageIcon home = new ImageIcon("src/Imagenes/home-outline.png");
         
         //configurando la posicion de los textos e iconos
-        PanelArray.Panel_text_bounds(55, 10, 100, 30);
-        PanelArray.Panel_icon_bounds(10, 10, 60, 30);
+        PanelArray.panelTextBounds(55, 10, 100, 30);
+        PanelArray.panelIconBounds(10, 10, 60, 30);
         
         // <editor-fold defaultstate="collapsed" desc="Texto de los botones">
         //Texto para cada Label
-        PanelArray.Panel_text("Principal", 0);
-        PanelArray.Panel_text("Ejercicio 1", 1);
-        PanelArray.Panel_text("Ejercicio 2", 2);
-        PanelArray.Panel_text("Ejercicio 3", 3);
-        PanelArray.Panel_text("Ejercicio 4", 4);
-        PanelArray.Panel_text("Ejercicio 5", 5);
+        PanelArray.panelText("Principal", 0);
+        PanelArray.panelText("Ejercicio 1", 1);
+        PanelArray.panelText("Ejercicio 2", 2);
+        PanelArray.panelText("Ejercicio 3", 3);
+        PanelArray.panelText("Ejercicio 4", 4);
+        PanelArray.panelText("Ejercicio 5", 5);
         //</editor-fold>
         
         //Iconos en los Jpanel
-        PanelArray.Panel_icon(home, 0);
+        PanelArray.panelIcon(home, 0);
         for(int i = 1 ; i < filas ; i++)//Font y Color Text
         {
-            PanelArray.Panel_icon(calendarioMultiple, i);
+            PanelArray.panelIcon(calendarioMultiple, i);
         }
         //Color y Estilo del texto
-        PanelArray.Panel_set_text_colors(color_texto);
-        PanelArray.Panel_set_text_fonts(Estilo); 
+        PanelArray.panelSetTextColors(color_texto);
+        PanelArray.panelSetTextFonts(Estilo); 
         
     }
     //</editor-fold>
@@ -170,7 +165,7 @@ public class Dashboard extends javax.swing.JFrame {
                 }
                 setBoton(PanelArray.button_active);//Configurando todos los botones en falso
                 PanelArray.button_active[i] = true;//boton seleccionado en true
-                PanelArray.Panel_set_colors(colorReSet);//Color normal para todos los botones
+                PanelArray.panelSetColors(colorReSet);//Color normal para todos los botones
                 PanelArray.JPaneles[i].setBackground(colorSet);//Color diferente para el seleccionado
                 boton_selec_Action(i);
             }
@@ -388,7 +383,7 @@ public class Dashboard extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("Pilas y Colas");
+        jLabel2.setText("Arraylis y Pilas");
 
         fecha.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         fecha.setForeground(new java.awt.Color(0, 0, 0));
@@ -429,7 +424,7 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
 
-        red_squr.setBackground(new java.awt.Color(255, 255, 255));
+        red_squr.setBackground(new java.awt.Color(0, 75, 50));
         red_squr.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         red_squr.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -444,7 +439,7 @@ public class Dashboard extends javax.swing.JFrame {
         });
 
         exit.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        exit.setForeground(new java.awt.Color(102, 102, 102));
+        exit.setForeground(new java.awt.Color(255, 255, 255));
         exit.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         exit.setText("X");
         exit.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -554,8 +549,8 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_red_squrMouseEntered
 
     private void red_squrMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_red_squrMouseExited
-        red_squr.setBackground(new Color(255,255,255));
-        exit.setForeground(new Color(102,102,102));
+        red_squr.setBackground(new Color(0,75,50));
+        exit.setForeground(Color.white);
     }//GEN-LAST:event_red_squrMouseExited
 
     private void exitMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMouseEntered
@@ -564,8 +559,8 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_exitMouseEntered
 
     private void exitMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMouseExited
-        red_squr.setBackground(new Color(255,255,255));
-        exit.setForeground(new Color(102,102,102));
+        red_squr.setBackground(new Color(0,75,50));
+        exit.setForeground(Color.white);
     }//GEN-LAST:event_exitMouseExited
 
     private void Activar_color(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Activar_color
@@ -573,11 +568,11 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_Activar_color
     //Animacion de color regresar
     private void btn_RegresarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_RegresarMouseEntered
-        btn_Regresar.setBackground(new Color(21,101,192));
+        btn_Regresar.setBackground(colorSet);
     }//GEN-LAST:event_btn_RegresarMouseEntered
     
     private void btn_RegresarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_RegresarMouseExited
-        btn_Regresar.setBackground(new Color(13,71,161));
+        btn_Regresar.setBackground(colorReSet);
     }//GEN-LAST:event_btn_RegresarMouseExited
     //Accion de el boton regresar
     private void btn_RegresarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_RegresarMousePressed

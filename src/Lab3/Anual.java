@@ -63,12 +63,6 @@ public class Anual extends javax.swing.JPanel {
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, 320, 290));
     }// </editor-fold>//GEN-END:initComponents
 
-    void setColor(JPanel panel){
-        panel.setBackground(new Color(21,101,192));
-    }
-    void resetColor(JPanel panel){
-        panel.setBackground(new Color(18,90,173));
-    }
     
     public static void factorial(float ahorroPE, float ahorroJU, int año, StringBuilder Mensaje){
         Mensaje.append(String.valueOf(año) +"\t  " + String.valueOf(Math.round(ahorroPE)) + "\t\t  " + String.valueOf(Math.round(ahorroJU)+"\n"));

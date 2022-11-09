@@ -152,7 +152,7 @@ public class MayorMenor extends javax.swing.JPanel {
     private void button_AñadirMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_AñadirMouseExited
         resetColor(button_Añadir);
     }//GEN-LAST:event_button_AñadirMouseExited
-    // Añadir a la pila
+    // Añadir
     private void button_AñadirMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_AñadirMousePressed
         Añadir();
     }//GEN-LAST:event_button_AñadirMousePressed
@@ -164,7 +164,7 @@ public class MayorMenor extends javax.swing.JPanel {
     private void button_EliminarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_EliminarMouseExited
         resetColor(button_Eliminar);
     }//GEN-LAST:event_button_EliminarMouseExited
-    //Eliminar de la pila
+    //Eliminar
     private void button_EliminarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_EliminarMousePressed
         jTextAreaPN.setText(NumerosPN.mostrarPN().toString());
     }//GEN-LAST:event_button_EliminarMousePressed
@@ -223,12 +223,11 @@ public class MayorMenor extends javax.swing.JPanel {
     
     //colores
     void setColor(JPanel panel){
-        panel.setBackground(new Color(21,101,192));
+        panel.setBackground(new Color(0,51,0));
     }
     void resetColor(JPanel panel){
-        panel.setBackground(new Color(18,90,173));
+        panel.setBackground(new Color(0,75,50));
     }
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable JtablePila;

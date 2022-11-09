@@ -5,12 +5,10 @@
 package Principal;
 
 import Lab2.Dashboard2;
-import Lab3.Dashboard3;
+import Lab3.Dashboard;
 import java.awt.*;
 import java.time.LocalDate;
 import lab1grafico.*;
-import javax.swing.*;
-
 
 /**
  *
@@ -773,7 +771,7 @@ public class Principal extends javax.swing.JFrame {
 
     private void Solucion3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Solucion3MousePressed
         dispose();
-        new Dashboard3().setVisible(true);
+        new Dashboard().setVisible(true);
     }//GEN-LAST:event_Solucion3MousePressed
 
     private void Solucion4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Solucion4MousePressed

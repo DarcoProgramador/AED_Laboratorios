@@ -189,11 +189,12 @@ public class Producto_Arreglo extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtProductoKeyTyped
 
+    //colores
     void setColor(JPanel panel){
-        panel.setBackground(new Color(21,101,192));
+        panel.setBackground(new Color(0,51,0));
     }
     void resetColor(JPanel panel){
-        panel.setBackground(new Color(18,90,173));
+        panel.setBackground(new Color(0,75,50));
     }
     
     public boolean activar()
