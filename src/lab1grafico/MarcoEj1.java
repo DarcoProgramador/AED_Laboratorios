@@ -95,6 +95,8 @@ DefaultTableModel modelo2 = new DefaultTableModel();
         fecha = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
+        red_squr = new javax.swing.JPanel();
+        exit = new javax.swing.JLabel();
         content = new javax.swing.JPanel();
         MostrarEs1 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -136,6 +138,7 @@ DefaultTableModel modelo2 = new DefaultTableModel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -146,6 +149,12 @@ DefaultTableModel modelo2 = new DefaultTableModel();
 
         NuevoAlumno.setBackground(new java.awt.Color(51, 51, 51));
         NuevoAlumno.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                NuevoAlumnoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                NuevoAlumnoMouseExited(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 NuevoAlumnoMousePressed(evt);
             }
@@ -160,6 +169,12 @@ DefaultTableModel modelo2 = new DefaultTableModel();
 
         Modificar.setBackground(new java.awt.Color(51, 51, 51));
         Modificar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                ModificarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                ModificarMouseExited(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 ModificarMousePressed(evt);
             }
@@ -174,6 +189,12 @@ DefaultTableModel modelo2 = new DefaultTableModel();
 
         Regresar.setBackground(new java.awt.Color(51, 51, 51));
         Regresar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                RegresarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                RegresarMouseExited(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 RegresarMousePressed(evt);
             }
@@ -189,6 +210,12 @@ DefaultTableModel modelo2 = new DefaultTableModel();
 
         EliminarAlumno.setBackground(new java.awt.Color(51, 51, 51));
         EliminarAlumno.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                EliminarAlumnoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                EliminarAlumnoMouseExited(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 EliminarAlumnoMousePressed(evt);
             }
@@ -203,6 +230,12 @@ DefaultTableModel modelo2 = new DefaultTableModel();
 
         MostrarAlumno.setBackground(new java.awt.Color(51, 51, 51));
         MostrarAlumno.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                MostrarAlumnoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                MostrarAlumnoMouseExited(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 MostrarAlumnoMousePressed(evt);
             }
@@ -217,6 +250,12 @@ DefaultTableModel modelo2 = new DefaultTableModel();
 
         MostrarTodo.setBackground(new java.awt.Color(51, 51, 51));
         MostrarTodo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                MostrarTodoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                MostrarTodoMouseExited(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 MostrarTodoMousePressed(evt);
             }
@@ -269,6 +308,61 @@ DefaultTableModel modelo2 = new DefaultTableModel();
         jLabel3.setText("Facultad de Electrotecnia y Computación (F.E.C)");
         jPanel4.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
 
+        red_squr.setBackground(new java.awt.Color(0, 75, 50));
+        red_squr.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        red_squr.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                red_squrMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                red_squrMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                red_squrMousePressed(evt);
+            }
+        });
+
+        exit.setBackground(new java.awt.Color(0, 75, 50));
+        exit.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        exit.setForeground(new java.awt.Color(255, 255, 255));
+        exit.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        exit.setText("X");
+        exit.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        exit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                exitMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                exitMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                exitMousePressed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout red_squrLayout = new javax.swing.GroupLayout(red_squr);
+        red_squr.setLayout(red_squrLayout);
+        red_squrLayout.setHorizontalGroup(
+            red_squrLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 36, Short.MAX_VALUE)
+            .addGroup(red_squrLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(red_squrLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(exit, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        red_squrLayout.setVerticalGroup(
+            red_squrLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 25, Short.MAX_VALUE)
+            .addGroup(red_squrLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(red_squrLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(exit)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanel4.add(red_squr, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 0, -1, -1));
+
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 0, 580, 70));
 
         content.setBackground(new java.awt.Color(255, 255, 255));
@@ -307,8 +401,14 @@ DefaultTableModel modelo2 = new DefaultTableModel();
         NAM.setForeground(new java.awt.Color(255, 255, 255));
         MostrarEs.add(NAM, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 60, 110, 30));
 
-        MostrarEstudiante.setBackground(new java.awt.Color(0, 75, 50));
+        MostrarEstudiante.setBackground(new java.awt.Color(0, 51, 0));
         MostrarEstudiante.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                MostrarEstudianteMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                MostrarEstudianteMouseExited(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 MostrarEstudianteMousePressed(evt);
             }
@@ -347,8 +447,14 @@ DefaultTableModel modelo2 = new DefaultTableModel();
         jLabel11.setText("Nombre del Alumno a Modificar");
         Cambiar.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, -1, -1));
 
-        Buscar.setBackground(new java.awt.Color(0, 75, 50));
+        Buscar.setBackground(new java.awt.Color(0, 51, 0));
         Buscar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                BuscarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                BuscarMouseExited(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 BuscarMousePressed(evt);
             }
@@ -362,7 +468,8 @@ DefaultTableModel modelo2 = new DefaultTableModel();
 
         Cambiar.add(Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, 150, 40));
 
-        NAC.setForeground(new java.awt.Color(0, 0, 0));
+        NAC.setBackground(new java.awt.Color(51, 51, 51));
+        NAC.setForeground(new java.awt.Color(255, 255, 255));
         Cambiar.add(NAC, new org.netbeans.lib.awtextra.AbsoluteConstraints(184, 50, 110, -1));
 
         Smc.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -370,11 +477,18 @@ DefaultTableModel modelo2 = new DefaultTableModel();
         Smc.setText("Semestre");
         Cambiar.add(Smc, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, -1, -1));
 
+        SAC.setBackground(new java.awt.Color(51, 51, 51));
         SAC.setForeground(new java.awt.Color(0, 0, 0));
         Cambiar.add(SAC, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, 100, -1));
 
-        MModificar.setBackground(new java.awt.Color(0, 75, 50));
+        MModificar.setBackground(new java.awt.Color(0, 51, 0));
         MModificar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                MModificarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                MModificarMouseExited(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 MModificarMousePressed(evt);
             }
@@ -411,8 +525,14 @@ DefaultTableModel modelo2 = new DefaultTableModel();
         NEliminar.setForeground(new java.awt.Color(255, 255, 255));
         EA.add(NEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 130, 30));
 
-        Eliminar.setBackground(new java.awt.Color(0, 75, 50));
+        Eliminar.setBackground(new java.awt.Color(0, 51, 0));
         Eliminar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                EliminarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                EliminarMouseExited(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 EliminarMousePressed(evt);
             }
@@ -434,8 +554,14 @@ DefaultTableModel modelo2 = new DefaultTableModel();
         Promedio.setForeground(new java.awt.Color(255, 255, 255));
         INA.add(Promedio, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 200, 180, 30));
 
-        Añadir.setBackground(new java.awt.Color(0, 75, 50));
+        Añadir.setBackground(new java.awt.Color(0, 51, 0));
         Añadir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                AñadirMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                AñadirMouseExited(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 AñadirMousePressed(evt);
             }
@@ -723,6 +849,122 @@ DefaultTableModel modelo2 = new DefaultTableModel();
         }
         
     }//GEN-LAST:event_MostrarEstudianteMousePressed
+
+    private void NuevoAlumnoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NuevoAlumnoMouseEntered
+        NuevoAlumno.setBackground(new Color(0,51,0));
+    }//GEN-LAST:event_NuevoAlumnoMouseEntered
+
+    private void NuevoAlumnoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NuevoAlumnoMouseExited
+        NuevoAlumno.setBackground(new Color(51,51,51));
+    }//GEN-LAST:event_NuevoAlumnoMouseExited
+
+    private void EliminarAlumnoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EliminarAlumnoMouseEntered
+        EliminarAlumno.setBackground(new Color(0,51,0));
+    }//GEN-LAST:event_EliminarAlumnoMouseEntered
+
+    private void EliminarAlumnoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EliminarAlumnoMouseExited
+        EliminarAlumno.setBackground(new Color(51,51,51));
+    }//GEN-LAST:event_EliminarAlumnoMouseExited
+
+    private void ModificarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModificarMouseEntered
+        Modificar.setBackground(new Color(0,51,0));
+    }//GEN-LAST:event_ModificarMouseEntered
+
+    private void ModificarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModificarMouseExited
+        Modificar.setBackground(new Color(51,51,51));
+    }//GEN-LAST:event_ModificarMouseExited
+
+    private void MostrarAlumnoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MostrarAlumnoMouseEntered
+        MostrarAlumno.setBackground(new Color(0,51,0));
+    }//GEN-LAST:event_MostrarAlumnoMouseEntered
+
+    private void MostrarAlumnoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MostrarAlumnoMouseExited
+        MostrarAlumno.setBackground(new Color(51,51,51));
+    }//GEN-LAST:event_MostrarAlumnoMouseExited
+
+    private void MostrarTodoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MostrarTodoMouseEntered
+        MostrarTodo.setBackground(new Color(0,51,0));
+    }//GEN-LAST:event_MostrarTodoMouseEntered
+
+    private void MostrarTodoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MostrarTodoMouseExited
+        MostrarTodo.setBackground(new Color(51,51,51));
+    }//GEN-LAST:event_MostrarTodoMouseExited
+
+    private void RegresarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegresarMouseEntered
+        Regresar.setBackground(new Color(168,23,25));
+    }//GEN-LAST:event_RegresarMouseEntered
+
+    private void RegresarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegresarMouseExited
+        Regresar.setBackground(new Color(51,51,51));
+    }//GEN-LAST:event_RegresarMouseExited
+
+    private void exitMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMouseEntered
+        red_squr.setBackground(new Color(204,0,0));
+        exit.setForeground(Color.white);
+    }//GEN-LAST:event_exitMouseEntered
+
+    private void exitMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMouseExited
+        red_squr.setBackground(new Color(0,75,50));
+        exit.setForeground(Color.white);
+    }//GEN-LAST:event_exitMouseExited
+
+    private void exitMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMousePressed
+        System.exit(0);
+    }//GEN-LAST:event_exitMousePressed
+
+    private void red_squrMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_red_squrMouseEntered
+        red_squr.setBackground(new Color(204,0,0));
+        exit.setForeground(Color.white);
+    }//GEN-LAST:event_red_squrMouseEntered
+
+    private void red_squrMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_red_squrMouseExited
+        red_squr.setBackground(new Color(0,75,50));
+        exit.setForeground(Color.white);
+    }//GEN-LAST:event_red_squrMouseExited
+
+    private void red_squrMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_red_squrMousePressed
+        System.exit(0);
+    }//GEN-LAST:event_red_squrMousePressed
+
+    private void MostrarEstudianteMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MostrarEstudianteMouseEntered
+        MostrarEstudiante.setBackground(new Color(0,75,50));
+    }//GEN-LAST:event_MostrarEstudianteMouseEntered
+
+    private void MostrarEstudianteMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MostrarEstudianteMouseExited
+        MostrarEstudiante.setBackground(new Color(0,51,0));
+    }//GEN-LAST:event_MostrarEstudianteMouseExited
+
+    private void BuscarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BuscarMouseEntered
+        Buscar.setBackground(new Color(0,75,50));
+    }//GEN-LAST:event_BuscarMouseEntered
+
+    private void BuscarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BuscarMouseExited
+       Buscar.setBackground(new Color(0,51,0));
+    }//GEN-LAST:event_BuscarMouseExited
+
+    private void MModificarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MModificarMouseEntered
+        MModificar.setBackground(new Color(0,75,50));
+    }//GEN-LAST:event_MModificarMouseEntered
+
+    private void MModificarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MModificarMouseExited
+        MModificar.setBackground(new Color(0,51,0));
+    }//GEN-LAST:event_MModificarMouseExited
+
+    private void EliminarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EliminarMouseEntered
+        Eliminar.setBackground(new Color(0,75,50));
+    }//GEN-LAST:event_EliminarMouseEntered
+
+    private void EliminarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EliminarMouseExited
+        Eliminar.setBackground(new Color(0,51,0));
+    }//GEN-LAST:event_EliminarMouseExited
+
+    private void AñadirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AñadirMouseEntered
+        Añadir.setBackground(new Color(0,75,50));
+    }//GEN-LAST:event_AñadirMouseEntered
+
+    private void AñadirMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AñadirMouseExited
+        Añadir.setBackground(new Color(0,51,0));
+    }//GEN-LAST:event_AñadirMouseExited
     
     /**
      * @param args the command line arguments
@@ -759,6 +1001,7 @@ DefaultTableModel modelo2 = new DefaultTableModel();
     private javax.swing.JLabel Smc;
     private javax.swing.JTextField apellido;
     private javax.swing.JPanel content;
+    private javax.swing.JLabel exit;
     private javax.swing.JLabel fecha;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -789,5 +1032,6 @@ DefaultTableModel modelo2 = new DefaultTableModel();
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JPanel red_squr;
     // End of variables declaration//GEN-END:variables
 }

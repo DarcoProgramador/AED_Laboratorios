@@ -7,23 +7,61 @@ package lab1grafico;
 import Principal.Principal;
 import java.awt.BorderLayout;
 import java.awt.Color;
-import javax.swing.JOptionPane;
+import java.time.LocalDate;
+import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+import java.util.*;
 
 /**
  *
  * @author Thebeast
  */
 public class MarcoEj4 extends javax.swing.JFrame {
-
+int tam = 15;
+int n = -1, Cam = 0;
+String nombre[] = new String[tam];
+String Apellido[] = new String[tam];
+String Sexo[] = new String[tam];
+String direccion[] = new String[tam];
+int Edad[] = new int[tam];
+int Años[] = new int[tam];
+DefaultTableModel modelo = new DefaultTableModel(); 
+DefaultTableModel modelo2 = new DefaultTableModel(); 
     /**
      * Creates new form MarcoEj1
      */
     public MarcoEj4() {
         initComponents();
         this.setLocationRelativeTo(null);
-        int tam = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el tamaño del arreglo"));
-        int opc, n=-1;
-        String nombre[]= new String[tam], apellido[]= new String[tam], semestre[]= new String[tam], cali[]= new String[tam];
+        modelo.addColumn("Nombre");
+        modelo.addColumn("Apellido");
+        modelo.addColumn("Sexo");
+        modelo.addColumn("Edad");
+        modelo.addColumn("Direccion");
+        modelo.addColumn("Antiguedad");
+        modelo2.addColumn("Nombre");
+        modelo2.addColumn("Apellido");
+        modelo2.addColumn("Sexo");
+        modelo2.addColumn("Edad");
+        modelo2.addColumn("Direccion");
+        modelo2.addColumn("Antiguedad");
+        Tabla1.setModel(modelo);
+        Tabla2.setModel(modelo2);
+        Mostrar1.setVisible(false);
+        Mostrar2.setVisible(false);
+        Cambiar.setVisible(false);
+        Eliminar.setVisible(false);
+        NuevoEmpleado.setVisible(true);
+        Desabilitado1.setVisible(false);
+        AñosCambiar.setVisible(false);
+        Actualizar.setVisible(false);
+        LocalDate now = LocalDate.now();
+        int year = now.getYear();
+        int dia = now.getDayOfMonth();
+        int month = now.getMonthValue();
+        String[] meses = {"Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto"," Septiembre"
+            ,"Octubre","Noviembre","Diciemrbre"};
+        fecha.setText("Hoy es "+dia+" de "+meses[month - 1]+" de "+year);
     }
 
     /**
@@ -36,263 +74,997 @@ public class MarcoEj4 extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        IngresarN = new javax.swing.JButton();
-        Nuevo = new javax.swing.JButton();
-        EliminarAlumno = new javax.swing.JButton();
-        Modificar = new javax.swing.JButton();
-        MostrarTodos = new javax.swing.JButton();
-        MostrarAlumno2 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
+        fecha = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        red_squr = new javax.swing.JPanel();
+        exit = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        Regresar = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        IngresarEmpleado = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        EliminarEmpleado = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        EstadoCliente = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        MostrarCliente = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        MostrarClientes = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
         Content = new javax.swing.JPanel();
+        Mostrar2 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        Tabla2 = new javax.swing.JTable();
+        Mostrar1 = new javax.swing.JPanel();
+        jLabel19 = new javax.swing.JLabel();
+        NombreMostrar = new javax.swing.JTextField();
+        MostrarInfo = new javax.swing.JPanel();
+        jLabel23 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        Tabla1 = new javax.swing.JTable();
+        Eliminar = new javax.swing.JPanel();
+        jLabel17 = new javax.swing.JLabel();
+        NombreEliminar = new javax.swing.JTextField();
+        EliminarButon = new javax.swing.JPanel();
+        jLabel18 = new javax.swing.JLabel();
+        Cambiar = new javax.swing.JPanel();
+        Desabilitado1 = new javax.swing.JLabel();
+        NombreModificar = new javax.swing.JTextField();
+        Actualizar = new javax.swing.JPanel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        BuscarModificarButon1 = new javax.swing.JPanel();
+        jLabel22 = new javax.swing.JLabel();
+        AñosCambiar = new javax.swing.JTextField();
+        NuevoEmpleado = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        ApellidoAñadir = new javax.swing.JTextField();
+        NombreAñadir = new javax.swing.JTextField();
+        EdadAñadir = new javax.swing.JTextField();
+        Sexo1 = new javax.swing.JComboBox<>();
+        AñadirBoton = new javax.swing.JPanel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        DireccionAñadir = new javax.swing.JTextField();
+        jLabel25 = new javax.swing.JLabel();
+        AñosAñadir = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(13, 71, 161));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel1.setText("_________________");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 52, -1, 30));
-
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel2.setText("EJERCICIO 4");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 140, -1));
-
-        IngresarN.setBackground(new java.awt.Color(0, 51, 153));
-        IngresarN.setText("Mostrar todos los empleados");
-        IngresarN.setBorder(null);
-        IngresarN.setBorderPainted(false);
-        IngresarN.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                IngresarNMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                IngresarNMouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                IngresarNMousePressed(evt);
-            }
-        });
-        jPanel2.add(IngresarN, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 190, 40));
-
-        Nuevo.setBackground(new java.awt.Color(0, 51, 153));
-        Nuevo.setText("Nuevo Empleado");
-        Nuevo.setBorder(null);
-        Nuevo.setBorderPainted(false);
-        Nuevo.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                NuevoMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                NuevoMouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                NuevoMousePressed(evt);
-            }
-        });
-        jPanel2.add(Nuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 190, 40));
-
-        EliminarAlumno.setBackground(new java.awt.Color(0, 51, 153));
-        EliminarAlumno.setText("Eliminar Empleado");
-        EliminarAlumno.setBorder(null);
-        EliminarAlumno.setBorderPainted(false);
-        EliminarAlumno.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                EliminarAlumnoMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                EliminarAlumnoMouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                EliminarAlumnoMousePressed(evt);
-            }
-        });
-        jPanel2.add(EliminarAlumno, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, 190, 40));
-
-        Modificar.setBackground(new java.awt.Color(0, 51, 153));
-        Modificar.setText("Modificar Antiguedad de Empleado");
-        Modificar.setBorder(null);
-        Modificar.setBorderPainted(false);
-        Modificar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                ModificarMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                ModificarMouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                ModificarMousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                ModificarMouseReleased(evt);
-            }
-        });
-        jPanel2.add(Modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 190, 40));
-
-        MostrarTodos.setBackground(new java.awt.Color(0, 51, 153));
-        MostrarTodos.setText("Informacion de un empleado");
-        MostrarTodos.setBorder(null);
-        MostrarTodos.setBorderPainted(false);
-        MostrarTodos.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                MostrarTodosMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                MostrarTodosMouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                MostrarTodosMousePressed(evt);
-            }
-        });
-        jPanel2.add(MostrarTodos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 390, 190, 40));
-
-        MostrarAlumno2.setBackground(new java.awt.Color(51, 0, 0));
-        MostrarAlumno2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        MostrarAlumno2.setText("Regresar");
-        MostrarAlumno2.setBorder(null);
-        MostrarAlumno2.setBorderPainted(false);
-        MostrarAlumno2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                MostrarAlumno2MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                MostrarAlumno2MouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                MostrarAlumno2MousePressed(evt);
-            }
-        });
-        jPanel2.add(MostrarAlumno2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 520, 190, 40));
-
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 190, 580));
-
-        jPanel3.setBackground(new java.awt.Color(25, 118, 210));
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setForeground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Metodos para insertar y ordenar");
         jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, -1));
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 70, 580, 110));
+        fecha.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        fecha.setForeground(new java.awt.Color(0, 0, 0));
+        fecha.setText("Hoy es Sábado 28 de Abril de 2018");
+        jPanel3.add(fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, -1, -1));
+
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 70, 590, 110));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Facultad de Electrotecnia y Computación (F.E.C)");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 40, -1, -1));
 
+        jPanel4.setBackground(new java.awt.Color(0, 75, 50));
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        red_squr.setBackground(new java.awt.Color(0, 75, 50));
+        red_squr.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        red_squr.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                red_squrMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                red_squrMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                red_squrMousePressed(evt);
+            }
+        });
+
+        exit.setBackground(new java.awt.Color(0, 75, 50));
+        exit.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        exit.setForeground(new java.awt.Color(255, 255, 255));
+        exit.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        exit.setText("X");
+        exit.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        exit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                exitMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                exitMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                exitMousePressed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout red_squrLayout = new javax.swing.GroupLayout(red_squr);
+        red_squr.setLayout(red_squrLayout);
+        red_squrLayout.setHorizontalGroup(
+            red_squrLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(red_squrLayout.createSequentialGroup()
+                .addComponent(exit, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 4, Short.MAX_VALUE))
+        );
+        red_squrLayout.setVerticalGroup(
+            red_squrLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(red_squrLayout.createSequentialGroup()
+                .addComponent(exit)
+                .addGap(0, 5, Short.MAX_VALUE))
+        );
+
+        jPanel4.add(red_squr, new org.netbeans.lib.awtextra.AbsoluteConstraints(558, 0, 40, 30));
+
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 0, 590, 70));
+
+        jPanel2.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel5.setBackground(new java.awt.Color(0, 51, 0));
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("_________________");
+        jPanel5.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, 30));
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("EJERCICIO 4");
+        jPanel5.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 140, 30));
+
+        jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 190, 70));
+
+        Regresar.setBackground(new java.awt.Color(51, 51, 51));
+        Regresar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                RegresarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                RegresarMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                RegresarMousePressed(evt);
+            }
+        });
+        Regresar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Regresar");
+        Regresar.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, -1));
+
+        jPanel2.add(Regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 540, 190, 40));
+
+        IngresarEmpleado.setBackground(new java.awt.Color(51, 51, 51));
+        IngresarEmpleado.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                IngresarEmpleadoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                IngresarEmpleadoMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                IngresarEmpleadoMousePressed(evt);
+            }
+        });
+        IngresarEmpleado.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Ingresar Empleado");
+        IngresarEmpleado.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
+
+        jPanel2.add(IngresarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 190, 40));
+
+        EliminarEmpleado.setBackground(new java.awt.Color(51, 51, 51));
+        EliminarEmpleado.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                EliminarEmpleadoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                EliminarEmpleadoMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                EliminarEmpleadoMousePressed(evt);
+            }
+        });
+        EliminarEmpleado.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Eliminar Empleado");
+        EliminarEmpleado.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
+
+        jPanel2.add(EliminarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 190, 40));
+
+        EstadoCliente.setBackground(new java.awt.Color(51, 51, 51));
+        EstadoCliente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                EstadoClienteMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                EstadoClienteMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                EstadoClienteMousePressed(evt);
+            }
+        });
+        EstadoCliente.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Cambiar Antiguedad");
+        EstadoCliente.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+
+        jPanel2.add(EstadoCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 190, 40));
+
+        MostrarCliente.setBackground(new java.awt.Color(51, 51, 51));
+        MostrarCliente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                MostrarClienteMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                MostrarClienteMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                MostrarClienteMousePressed(evt);
+            }
+        });
+        MostrarCliente.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Mostrar Empleado");
+        MostrarCliente.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
+
+        jPanel2.add(MostrarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 190, 40));
+
+        MostrarClientes.setBackground(new java.awt.Color(51, 51, 51));
+        MostrarClientes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                MostrarClientesMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                MostrarClientesMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                MostrarClientesMousePressed(evt);
+            }
+        });
+        MostrarClientes.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Lista Empleados");
+        MostrarClientes.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel2.add(MostrarClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 420, 190, 40));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 190, 580));
+
         Content.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.add(Content, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 580, 400));
+        Content.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Mostrar2.setBackground(new java.awt.Color(255, 255, 255));
+        Mostrar2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Tabla2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(Tabla2);
+
+        Mostrar2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 500, 340));
+
+        Content.add(Mostrar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, -10, 560, 370));
+
+        Mostrar1.setBackground(new java.awt.Color(255, 255, 255));
+        Mostrar1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel19.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel19.setText("Nombre del Empleado a Mostrar");
+        Mostrar1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, -1, -1));
+
+        NombreMostrar.setBackground(new java.awt.Color(51, 51, 51));
+        NombreMostrar.setForeground(new java.awt.Color(255, 255, 255));
+        Mostrar1.add(NombreMostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 40, 130, -1));
+
+        MostrarInfo.setBackground(new java.awt.Color(0, 51, 0));
+        MostrarInfo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                MostrarInfoMousePressed(evt);
+            }
+        });
+        MostrarInfo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel23.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel23.setText("Mostrar");
+        MostrarInfo.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, -1, -1));
+
+        Mostrar1.add(MostrarInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 70, 120, 30));
+
+        Tabla1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(Tabla1);
+
+        Mostrar1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 370, 210));
+
+        Content.add(Mostrar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 530, 350));
+
+        Eliminar.setBackground(new java.awt.Color(255, 255, 255));
+        Eliminar.setForeground(new java.awt.Color(0, 0, 0));
+        Eliminar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel17.setText("Nombre de Empleado a Eliminar");
+        Eliminar.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 10, -1, -1));
+
+        NombreEliminar.setBackground(new java.awt.Color(51, 51, 51));
+        NombreEliminar.setForeground(new java.awt.Color(255, 255, 255));
+        Eliminar.add(NombreEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 50, 140, -1));
+
+        EliminarButon.setBackground(new java.awt.Color(0, 51, 0));
+        EliminarButon.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                EliminarButonMousePressed(evt);
+            }
+        });
+        EliminarButon.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel18.setText("Eliminar");
+        EliminarButon.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, -1, -1));
+
+        Eliminar.add(EliminarButon, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 110, 120, 30));
+
+        Content.add(Eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 520, 310));
+
+        Cambiar.setBackground(new java.awt.Color(255, 255, 255));
+        Cambiar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Desabilitado1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Desabilitado1.setForeground(new java.awt.Color(0, 0, 0));
+        Desabilitado1.setText("Años Antiguedad");
+        Cambiar.add(Desabilitado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 160, -1, -1));
+
+        NombreModificar.setBackground(new java.awt.Color(51, 51, 51));
+        NombreModificar.setForeground(new java.awt.Color(255, 255, 255));
+        Cambiar.add(NombreModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 50, 130, -1));
+
+        Actualizar.setBackground(new java.awt.Color(0, 51, 0));
+        Actualizar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                ActualizarMousePressed(evt);
+            }
+        });
+        Actualizar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel20.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel20.setText("Actualizar");
+        Actualizar.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, -1));
+
+        Cambiar.add(Actualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 250, 110, 30));
+
+        jLabel21.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel21.setText("Nombre del Empleado a Modificar");
+        Cambiar.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, -1, -1));
+
+        BuscarModificarButon1.setBackground(new java.awt.Color(0, 51, 0));
+        BuscarModificarButon1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                BuscarModificarButon1MousePressed(evt);
+            }
+        });
+        BuscarModificarButon1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel22.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel22.setText("Buscar");
+        BuscarModificarButon1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, -1, -1));
+
+        Cambiar.add(BuscarModificarButon1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 90, 110, 30));
+
+        AñosCambiar.setBackground(new java.awt.Color(51, 51, 51));
+        AñosCambiar.setForeground(new java.awt.Color(255, 255, 255));
+        AñosCambiar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                AñosCambiarKeyTyped(evt);
+            }
+        });
+        Cambiar.add(AñosCambiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 110, -1));
+
+        Content.add(Cambiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 500, 310));
+
+        NuevoEmpleado.setBackground(new java.awt.Color(255, 255, 255));
+        NuevoEmpleado.setForeground(new java.awt.Color(0, 0, 0));
+        NuevoEmpleado.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel11.setText("Sexo");
+        NuevoEmpleado.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 150, -1, -1));
+
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel12.setText("Nuevo Empleado");
+        NuevoEmpleado.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 10, -1, -1));
+
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel13.setText("Nombre");
+        NuevoEmpleado.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, -1, -1));
+
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel14.setText("Apellido");
+        NuevoEmpleado.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, -1, -1));
+
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel15.setText("Edad");
+        NuevoEmpleado.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 60, -1, -1));
+
+        ApellidoAñadir.setBackground(new java.awt.Color(51, 51, 51));
+        ApellidoAñadir.setForeground(new java.awt.Color(255, 255, 255));
+        NuevoEmpleado.add(ApellidoAñadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, 90, -1));
+
+        NombreAñadir.setBackground(new java.awt.Color(51, 51, 51));
+        NombreAñadir.setForeground(new java.awt.Color(255, 255, 255));
+        NuevoEmpleado.add(NombreAñadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 90, -1));
+
+        EdadAñadir.setBackground(new java.awt.Color(51, 51, 51));
+        EdadAñadir.setForeground(new java.awt.Color(255, 255, 255));
+        EdadAñadir.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                EdadAñadirKeyTyped(evt);
+            }
+        });
+        NuevoEmpleado.add(EdadAñadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 90, 90, -1));
+
+        Sexo1.setBackground(new java.awt.Color(51, 51, 51));
+        Sexo1.setForeground(new java.awt.Color(255, 255, 255));
+        Sexo1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Femenino" }));
+        NuevoEmpleado.add(Sexo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 180, -1, -1));
+
+        AñadirBoton.setBackground(new java.awt.Color(0, 51, 0));
+        AñadirBoton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                AñadirBotonMousePressed(evt);
+            }
+        });
+        AñadirBoton.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel16.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setText("Añadir");
+        AñadirBoton.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, -1, -1));
+
+        NuevoEmpleado.add(AñadirBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, 140, 40));
+
+        jLabel24.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel24.setText("Direccion");
+        NuevoEmpleado.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, -1, -1));
+
+        DireccionAñadir.setBackground(new java.awt.Color(51, 51, 51));
+        DireccionAñadir.setForeground(new java.awt.Color(255, 255, 255));
+        NuevoEmpleado.add(DireccionAñadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 90, -1));
+
+        jLabel25.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel25.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel25.setText("Años Antiguedad");
+        NuevoEmpleado.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 140, 150, 30));
+
+        AñosAñadir.setBackground(new java.awt.Color(51, 51, 51));
+        AñosAñadir.setForeground(new java.awt.Color(255, 255, 255));
+        AñosAñadir.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                AñosAñadirKeyTyped(evt);
+            }
+        });
+        NuevoEmpleado.add(AñosAñadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 180, 90, -1));
+
+        Content.add(NuevoEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 530, 330));
+
+        jPanel1.add(Content, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 590, 400));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, 580));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void IngresarNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IngresarNMouseEntered
-        IngresarN.setBackground(new Color(25,118,210));
-    }//GEN-LAST:event_IngresarNMouseEntered
+    private void IngresarEmpleadoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IngresarEmpleadoMouseEntered
+        IngresarEmpleado.setBackground(new Color(0,51,0));
+    }//GEN-LAST:event_IngresarEmpleadoMouseEntered
 
-    private void IngresarNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IngresarNMouseExited
-        IngresarN.setBackground(new Color(0,51,153));
-    }//GEN-LAST:event_IngresarNMouseExited
+    private void IngresarEmpleadoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IngresarEmpleadoMouseExited
+        IngresarEmpleado.setBackground(new Color(51,51,51));
+    }//GEN-LAST:event_IngresarEmpleadoMouseExited
 
-    private void NuevoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NuevoMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_NuevoMouseEntered
+    private void EliminarEmpleadoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EliminarEmpleadoMouseEntered
+        EliminarEmpleado.setBackground(new Color(0,51,0));
+    }//GEN-LAST:event_EliminarEmpleadoMouseEntered
 
-    private void NuevoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NuevoMouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_NuevoMouseExited
+    private void EliminarEmpleadoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EliminarEmpleadoMouseExited
+        EliminarEmpleado.setBackground(new Color(51,51,51));
+    }//GEN-LAST:event_EliminarEmpleadoMouseExited
 
-    private void EliminarAlumnoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EliminarAlumnoMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_EliminarAlumnoMouseEntered
+    private void EstadoClienteMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EstadoClienteMouseEntered
+        EstadoCliente.setBackground(new Color(0,51,0));
+    }//GEN-LAST:event_EstadoClienteMouseEntered
 
-    private void EliminarAlumnoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EliminarAlumnoMouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_EliminarAlumnoMouseExited
+    private void EstadoClienteMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EstadoClienteMouseExited
+        EstadoCliente.setBackground(new Color(51,51,51));
+    }//GEN-LAST:event_EstadoClienteMouseExited
 
-    private void ModificarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModificarMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ModificarMouseEntered
+    private void MostrarClienteMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MostrarClienteMouseEntered
+        MostrarCliente.setBackground(new Color(0,51,0));
+    }//GEN-LAST:event_MostrarClienteMouseEntered
 
-    private void ModificarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModificarMouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ModificarMouseExited
+    private void MostrarClienteMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MostrarClienteMouseExited
+        MostrarCliente.setBackground(new Color(51,51,51));
+    }//GEN-LAST:event_MostrarClienteMouseExited
 
-    private void MostrarTodosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MostrarTodosMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_MostrarTodosMouseEntered
+    private void MostrarClientesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MostrarClientesMouseEntered
+        MostrarClientes.setBackground(new Color(0,51,0));
+    }//GEN-LAST:event_MostrarClientesMouseEntered
 
-    private void MostrarTodosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MostrarTodosMouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_MostrarTodosMouseExited
+    private void MostrarClientesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MostrarClientesMouseExited
+        MostrarClientes.setBackground(new Color(51,51,51));
+    }//GEN-LAST:event_MostrarClientesMouseExited
 
-    private void MostrarAlumno2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MostrarAlumno2MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_MostrarAlumno2MouseEntered
+    private void RegresarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegresarMouseEntered
+        Regresar.setBackground(new Color(168,23,25));
+    }//GEN-LAST:event_RegresarMouseEntered
 
-    private void MostrarAlumno2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MostrarAlumno2MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_MostrarAlumno2MouseExited
+    private void RegresarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegresarMouseExited
+        Regresar.setBackground(new Color(51,51,51));
+    }//GEN-LAST:event_RegresarMouseExited
 
-    private void MostrarAlumno2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MostrarAlumno2MousePressed
+    private void exitMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMouseEntered
+        red_squr.setBackground(new Color(204,0,0));
+        exit.setForeground(Color.white);
+    }//GEN-LAST:event_exitMouseEntered
+
+    private void exitMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMouseExited
+        red_squr.setBackground(new Color(0,75,50));
+        exit.setForeground(Color.white);
+    }//GEN-LAST:event_exitMouseExited
+
+    private void exitMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMousePressed
+        System.exit(0);
+    }//GEN-LAST:event_exitMousePressed
+
+    private void red_squrMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_red_squrMouseEntered
+        red_squr.setBackground(new Color(204,0,0));
+        exit.setForeground(Color.white);
+    }//GEN-LAST:event_red_squrMouseEntered
+
+    private void red_squrMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_red_squrMouseExited
+        red_squr.setBackground(new Color(0,75,50));
+        exit.setForeground(Color.white);
+    }//GEN-LAST:event_red_squrMouseExited
+
+    private void red_squrMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_red_squrMousePressed
+        System.exit(0);
+    }//GEN-LAST:event_red_squrMousePressed
+
+    private void IngresarEmpleadoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IngresarEmpleadoMousePressed
+        Mostrar1.setVisible(false);
+        Mostrar2.setVisible(false);
+        Cambiar.setVisible(false);
+        Eliminar.setVisible(false);
+        NuevoEmpleado.setVisible(true);
+        Desabilitado1.setVisible(false);
+        AñosCambiar.setVisible(false);
+        Actualizar.setVisible(false);
+    }//GEN-LAST:event_IngresarEmpleadoMousePressed
+
+    private void EliminarEmpleadoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EliminarEmpleadoMousePressed
+        Mostrar1.setVisible(false);
+        Mostrar2.setVisible(false);
+        Cambiar.setVisible(false);
+        Eliminar.setVisible(true);
+        NuevoEmpleado.setVisible(false);
+        Desabilitado1.setVisible(false);
+        AñosCambiar.setVisible(false);
+        Actualizar.setVisible(false);
+    }//GEN-LAST:event_EliminarEmpleadoMousePressed
+
+    private void EstadoClienteMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EstadoClienteMousePressed
+        Mostrar1.setVisible(false);
+        Mostrar2.setVisible(false);
+        Cambiar.setVisible(true);
+        Eliminar.setVisible(false);
+        NuevoEmpleado.setVisible(false);
+        Desabilitado1.setVisible(false);
+        AñosCambiar.setVisible(false);
+        Actualizar.setVisible(false);
+    }//GEN-LAST:event_EstadoClienteMousePressed
+
+    private void MostrarClienteMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MostrarClienteMousePressed
+        Mostrar1.setVisible(true);
+        Mostrar2.setVisible(false);
+        Cambiar.setVisible(false);
+        Eliminar.setVisible(false);
+        NuevoEmpleado.setVisible(false);
+        Desabilitado1.setVisible(false);
+        AñosCambiar.setVisible(false);
+        Actualizar.setVisible(false);
+        for (int i = 0; i < Tabla1.getRowCount(); i++) 
+        {
+        modelo.removeRow(i);
+        i-=1;
+        }
+    }//GEN-LAST:event_MostrarClienteMousePressed
+
+    private void MostrarClientesMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MostrarClientesMousePressed
+        Mostrar1.setVisible(false);
+        Mostrar2.setVisible(true);
+        Cambiar.setVisible(false);
+        Eliminar.setVisible(false);
+        NuevoEmpleado.setVisible(false);
+        Desabilitado1.setVisible(false);
+        AñosCambiar.setVisible(false);
+        Actualizar.setVisible(false);
+        for (int i = 0; i < Tabla2.getRowCount(); i++) 
+        {
+        modelo2.removeRow(i);
+        i-=1;
+        }
+        int i;
+        for(i = 0; i < tam; i++)
+        {
+            if (nombre[i] == "")
+            {
+                continue;
+            }
+            else if(Edad[i] == 0)
+            {
+                continue;
+            }
+            else
+            {
+                Object [] arreglo = new Object[6];
+                arreglo[0] = nombre[i];
+                arreglo[1] = Apellido[i];
+                arreglo[2] = Sexo[i];
+                arreglo[3] = Edad[i];
+                arreglo[4] = direccion[i];
+                arreglo[5] = Años[i];
+                modelo2.addRow(arreglo);
+            }
+        }
+        
+    }//GEN-LAST:event_MostrarClientesMousePressed
+
+    private void RegresarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegresarMousePressed
         dispose();
         new Principal().setVisible(true);
-    }//GEN-LAST:event_MostrarAlumno2MousePressed
+    }//GEN-LAST:event_RegresarMousePressed
 
-    private void IngresarNMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IngresarNMousePressed
-            
-    }//GEN-LAST:event_IngresarNMousePressed
+    private void AñadirBotonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AñadirBotonMousePressed
+        if (NombreAñadir.getText().equals("") || ApellidoAñadir.getText().equals("") || EdadAñadir.getText().equals("") || DireccionAñadir.getText().equals("") || AñosAñadir.getText().equals(""))
+        {
+            JOptionPane.showMessageDialog(null,"Hay campos vacios");
+        }
+        else
+        {
+            if (n == -1)
+            { /*Agrega al empleado en la posici�n 0 cuando no hay datos*/
+		n++;
+		nombre[n] = NombreAñadir.getText();
+                Apellido[n] = ApellidoAñadir.getText();
+		direccion[n] = DireccionAñadir.getText();
+		Edad[n]= Integer.parseInt(EdadAñadir.getText());
+		Sexo[n]= String.valueOf(Sexo1.getSelectedItem());
+		Años[n]= Integer.parseInt(AñosAñadir.getText());
+                JOptionPane.showMessageDialog(null, "Insercion realizada.");
+            }
+            else if (n < (tam-1))
+            { /*Agrega al empleado cuando hay otro empleado existente*/
+		String nomB= NombreAñadir.getText();
+			
+		int pos = Busca(nombre, nomB, n);
+			
+		if ((pos >= 0) && ((pos == 0) && (nomB.equalsIgnoreCase(nombre[0]))))
+                    JOptionPane.showMessageDialog(null, nomB + " ya existe.");
+		else
+                {
+                    n=n+1;
+                    pos= pos * (-1);
+				
+                    for(int i=n; i>= (pos+1); i--)
+                    {
+                        nombre[i]= nombre[i-1];
+                        Apellido[i]= Apellido[i-1];
+                        direccion[i]= direccion[i-1];
+                        Edad[i]= Edad[i-1];
+                        Sexo[i]= Sexo[i-1];
+                        Años[i]= Años[i-1];
+                    }
+				
+                    nombre[n] = NombreAñadir.getText();
+                    Apellido[n] = ApellidoAñadir.getText();
+                    direccion[n] = DireccionAñadir.getText();
+                    Edad[n]= Integer.parseInt(EdadAñadir.getText());
+                    Sexo[n]= String.valueOf(Sexo1.getSelectedItem());
+                    Años[n]= Integer.parseInt(AñosAñadir.getText());
+                    JOptionPane.showMessageDialog(null, "Insercion realizada.");
+                }
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(null, "No hay espacio disponible");
+            }
+	Arrays.sort(nombre, String.CASE_INSENSITIVE_ORDER);
+        }
+    }//GEN-LAST:event_AñadirBotonMousePressed
 
-    private void NuevoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NuevoMousePressed
-            
-    }//GEN-LAST:event_NuevoMousePressed
+    private void EliminarButonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EliminarButonMousePressed
+       if (NombreEliminar.getText().equals(""))
+       {
+           JOptionPane.showMessageDialog(null,"Ingrese un nombre");
+       }
+       else
+       {
+           if(n>-1){
+			String nomB= NombreEliminar.getText();
+			int pos = Busca(nombre,nomB,n);
+			JOptionPane.showMessageDialog(null, "Pos ="+pos);
+			
+			if ((pos < 0) || (!nomB.equalsIgnoreCase(nombre[0])))
+				JOptionPane.showMessageDialog(null,nomB + " no existe.");
+			else
+			{
+				n=n-1;
+				
+				for(int i=pos; i<= n; i++){
+					nombre[i]= nombre[i-1];
+					Apellido[i]= Apellido[i-1];
+					direccion[i]= direccion[i-1];
+					Edad[i]= Edad[i-1];
+					Sexo[i]= Sexo[i-1];
+                                        Años[i]= Años[i-1];
+				}
+				
+				JOptionPane.showMessageDialog(null, "Eliminacion realizada.");
+			}
+		}
+		else
+			JOptionPane.showMessageDialog(null, "Arreglo vacio.");
+       }
+        
+    }//GEN-LAST:event_EliminarButonMousePressed
 
-    private void EliminarAlumnoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EliminarAlumnoMousePressed
-            
-    }//GEN-LAST:event_EliminarAlumnoMousePressed
+    private void BuscarModificarButon1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BuscarModificarButon1MousePressed
+        if (NombreModificar.getText().equals(""))
+        {
+        JOptionPane.showMessageDialog(null,"Hay campos vacios");
+        }
+        else
+        {
+            if(n>-1){
+			String nomB= NombreModificar.getText();
+			int pos = Busca(nombre,nomB,n);
+			
+			if ((pos < 0) && (!nomB.equalsIgnoreCase(nombre[0])))
+				JOptionPane.showMessageDialog(null,nomB + " no existe.");
+			else{
+				Cam = pos;
+                                Desabilitado1.setVisible(true);
+                                AñosCambiar.setVisible(true);
+                                Actualizar.setVisible(true);
+			}
+		}
+		else
+			JOptionPane.showMessageDialog(null, "Arreglo vacio.");
+        }
+    }//GEN-LAST:event_BuscarModificarButon1MousePressed
 
-    private void ModificarMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModificarMouseReleased
+    private void ActualizarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ActualizarMousePressed
+        if (AñosCambiar.getText().equals(""))
+        {
+            JOptionPane.showMessageDialog(null,"Hay campos vacios");
+        }
+        else
+        {
+            Años[Cam]= Integer.parseInt(AñosCambiar.getText());
+            JOptionPane.showMessageDialog(null,"Se modifico con exito");
+        }
+    }//GEN-LAST:event_ActualizarMousePressed
+
+    private void MostrarInfoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MostrarInfoMousePressed
+         if (NombreMostrar.getText().equals(""))
+        {
+            JOptionPane.showMessageDialog(null,"Ingrese un nombre");
+        }
+        else
+        {
+            String nombreB = NombreMostrar.getText();
+            int i=0;
+            while((i<=n)&&(!(nombreB.equalsIgnoreCase(nombre[i])))){
+                i++;
+            }
+            if(i>n)
+            {
+                JOptionPane.showMessageDialog(null, nombreB+" no encontrado");
+            }
+            else
+            {
+                Object [] datos = new Object[6];
+                datos[0] = nombre[i];
+                datos[1] = Apellido[i];
+                datos[2] = Sexo[i];
+                datos[3] = Edad[i];
+                datos[4] = direccion[i];
+                datos[5] = Años[i];
+                modelo.addRow(datos);
+            }
+        }
+    }//GEN-LAST:event_MostrarInfoMousePressed
+
+    private void AñosCambiarKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_AñosCambiarKeyTyped
+    int key = evt.getKeyChar();
+
+    boolean numeros = key >= 48 && key <= 57;
+        
+    if (!numeros)
+    {
+        evt.consume();
+    }
+
+    if (AñosCambiar.getText().trim().length() == 10) {
+        evt.consume();
+    }
+    }//GEN-LAST:event_AñosCambiarKeyTyped
+
+    private void EdadAñadirKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_EdadAñadirKeyTyped
+    int key = evt.getKeyChar();
+
+    boolean numeros = key >= 48 && key <= 57;
+        
+    if (!numeros)
+    {
+        evt.consume();
+    }
+
+    if (EdadAñadir.getText().trim().length() == 10) {
+        evt.consume();
+    }
+    }//GEN-LAST:event_EdadAñadirKeyTyped
+
+    private void AñosAñadirKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_AñosAñadirKeyTyped
         // TODO add your handling code here:
-    }//GEN-LAST:event_ModificarMouseReleased
+    }//GEN-LAST:event_AñosAñadirKeyTyped
+    public static int Busca(String nom[], String nomB,int n){
+ 		int i = 0;
 
-    private void ModificarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModificarMousePressed
-            
-    }//GEN-LAST:event_ModificarMousePressed
-
-    private void MostrarTodosMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MostrarTodosMousePressed
-            
-    }//GEN-LAST:event_MostrarTodosMousePressed
-
+ 		while ((i <= n) && (nom[i].compareTo(nomB)< 0)) /*Comprueba que no vaya primero */
+			i++;
+ 		
+		if ((i > n) || (nom[i].compareTo(nomB)> 0)) /*Comprueba que vaya primero*/
+			return (-i);
+		else
+			return (i);
+    }
     /**
      * @param args the command line arguments
      */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel Actualizar;
+    private javax.swing.JTextField ApellidoAñadir;
+    private javax.swing.JPanel AñadirBoton;
+    private javax.swing.JTextField AñosAñadir;
+    private javax.swing.JTextField AñosCambiar;
+    private javax.swing.JPanel BuscarModificarButon1;
+    private javax.swing.JPanel Cambiar;
     private javax.swing.JPanel Content;
-    private javax.swing.JButton EliminarAlumno;
-    private javax.swing.JButton IngresarN;
-    private javax.swing.JButton Modificar;
-    private javax.swing.JButton MostrarAlumno2;
-    private javax.swing.JButton MostrarTodos;
-    private javax.swing.JButton Nuevo;
+    private javax.swing.JLabel Desabilitado1;
+    private javax.swing.JTextField DireccionAñadir;
+    private javax.swing.JTextField EdadAñadir;
+    private javax.swing.JPanel Eliminar;
+    private javax.swing.JPanel EliminarButon;
+    private javax.swing.JPanel EliminarEmpleado;
+    private javax.swing.JPanel EstadoCliente;
+    private javax.swing.JPanel IngresarEmpleado;
+    private javax.swing.JPanel Mostrar1;
+    private javax.swing.JPanel Mostrar2;
+    private javax.swing.JPanel MostrarCliente;
+    private javax.swing.JPanel MostrarClientes;
+    private javax.swing.JPanel MostrarInfo;
+    private javax.swing.JTextField NombreAñadir;
+    private javax.swing.JTextField NombreEliminar;
+    private javax.swing.JTextField NombreModificar;
+    private javax.swing.JTextField NombreMostrar;
+    private javax.swing.JPanel NuevoEmpleado;
+    private javax.swing.JPanel Regresar;
+    private javax.swing.JComboBox<String> Sexo1;
+    private javax.swing.JTable Tabla1;
+    private javax.swing.JTable Tabla2;
+    private javax.swing.JLabel exit;
+    private javax.swing.JLabel fecha;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JPanel red_squr;
     // End of variables declaration//GEN-END:variables
 }
