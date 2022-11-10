@@ -755,7 +755,35 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_Lab5MousePressed
 
     private void Lab6MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lab6MousePressed
-        // TODO add your handling code here:
+        Lab6Info p1 = new Lab6Info();
+        p1.setSize(620, 470);
+        p1.setLocation(0,0);
+        content.removeAll();
+        content.add(p1, BorderLayout.CENTER);
+        content.revalidate();
+        content.repaint();
+        this.Solucion1_1.setVisible(false);
+        Solucion1_1.setEnabled(false);
+        this.Solucion1_2.setVisible(false);
+        Solucion1_2.setEnabled(false);
+        this.Solucion1_3.setVisible(false);
+        Solucion1_3.setEnabled(false);
+        this.Solucion1_4.setVisible(false);
+        Solucion1_4.setEnabled(false);
+        this.Solucion1_5.setVisible(false);
+        Solucion1_5.setEnabled(false);
+        this.Solucion1_6.setVisible(false);
+        Solucion1_6.setEnabled(false);
+        this.Solucion2.setVisible(false);
+        Solucion2.setEnabled(false);
+        this.Solucion3.setVisible(false);
+        Solucion3.setEnabled(false);
+        this.Solucion4.setVisible(false);
+        Solucion4.setEnabled(false);
+        this.Solucion5.setVisible(false);
+        Solucion5.setEnabled(false);
+        this.Solucion6.setVisible(true);
+        Solucion6.setEnabled(true);
     }//GEN-LAST:event_Lab6MousePressed
     //</editor-fold>
     // <editor-fold defaultstate="collapsed" desc="Botones de Solucion de Lab">
@@ -785,7 +813,8 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_Solucion5MousePressed
 
     private void Solucion6MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Solucion6MousePressed
-        // TODO add your handling code here:
+        dispose();
+        new Lab6.Dashboard().setVisible(true);
     }//GEN-LAST:event_Solucion6MousePressed
 //</editor-fold>
     private void PresentacionlMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PresentacionlMousePressed

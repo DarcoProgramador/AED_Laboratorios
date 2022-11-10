@@ -309,6 +309,9 @@ public class Dashboard2 extends javax.swing.JFrame {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 btn_RegresarMousePressed(evt);
             }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                btn_RegresarMouseReleased(evt);
+            }
         });
         btn_Regresar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -813,6 +816,10 @@ public class Dashboard2 extends javax.swing.JFrame {
         red_squr.setBackground(new Color(204,0,0));
         exit.setForeground(Color.white);
     }//GEN-LAST:event_exitMouseEntered
+
+    private void btn_RegresarMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_RegresarMouseReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_RegresarMouseReleased
 
 //Funciones para volver a Poner y quitar el color de los botones
     //Funciones para volver a Poner y quitar el color de los botones

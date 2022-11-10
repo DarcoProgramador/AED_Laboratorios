@@ -8,12 +8,12 @@ package Lab6;
  *
  * @author Antonio
  */
-public class Principal extends javax.swing.JPanel {
+public class Principal1 extends javax.swing.JPanel {
 
     /**
      * Creates new form Principal
      */
-    public Principal() {
+    public Principal1() {
         initComponents();
     }
 

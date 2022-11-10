@@ -35,7 +35,6 @@ public class Lab1Info extends javax.swing.JPanel {
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -96,11 +95,6 @@ public class Lab1Info extends javax.swing.JPanel {
         jLabel7.setText("y desordenados");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 320, 30));
 
-        jLabel12.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel12.setText("EN DESARROLLO...");
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, 350, 30));
-
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 380));
     }// </editor-fold>//GEN-END:initComponents
 
@@ -109,7 +103,6 @@ public class Lab1Info extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

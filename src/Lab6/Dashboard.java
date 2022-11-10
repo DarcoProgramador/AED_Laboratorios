@@ -35,8 +35,8 @@ public class Dashboard extends javax.swing.JFrame {
         fecha.setText("Hoy es "+dia+" de "+meses[month - 1]+" de "+year);
         //</editor-fold>
         
-        // <editor-fold defaultstate="collapsed" desc="Cargando el Panel Principal">
-        Principal p1 = new Principal();
+        // <editor-fold defaultstate="collapsed" desc="Cargando el Panel Principal1">
+        Principal1 p1 = new Principal1();
         p1.setSize(750, 430);
         p1.setLocation(0,0);
         content.removeAll();
@@ -193,7 +193,7 @@ public class Dashboard extends javax.swing.JFrame {
         switch(i) {
             case 0 -> {
                 // Abrir sección
-                Principal p1 = new Principal();
+                Principal1 p1 = new Principal1();
                 p1.setSize(750, 430);
                 p1.setLocation(0,0);
 
@@ -518,7 +518,8 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_RegresarMouseExited
     //Accion de el boton regresar
     private void btn_RegresarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_RegresarMousePressed
-        
+        dispose();
+        new Principal.Principal().setVisible(true);
     }//GEN-LAST:event_btn_RegresarMousePressed
 //</editor-fold>
     
